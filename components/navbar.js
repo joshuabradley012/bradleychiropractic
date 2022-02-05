@@ -1,23 +1,28 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import ActiveLink from './active-link';
 import Navlinks from './navlinks';
 import useMobile from '../hooks/useMobile';
 
-import styles from '../styles/Navbar.module.scss';
+import styles from '../styles/navbar.module.scss';
 import logo from '../public/logo.png';
 
 export default function Navbar() {
   const [isNavOpen, setNavOpen] = useState(false);
+  let isMobile = false;
 
   const toggleNav = () => setNavOpen(!isNavOpen);
+
+  if (typeof window !== 'undefined') {
+    isMobile = useMobile();
+  }
 
   return (
     <div className={styles.navbarWrapper}>
       <nav className={styles.navbar}>
-        <div className={classnames('container', styles.navbarContainer)}>
+        <div className={cn('container', styles.navbarContainer)}>
 
           <ActiveLink href="/" activeClassName={styles.active}>
             <a className={styles.logo}>
@@ -38,7 +43,7 @@ export default function Navbar() {
             </ActiveLink>
           </div>
 
-          <div className={classnames({
+          <div className={cn({
             [styles.hamburger]: true,
             [styles.hamburgerActive]: isNavOpen,
           })} onClick={toggleNav}>
@@ -48,11 +53,11 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <nav className={classnames({
+      <nav className={cn({
         [styles.drawer]: true,
         [styles.drawerOpen]: isNavOpen,
       })}>
-        <div className={classnames('container', styles.navbarContainer)}>
+        <div className={cn('container', styles.navbarContainer)}>
           <Navlinks />
         </div>
       </nav>

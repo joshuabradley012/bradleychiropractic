@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import styles from '../styles/Navlinks.module.scss';
+import styles from '../styles/navlinks.module.scss';
 
 import ActiveLink from './active-link';
 

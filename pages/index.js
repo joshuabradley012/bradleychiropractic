@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <div>BCNC Homepage</div>
+    <div className="container">BCNC Homepage</div>
   );
 }

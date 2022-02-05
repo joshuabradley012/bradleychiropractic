@@ -1,0 +1,28 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.bottomBar {
+  background: $white;
+  font-size: $font-size-sm;
+  padding: $spacer-4 0;
+}
+
+.bottomBarContainer {
+  display: flex;
+}
+
+.bottomBarLinks {
+  a {
+    margin: 0 $spacer-2;
+    color: $black;
+    font-weight: 700;
+  }
+
+  .copyright {
+    color: $gray-600;
+    margin-right: $spacer-2;
+  }
+}
+
+.bottomBarSocial {
+}
