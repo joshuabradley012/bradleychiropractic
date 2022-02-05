@@ -1,0 +1,178 @@
+@use "variables" as *;
+@use "mixins/breakpoints" as *;
+
+form {
+  background: $white;
+  border-radius: $border-radius-lg;
+  margin: $spacer-8 0;
+  padding: $spacer-8;
+
+  @include media-breakpoint-down(sm) {
+    border-radius: 0;
+    margin: 0 (-$spacer-6);
+    padding: $spacer-6;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  a:not(.btn) {
+    color: $secondary;
+    font-size: 1.4rem;
+    position: relative;
+    text-decoration: none;
+  }
+}
+
+label {
+  display: block;
+  font-size: $font-size-sm;
+  line-height: 1;
+  margin: 0 0 $spacer-2;
+}
+
+select,
+textarea,
+input {
+  margin: 0 0 $spacer-5;
+}
+
+select,
+textarea,
+[type="color"],
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="range"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"] {
+  background: $white;
+  border: $border;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  color: $black;
+  display: block;
+  font-family: $main-font;
+  height: $spacer-10;
+  line-height: 1;
+  padding: ($spacer-3 - $border-width * 2) $spacer-2;
+  width: 100%;
+
+  &:focus {
+    border-color: $secondary;
+    border-top-width: $spacer-0_5;
+    border-right-width: $spacer-0_5;
+    border-bottom-width: $spacer-0_5;
+    border-left-width: $spacer-0_5;
+    box-shadow: unset;
+  }
+}
+
+textarea {
+  line-height: $line-height;
+  height: auto;
+}
+
+[type="color"] {
+  padding: 0 $spacer-0_5;
+}
+
+.btn,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background-color: $secondary;
+  border: 0;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: $spacer-3 $spacer-6;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition-all;
+
+  &:hover {
+    background-color: $secondary-hover;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    color: $secondary;
+
+    &:hover {
+      background-color: $gray-100;
+    }
+  }
+}
+
+// This must be separate from other buttons
+// Adding a .class after a psuedoclass breaks the CSS class
+[type="file"]::file-selector-button {
+  background-color: $secondary;
+  border: 0;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: $spacer-3 $spacer-6;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition-all;
+
+  &:hover {
+    background-color: $secondary-hover;
+  }
+}
+
+.btn,
+button,
+[type="checkbox"],
+[type="button"],
+[type="radio"],
+[type="reset"],
+[type="submit"] {
+  & + & {
+    margin-left: $spacer-4;
+  }
+}
+
+[type="file"] {
+  width: 100%;
+
+  &::file-selector-button {
+    margin: 0 $spacer-2 0 0;
+  }
+}
+
+.form-group {
+  .btn,
+  button,
+  [type="button"],
+  [type="file"]::file-selector-button,
+  [type="reset"],
+  [type="submit"] {
+    margin-bottom: 0;
+  }
+}
+

@@ -1,0 +1,121 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.navbarWrapper {
+  position: relative;
+}
+
+.navbar {
+  background: $white;
+  padding: $spacer-2 0;
+  position: relative;
+  z-index: 2;
+}
+
+.drawer {
+  display: none;
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  border-radius: 50%;
+  display: block;
+  height: 64px;
+  overflow: hidden;
+  width: 64px;
+  margin-right: $spacer-4;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+}
+
+.link {
+  color: $gray-600;
+  font-weight: 500;
+  margin: 0 $spacer-4;
+  transition: color $transition-time;
+
+  .linkInner {
+    border-bottom: $spacer-0_5 solid transparent;
+    padding: $spacer-0_5 0 0;
+    transition: border-color $transition-time;
+  }
+
+  &.active,
+  &:hover {
+    color: $primary;
+
+    .linkInner {
+      border-bottom-color: $primary;
+    }
+  }
+}
+
+.cta {
+  margin-left: auto;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  height: $spacer-5;
+  margin-left: $spacer-6;
+  transition: $transition-all;
+  width: $spacer-5;
+}
+
+.hamburgerActive {
+  color: $secondary;
+}
+
+@include media-breakpoint-down(md) {
+  .logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .drawer {
+    background: $white;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: transform $transition-time;
+    z-index: 1;
+  }
+
+  .drawerOpen {
+    transform: translateY(0);
+  }
+
+  .links {
+    display: none;
+  }
+
+  .linksMobile {
+    display: block;
+    left: 0;
+    padding: 0 0 $spacer-2;
+    top: 100%;
+    width: 100%;
+
+    .link {
+      display: block;
+      margin: 0;
+      padding: $spacer-2 0;
+    }
+  }
+}
