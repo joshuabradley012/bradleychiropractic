@@ -3,6 +3,7 @@ import Image from 'next/image';
 import classnames from 'classnames';
 
 import ActiveLink from './active-link';
+import Navlinks from './navlinks';
 import useMobile from '../hooks/useMobile';
 
 import styles from '../styles/Navbar.module.scss';
@@ -30,20 +31,7 @@ export default function Navbar() {
             </a>
           </ActiveLink>
 
-          <div className={styles.links}>
-            <ActiveLink href="/" activeClassName={styles.active}>
-              <a className={styles.link}><span className={styles.linkInner}>Home</span></a>
-            </ActiveLink>
-            <ActiveLink href="/services" activeClassName={styles.active}>
-              <a className={styles.link}><span className={styles.linkInner}>Services</span></a>
-            </ActiveLink>
-            <ActiveLink href="/about" activeClassName={styles.active}>
-              <a className={styles.link}><span className={styles.linkInner}>About</span></a>
-            </ActiveLink>
-            <ActiveLink href="/blog" activeClassName={styles.active}>
-              <a className={styles.link}><span className={styles.linkInner}>Blog</span></a>
-            </ActiveLink>
-          </div>
+          <Navlinks className="d-none d-md-flex" />
 
           <div className={styles.cta}>
             <ActiveLink href="/contact" activeClassName={styles.active}>
@@ -66,20 +54,7 @@ export default function Navbar() {
         [styles.drawerOpen]: isNavOpen,
       })}>
         <div className={classnames('container', styles.navbarContainer)}>
-          <div className={styles.linksMobile}>
-            <ActiveLink href="/" activeClassName={styles.active}>
-              <a className={styles.link}><span className={styles.linkInner}>Home</span></a>
-            </ActiveLink>
-            <ActiveLink href="/services" activeClassName={styles.active}>
-              <a className={styles.link}><span className={styles.linkInner}>Services</span></a>
-            </ActiveLink>
-            <ActiveLink href="/about" activeClassName={styles.active}>
-              <a className={styles.link}><span className={styles.linkInner}>About</span></a>
-            </ActiveLink>
-            <ActiveLink href="/blog" activeClassName={styles.active}>
-              <a className={styles.link}><span className={styles.linkInner}>Blog</span></a>
-            </ActiveLink>
-          </div>
+          <Navlinks />
         </div>
       </nav>
     </div>
