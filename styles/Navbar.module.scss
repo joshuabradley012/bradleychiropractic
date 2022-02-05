@@ -32,6 +32,8 @@
 }
 
 .cta {
+  align-items: center;
+  display: flex;
   margin-left: auto;
 }
 
@@ -42,6 +44,10 @@
   margin-left: $spacer-6;
   transition: $transition-all;
   width: $spacer-5;
+
+  &:hover {
+    color: $secondary;
+  }
 }
 
 .hamburgerActive {

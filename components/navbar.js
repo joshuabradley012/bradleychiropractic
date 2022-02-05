@@ -11,7 +11,6 @@ import logo from '../public/logo.png';
 
 export default function Navbar() {
   const [isNavOpen, setNavOpen] = useState(false);
-  const isMobile = useMobile();
 
   const toggleNav = () => setNavOpen(!isNavOpen);
 
@@ -35,7 +34,7 @@ export default function Navbar() {
 
           <div className={styles.cta}>
             <ActiveLink href="/contact" activeClassName={styles.active}>
-              <a className="btn">Contact</a>
+              <a className="btn">Schedule Now</a>
             </ActiveLink>
           </div>
 
