@@ -3,21 +3,17 @@ import Image from 'next/image';
 import cn from 'classnames';
 
 import ActiveLink from './active-link';
+import Icon from './icon';
 import Navlinks from './navlinks';
-import useMobile from '../hooks/useMobile';
 
+// styles must be imported after components to maintain priority
 import styles from '../styles/navbar.module.scss';
 import logo from '../public/logo.png';
 
 export default function Navbar() {
   const [isNavOpen, setNavOpen] = useState(false);
-  let isMobile = false;
 
   const toggleNav = () => setNavOpen(!isNavOpen);
-
-  if (typeof window !== 'undefined') {
-    isMobile = useMobile();
-  }
 
   return (
     <div className={styles.navbarWrapper}>
@@ -43,12 +39,14 @@ export default function Navbar() {
             </ActiveLink>
           </div>
 
-          <div className={cn({
-            [styles.hamburger]: true,
-            [styles.hamburgerActive]: isNavOpen,
-          })} onClick={toggleNav}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg>
-          </div>
+          <Icon
+            className={cn({
+              [styles.hamburger]: true,
+              [styles.hamburgerActive]: isNavOpen,
+            })}
+            onClick={toggleNav}
+            type="hamburger"
+          />
 
         </div>
       </nav>

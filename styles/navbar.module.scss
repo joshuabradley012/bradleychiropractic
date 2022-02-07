@@ -40,10 +40,8 @@
 .hamburger {
   display: none;
   cursor: pointer;
-  height: $spacer-5;
   margin-left: $spacer-6;
   transition: $transition-all;
-  width: $spacer-5;
 
   &:hover {
     color: $secondary;

@@ -1,0 +1,25 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.hero {
+  text-align: center;
+}
+
+.heroCaption {
+  font-size: $font-size-lg;
+  margin: $spacer-8 0;
+}
+
+.title {
+  font-size: 120px;
+  margin-top: 0;
+}
+
+.cta {
+}
+
+.phone {
+  color: $black;
+  font-weight: 500;
+  margin-left: $spacer-8;
+}

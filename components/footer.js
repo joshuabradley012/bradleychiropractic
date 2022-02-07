@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import cn from 'classnames';
+
+import Social from './social';
+
 import styles from '../styles/footer.module.scss';
 
 export default function Footer() {
@@ -11,7 +14,7 @@ export default function Footer() {
       <div className={styles.bottomBar}>
         <div className={cn('container', styles.bottomBarContainer)}>
           <div className={styles.bottomBarLinks}>
-            <span className={styles.copyright}>&copy; {year} Bradley Chiropractic Nutrition Center</span>
+            <span className={styles.copyright}>&copy; {year} Bradley Chiropractic</span>
             <Link href="/privacy">
               <a>Privacy Policy</a>
             </Link>
@@ -19,8 +22,7 @@ export default function Footer() {
               <a>Terms of Service</a>
             </Link>
           </div>
-          <div className={styles.bottomBarSocial}>
-          </div>
+          <Social className={styles.bottomBarSocial} />
         </div>
       </div>
     </footer>

@@ -1,0 +1,12 @@
+@use "bootstrap/variables" as *;
+
+.icon {
+  align-items: center;
+  color: $primary;
+  cursor: pointer;
+  display: flex;
+  height: $spacer-4;
+  position: relative;
+  transition: $transition-all;
+  width: $spacer-4;
+}

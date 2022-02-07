@@ -1,0 +1,27 @@
+@use "bootstrap/variables" as *;
+
+.iconLink {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: $font-size-md;
+  line-height: 1;
+  text-decoration: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.text {
+  color: $primary;
+  margin-left: $spacer-6;
+  transition: $transition-all;
+}
+
+.active {
+  > * {
+    color: $secondary;
+  }
+}
+
