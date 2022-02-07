@@ -1,5 +1,11 @@
 @use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
 
-.page {
+.section {
   padding: $spacer-16 0;
+
+  @include media-breakpoint-down(md) {
+    padding: $spacer-8 0;
+  }
 }
+

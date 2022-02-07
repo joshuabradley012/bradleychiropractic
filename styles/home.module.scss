@@ -5,14 +5,14 @@
   text-align: center;
 }
 
-.heroCaption {
-  font-size: $font-size-lg;
-  margin: $spacer-8 0;
-}
-
 .title {
   font-size: 120px;
   margin-top: 0;
+}
+
+.caption {
+  font-size: $font-size-lg;
+  margin: $spacer-8 0;
 }
 
 .cta {
@@ -22,4 +22,25 @@
   color: $black;
   font-weight: 500;
   margin-left: $spacer-8;
+}
+
+@include media-breakpoint-down(xl) {
+  .title {
+    font-size: 80px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .hero {
+    text-align: left;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .caption {
+    font-size: $font-size;
+    margin: $spacer-4 0;
+  }
 }
