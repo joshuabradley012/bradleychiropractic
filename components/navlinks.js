@@ -3,21 +3,33 @@ import styles from '../styles/navlinks.module.scss';
 
 import ActiveLink from './active-link';
 
-export default function Navlinks({ className }) {
+export default function Navlinks({ className, handleClick }) {
+  const links = [
+    {
+      href: '/',
+      name: 'Home',
+    },
+    {
+      href: '/services',
+      name: 'Services',
+    },
+    {
+      href: 'about',
+      name: 'About',
+    },
+    {
+      href: '/blog',
+      name: 'Blog',
+    },
+  ];
+
   return (
     <div className={cn(styles.links, className)}>
-      <ActiveLink href="/" activeClassName={styles.active}>
-        <a className={styles.link}><span className={styles.linkInner}>Home</span></a>
-      </ActiveLink>
-      <ActiveLink href="/services" activeClassName={styles.active}>
-        <a className={styles.link}><span className={styles.linkInner}>Services</span></a>
-      </ActiveLink>
-      <ActiveLink href="/about" activeClassName={styles.active}>
-        <a className={styles.link}><span className={styles.linkInner}>About</span></a>
-      </ActiveLink>
-      <ActiveLink href="/blog" activeClassName={styles.active}>
-        <a className={styles.link}><span className={styles.linkInner}>Blog</span></a>
-      </ActiveLink>
+      {links.map(link => (
+        <ActiveLink href={link.href} activeClassName={styles.active}>
+          <a className={styles.link} onClick={handleClick}><span className={styles.linkInner}>{link.name}</span></a>
+        </ActiveLink>
+      ))}
     </div>
   );
 }

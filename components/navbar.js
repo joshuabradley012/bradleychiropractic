@@ -15,6 +15,8 @@ export default function Navbar() {
 
   const toggleNav = () => setNavOpen(!isNavOpen);
 
+  const handleNavigation = () => setNavOpen(false);
+
   return (
     <div className={styles.navbarWrapper}>
       <nav className={styles.navbar}>
@@ -31,7 +33,7 @@ export default function Navbar() {
             </a>
           </ActiveLink>
 
-          <Navlinks className="d-none d-md-flex" />
+          <Navlinks className="d-none d-md-flex" handleClick={handleNavigation} />
 
           <div className={styles.cta}>
             <ActiveLink href="/contact" activeClassName={styles.active}>
@@ -56,7 +58,7 @@ export default function Navbar() {
         [styles.drawerOpen]: isNavOpen,
       })}>
         <div className={cn('container', styles.navbarContainer)}>
-          <Navlinks />
+          <Navlinks handleClick={handleNavigation} />
         </div>
       </nav>
     </div>
