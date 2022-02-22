@@ -27,10 +27,10 @@
   display: flex;
   color: $black;
   font-weight: 500;
-  margin-left: $spacer-8;
 }
 
 .icon {
+  margin-left: -$spacer-2;
   margin-right: $spacer-4;
 }
 
@@ -160,8 +160,11 @@
   border: 1px solid $gray-300;
   border-radius: $border-radius-lg;
   box-shadow: $box-shadow-3;
-  font-size: 1.2em;
   padding: $spacer-8;
+
+  .quote {
+    font-size: 1.2em;
+  }
 }
 
 @include media-breakpoint-down(xl) {

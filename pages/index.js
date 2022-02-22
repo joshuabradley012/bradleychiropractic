@@ -11,45 +11,62 @@ import decompression from '../public/placeholder.png';
 import exercise from '../public/placeholder.png';
 import massage from '../public/placeholder.png';
 import nutrition from '../public/placeholder.png';
-import doctor from '../public/placeholder.png';
+import doctorImage from '../public/placeholder.png';
 
-const services = [
-  {
-    name: 'Chiropractic',
-    image: chiropractic,
-    link: '/services/chiropractic',
-  },
-  {
-    name: 'Spinal Decompression',
-    image: decompression,
-    link: '/services/spinal-decompression',
-  },
-  {
-    name: 'Corrective Exercise',
-    image: exercise,
-    link: '/services/corrective-exercise',
-  },
-  {
-    name: 'Massage',
-    image: massage,
-    link: '/services/massage',
-  },
-  {
-    name: 'Nutrition',
-    image: nutrition,
-    link: '/services/nutrition',
-  },
-];
+const hero = {
+  headline: <>Bakersfield&rsquo;s <br className="d-none d-md-inline"/>Best Chiropractor</>,
+  caption: "Bradley Chiropractic Nutrition Center has made a name for itself by helping thousands of patients get out of pain. With a doctor and staff who authentically care about your well-being, we look forward to helping you down the road towards better health.",
+};
+
+const services = {
+  headline: "Our Approach to Chiropractic Care",
+  caption: "We take a holistic approach to health. We identify the root cause of your symptoms and treat it with a comprehensive plan that addresses your physical, nutritional, and emotional wellbeing.",
+  items: [
+    {
+      name: 'Chiropractic',
+      image: chiropractic,
+      link: '/services/chiropractic',
+    },
+    {
+      name: 'Spinal Decompression',
+      image: decompression,
+      link: '/services/spinal-decompression',
+    },
+    {
+      name: 'Corrective Exercise',
+      image: exercise,
+      link: '/services/corrective-exercise',
+    },
+    {
+      name: 'Massage',
+      image: massage,
+      link: '/services/massage',
+    },
+    {
+      name: 'Nutrition',
+      image: nutrition,
+      link: '/services/nutrition',
+    },
+  ],
+};
+
+const doctor = {
+  quote: "I see chiropractic as a science, philosophy, and art. A science because it is the study of how the body is a system of nerves, muscles, and bones that all work in synchronization, and how misalignments in that system can affect health. A philosophy because it is the idea that putting the body in alignment allows the nervous system to work optimally, relieving pain and giving the body a proper healing environment. And an art because of the practice it takes to perfect the technique of effectively restoring alignment to the body. I am passionate about using my knowledge and skills to bring people to a higher state of health.",
+  name: 'Dr. Brendon Bradley',
+};
 
 const testimonials = [
   {
     quote: "After seeing Dr. Bradley I am now living a normal life and having fun, something I never thought I'd be able to say again. All thanks to the care I received by Dr. Bradley and his staff.",
+    source: 'John Doe',
   },
   {
     quote: "The back pain I had suffered from my whole life became severe. I was told the only thing that would help was surgery. I tried several other chiropractors and still did not receive any relief. Now, after only fifteen treatments on spinal decompression, I am pain free!",
+    source: 'Jane Doe',
   },
   {
     quote: "I have better mobility and the pain I was feeling in my back everyday is almost completely gone! I now have a much brighter future.",
+    source: 'Joe Schmo',
   },
 ];
 
@@ -61,13 +78,13 @@ export default function Home() {
           <div className="row justify-content-center">
             <div className="col-12">
               <div className={styles.hero}>
-                <h1 className={styles.title}>Bakersfield&rsquo;s <br className="d-none d-md-inline"/>Best Chiropractor</h1>
-                <p className={styles.caption}>Bradley Chiropractic Nutrition Center has made a name for itself by helping thousands of patients get out of pain. With a doctor and staff who authentically care about your well-being, we look forward to helping you down the road towards better health.</p>
+                <h1 className={styles.title}>{hero.headline}</h1>
+                <p className={styles.caption}>{hero.caption}</p>
                 <div className={styles.cta}>
                   <Link href="/contact">
                     <a className="btn">Schedule</a>
                   </Link>
-                  <a className={styles.phone} href="tel:+16616176160"><Icon type="phone" className={styles.icon} />(661) 617-6160</a>
+                  <a className={cn('btn secondary', styles.phone)} href="tel:+16616176160"><Icon type="phone" className={styles.icon} />(661) 617-6160</a>
                 </div>
               </div>
             </div>
@@ -112,12 +129,12 @@ export default function Home() {
                 alt="Bradley Chiropractic Team"
                 className={styles.teamImage}
               />
-              <h2>Our Approach to Chiropractic</h2>
-              <p>We take a holistic approach to health. We identify the root cause of your symptoms and treat it with a comprehensive plan that addresses your physical, nutritional, and emotional wellbeing.</p>
+              <h2>{services.headline}</h2>
+              <p>{services.caption}</p>
             </div>
             <div className="col-12">
               <div className="row">
-                {services.map(service => (
+                {services.items.map(service => (
                   <div className="col" key={service.name}>
                     <Link href={service.link}>
                       <a className={styles.service}>
@@ -146,7 +163,7 @@ export default function Home() {
                 <div className={styles.doctorLeft}>
                   <div className={styles.doctorImageWrapper}>
                     <Image
-                      src={doctor}
+                      src={doctorImage}
                       alt="Portrait of Dr. Brendon Bradley"
                       layout="fill"
                     />
@@ -154,8 +171,8 @@ export default function Home() {
                 </div>
                 <div className={styles.doctorRight}>
                   <div className="content">
-                    <p className="quote">I see chiropractic as a science, philosophy, and art. A science because it is the study of how the body is a system of nerves, muscles, and bones that all work in synchronization, and how misalignments in that system can affect health. A philosophy because it is the idea that putting the body in alignment allows the nervous system to work optimally, relieving pain and giving the body a proper healing environment. And an art because of the practice it takes to perfect the technique of effectively restoring alignment to the body. I am passionate about using my knowledge and skills to bring people to a higher state of health.</p>
-                    <p>Dr. Brendon Bradley</p>
+                    <p className="quote">{doctor.quote}</p>
+                    <p>{doctor.name}</p>
                   </div>
                 </div>
               </div>
@@ -164,7 +181,10 @@ export default function Home() {
           <div className="row">
             {testimonials.map((testimonial, i) => (
               <div className="col-4" key={i}>
-                <div className={cn('quote', styles.testimonial)}>{testimonial.quote}</div>
+                <div className={cn('content', styles.testimonial)}>
+                  <p className="quote">{testimonial.quote}</p>
+                  <p>{testimonial.source}</p>
+                </div>
               </div>
             ))}
           </div>
