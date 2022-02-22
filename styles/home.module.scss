@@ -1,8 +1,10 @@
+@use 'sass:map';
 @use 'bootstrap/variables' as *;
 @use 'bootstrap/mixins/breakpoints' as *;
 
 .hero {
   text-align: center;
+  margin-bottom: $spacer-16;
 }
 
 .title {
@@ -22,6 +24,101 @@
   color: $black;
   font-weight: 500;
   margin-left: $spacer-8;
+}
+
+.map {
+  border: 1px solid $gray-300;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-3;
+  display: flex;
+  overflow: hidden;
+}
+
+.mapLeft {
+  flex: 0 0 50%;
+  padding: $spacer-8;
+}
+
+.mapRight {
+  display: block;
+  flex: 0 0 50%;
+  overflow: hidden;
+  position: relative;
+
+  iframe {
+    border: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.teamImage {
+  border-radius: $border-radius-lg;
+}
+
+.servicesIntro {
+  margin-bottom: $spacer-16;
+}
+
+.service {
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.serviceImageWrapper {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.serviceName {
+  color: $gray-700;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  margin-top: $spacer-4;
+  text-transform: uppercase;
+}
+
+.doctor {
+  display: flex;
+  margin-bottom: $spacer-16;
+}
+
+.doctorLeft {
+  flex: 0 0 25%;
+  margin-right: $spacer-16;
+}
+
+.doctorRight {
+  align-items: center;
+  display: flex;
+}
+
+.doctorImageWrapper {
+  border-radius: $border-radius-lg;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.testimonial {
 }
 
 @include media-breakpoint-down(xl) {
@@ -44,3 +141,4 @@
     margin: $spacer-4 0;
   }
 }
+

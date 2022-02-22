@@ -1,8 +1,27 @@
 @use 'bootstrap/variables' as *;
 @use 'bootstrap/mixins/breakpoints' as *;
 
+// Fix Next.js images
+span[style^="box-sizing:border-box;display:inline-block"] {
+  display: block !important;
+}
+
+.content {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
 .section {
   padding: $spacer-16 0;
+
+  &.gray {
+    background-color: $gray-100;
+  }
 
   @include media-breakpoint-down(md) {
     padding: $spacer-8 0;

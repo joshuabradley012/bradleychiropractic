@@ -97,7 +97,7 @@
     @return $value1;
   }
 
-  @if meta.type-of($value1) == number and meta.type-of($value2) == number and math.comparable($value1, $value2) {
+  @if meta.type-of($value1) == number and meta.type-of($value2) == number and math.compatible($value1, $value2) {
     @return $value1 + $value2;
   }
 
@@ -117,7 +117,7 @@
     @return $value1;
   }
 
-  @if meta.type-of($value1) == number and meta.type-of($value2) == number and math.comparable($value1, $value2) {
+  @if meta.type-of($value1) == number and meta.type-of($value2) == number and math.compatible($value1, $value2) {
     @return $value1 - $value2;
   }
 

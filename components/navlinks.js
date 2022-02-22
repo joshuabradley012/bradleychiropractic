@@ -26,7 +26,7 @@ export default function Navlinks({ className, handleClick }) {
   return (
     <div className={cn(styles.links, className)}>
       {links.map(link => (
-        <ActiveLink href={link.href} activeClassName={styles.active}>
+        <ActiveLink href={link.href} activeClassName={styles.active} key={link.href}>
           <a className={styles.link} onClick={handleClick}><span className={styles.linkInner}>{link.name}</span></a>
         </ActiveLink>
       ))}
