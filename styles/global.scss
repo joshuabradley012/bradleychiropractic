@@ -6,6 +6,19 @@ span[style^="box-sizing:border-box;display:inline-block"] {
   display: block !important;
 }
 
+.btn {
+  &.secondary {
+    border: 1px solid $gray-300;
+    background-color: $white;
+    color: $primary;
+    padding: calc(#{$spacer-3} - .1rem) calc(#{$spacer-6} - .1rem);
+
+    &:hover {
+      background-color: $gray-300;
+    }
+  }
+}
+
 .content {
   > :first-child {
     margin-top: 0;
@@ -23,8 +36,25 @@ span[style^="box-sizing:border-box;display:inline-block"] {
     background-color: $gray-100;
   }
 
+  &.blue {
+    background-color: $blue;
+  }
+
   @include media-breakpoint-down(md) {
     padding: $spacer-8 0;
   }
 }
 
+.quote {
+  font-family: $sub-font;
+  font-style: italic;
+  font-size: 1.5em;
+
+  &::before {
+    content: '"';
+  }
+
+  &::after {
+    content: '"';
+  }
+}

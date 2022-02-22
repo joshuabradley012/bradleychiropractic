@@ -37,7 +37,7 @@ export default function Navbar() {
 
           <div className={styles.cta}>
             <ActiveLink href="/contact" activeClassName={styles.active}>
-              <a className="btn">Schedule Now</a>
+              <a className="btn">Schedule</a>
             </ActiveLink>
           </div>
 
