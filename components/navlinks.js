@@ -14,7 +14,7 @@ export default function Navlinks({ className, handleClick }) {
       name: 'Services',
     },
     {
-      href: 'about',
+      href: '/about',
       name: 'About',
     },
     {

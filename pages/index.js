@@ -5,6 +5,8 @@ import cn from 'classnames';
 import Icon from '../components/icon';
 
 import styles from '../styles/home.module.scss';
+
+import heroImage from '../public/placeholder.png';
 import team from '../public/placeholder.png';
 import chiropractic from '../public/placeholder.png';
 import decompression from '../public/placeholder.png';
@@ -12,10 +14,22 @@ import exercise from '../public/placeholder.png';
 import massage from '../public/placeholder.png';
 import nutrition from '../public/placeholder.png';
 import doctorImage from '../public/placeholder.png';
+import post1 from '../public/placeholder.png';
+import post2 from '../public/placeholder.png';
+import post3 from '../public/placeholder.png';
 
 const hero = {
   headline: <>Bakersfield&rsquo;s <br className="d-none d-md-inline"/>Best Chiropractor</>,
   caption: "Bradley Chiropractic Nutrition Center has made a name for itself by helping thousands of patients get out of pain. With a doctor and staff who authentically care about your well-being, we look forward to helping you down the road towards better health.",
+};
+
+const directions = {
+  headline: 'Visit Our Office',
+  caption: 'On your first visit, there will be a full evaluation and sit down consultation so we can work with you to create a specialized wellness plan.',
+  officeHoursHeadline: 'Office Hours',
+  officeHours: <>9AM - 6PM, Monday - Thursday <br />9AM - 2PM, Friday</>,
+  addressHeadline: 'Address',
+  address: <>5001 Stockdale Hwy, <br/>Bakersfield, CA 93309</>,
 };
 
 const services = {
@@ -25,27 +39,27 @@ const services = {
     {
       name: 'Chiropractic',
       image: chiropractic,
-      link: '/services/chiropractic',
+      href: '/services/chiropractic',
     },
     {
       name: 'Spinal Decompression',
       image: decompression,
-      link: '/services/spinal-decompression',
+      href: '/services/spinal-decompression',
     },
     {
       name: 'Corrective Exercise',
       image: exercise,
-      link: '/services/corrective-exercise',
+      href: '/services/corrective-exercise',
     },
     {
       name: 'Massage',
       image: massage,
-      link: '/services/massage',
+      href: '/services/massage',
     },
     {
       name: 'Nutrition',
       image: nutrition,
-      link: '/services/nutrition',
+      href: '/services/nutrition',
     },
   ],
 };
@@ -70,14 +84,47 @@ const testimonials = [
   },
 ];
 
+const posts = [
+  {
+    title: 'Stem Cells: Should you believe the hype?',
+    description: 'Is it possible you are paying for dead stem cells?',
+    href: '/blog/stem-cells-should-you-believe-the-hype',
+    image: post1,
+  },
+  {
+    title: 'Letting Go',
+    description: 'How can letting go of control help a sports injury heal.',
+    href: '/blog/letting-go',
+    image: post2,
+  },
+  {
+    title: 'Movement is Life, Life is Movement',
+    description: 'Learn how to improve your overall health through better movement.',
+    href: '/blog/movement-is-life-life-is-movement',
+    image: post3,
+  },
+];
+
+const subscribe = {
+  headline: 'Become a subscriber today!',
+  caption: 'Sign up to receive our newsletter where we share tips, special offers, and our latest content. We are dedicated to helping you achieve better health.',
+};
+
 export default function Home() {
   return (
     <>
       <section className="section">
+        <div className="bg-image">
+          <Image
+            src={heroImage}
+            alt="Bradley Chiropractic Hero Image"
+            layout="fill"
+          />
+        </div>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12">
-              <div className={styles.hero}>
+              <div className={cn('content', styles.hero)}>
                 <h1 className={styles.title}>{hero.headline}</h1>
                 <p className={styles.caption}>{hero.caption}</p>
                 <div className={styles.cta}>
@@ -88,17 +135,23 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="row justify-content-center">
             <div className="col-8">
               <div className={styles.map}>
                 <div className={styles.mapInner}>
                   <div className={styles.mapLeft}>
-                    <div className="content">
-                      <h2>Visit Our Office</h2>
-                      <p>On your first visit, there will be a full evaluation and sit down consultation so we can work with you to create a specialized wellness plan.</p>
-                      <h4>Office Hours</h4>
-                      <p>9AM - 6PM, Monday - Friday</p>
-                      <h4>Address</h4>
-                      <p>5001 Stockdale Hwy,<br/>Bakersfield, CA 93309</p>
+                    <div className={cn('content', styles.mapLeftContent)}>
+                      <h2>{directions.headline}</h2>
+                      <p>{directions.caption}</p>
+                      <h4>{directions.officeHoursHeadline}</h4>
+                      <p>{directions.officeHours}</p>
+                      <h4>{directions.addressHeadline}</h4>
+                      <p>{directions.address}</p>
                     </div>
                     <div className={styles.mapCta}>
                       <Link href="/contact">
@@ -136,7 +189,7 @@ export default function Home() {
               <div className="row">
                 {services.items.map(service => (
                   <div className="col" key={service.name}>
-                    <Link href={service.link}>
+                    <Link href={service.href}>
                       <a className={styles.service}>
                         <span className={styles.serviceImageWrapper}>
                           <Image
@@ -191,8 +244,45 @@ export default function Home() {
         </div>
       </section>
       <section className="section gray">
+        <div className="container">
+          <div className="row">
+            {posts.map(post => (
+              <div className="col-4" key={post.title}>
+                <Link href={post.href}>
+                  <a className={styles.post}>
+                    <div className={styles.postImageWrapper}>
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        layout="fill"
+                      />
+                    </div>
+                    <div className={cn('content', styles.postContent)}>
+                      <h3>{post.title}</h3>
+                      <p>{post.description}</p>
+                    </div>
+                  </a>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
       <section className="section blue">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-8">
+              <div className={cn('content', styles.subscribe)}>
+                <h2>{subscribe.headline}</h2>
+                <p>{subscribe.caption}</p>
+                <form className={styles.subscribeForm}>
+                  <input type="text" placeholder="Email" />
+                  <button className="secondary" type="submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
