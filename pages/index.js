@@ -25,11 +25,14 @@ const hero = {
 
 const directions = {
   headline: 'Visit Our Office',
-  caption: 'On your first visit, there will be a full evaluation and sit down consultation so we can work with you to create a specialized wellness plan.',
+  caption: 'On your first visit, we will have a sit down consultation to create a specialized wellness plan for you.',
   officeHoursHeadline: 'Office Hours',
   officeHours: <>9AM - 6PM, Monday - Thursday <br />9AM - 2PM, Friday</>,
   addressHeadline: 'Address',
   address: <>5001 Stockdale Hwy, <br/>Bakersfield, CA 93309</>,
+
+  values: {
+  }
 };
 
 const services = {
@@ -66,7 +69,7 @@ const services = {
 
 const doctor = {
   quote: "I see chiropractic as a science, philosophy, and art. A science because it is the study of how the body is a system of nerves, muscles, and bones that all work in synchronization, and how misalignments in that system can affect health. A philosophy because it is the idea that putting the body in alignment allows the nervous system to work optimally, relieving pain and giving the body a proper healing environment. And an art because of the practice it takes to perfect the technique of effectively restoring alignment to the body. I am passionate about using my knowledge and skills to bring people to a higher state of health.",
-  name: 'Dr. Brendon Bradley',
+  source: 'Dr. Brendon Bradley',
 };
 
 const testimonials = [
@@ -107,7 +110,7 @@ const posts = [
 
 const subscribe = {
   headline: 'Become a subscriber today!',
-  caption: 'Sign up to receive our newsletter where we share tips, special offers, and our latest content. We are dedicated to helping you achieve better health.',
+  caption: 'Sign up to receive our newsletter where we share tips, special offers, and our latest content. We are dedicated to helping you achieve a higher state of health.',
 };
 
 export default function Home() {
@@ -141,32 +144,32 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-8">
+            <div className="col-5 d-flex">
+              <div className={styles.mapContent}>
+                <div className="content">
+                  <h2>{directions.headline}</h2>
+                  <p>{directions.caption}</p>
+                  <h3>{directions.officeHoursHeadline}</h3>
+                  <p>{directions.officeHours}</p>
+                  <h3>{directions.addressHeadline}</h3>
+                  <p>{directions.address}</p>
+                </div>
+                <div className={styles.mapCta}>
+                  <Link href="/contact">
+                    <a className="btn secondary">Learn more</a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-7">
               <div className={styles.map}>
                 <div className={styles.mapInner}>
-                  <div className={styles.mapLeft}>
-                    <div className={cn('content', styles.mapLeftContent)}>
-                      <h2>{directions.headline}</h2>
-                      <p>{directions.caption}</p>
-                      <h4>{directions.officeHoursHeadline}</h4>
-                      <p>{directions.officeHours}</p>
-                      <h4>{directions.addressHeadline}</h4>
-                      <p>{directions.address}</p>
-                    </div>
-                    <div className={styles.mapCta}>
-                      <Link href="/contact">
-                        <a className="btn secondary">Get Directions</a>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className={styles.mapRight}>
-                    <iframe
-                      loading="lazy"
-                      allowFullScreen={true}
-                      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0D0k2ChjLuOipeyDacW0pZsfR708ueC4
-                        &q=Bradley+Chiropractic+Nutrition+Center,Bakersfield+CA"
-                    />
-                  </div>
+                  <iframe
+                    loading="lazy"
+                    allowFullScreen={true}
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0D0k2ChjLuOipeyDacW0pZsfR708ueC4
+                      &q=Bradley+Chiropractic+Nutrition+Center,Bakersfield+CA"
+                  />
                 </div>
               </div>
             </div>
@@ -225,7 +228,7 @@ export default function Home() {
                 <div className={styles.doctorRight}>
                   <div className="content">
                     <p className="quote">{doctor.quote}</p>
-                    <p>{doctor.name}</p>
+                    <p>{doctor.source}</p>
                   </div>
                 </div>
               </div>
@@ -246,6 +249,7 @@ export default function Home() {
       <section className="section gray">
         <div className="container">
           <div className="row">
+            <h2 className={styles.postsTitle}>Read More About Health</h2>
             {posts.map(post => (
               <div className="col-4" key={post.title}>
                 <Link href={post.href}>

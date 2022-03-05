@@ -35,32 +35,24 @@
 }
 
 .map {
+  background: $white;
   border: 1px solid $border-color;
   border-radius: $border-radius-lg;
   box-shadow: $box-shadow-3;
   overflow: hidden;
 }
 
+
 .mapInner {
-  display: flex;
-}
-
-.mapLeft {
-  display: flex;
-  flex: 0 0 50%;
-  flex-direction: column;
-  padding: $spacer-8;
-}
-
-.mapLeftContent {
-  margin-bottom: $spacer-8;
-}
-
-.mapRight {
   display: block;
-  flex: 0 0 50%;
   overflow: hidden;
   position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
 
   iframe {
     border: 0;
@@ -71,6 +63,11 @@
     bottom: 0;
     left: 0;
   }
+}
+
+.mapContent {
+  display: flex;
+  flex-direction: column;
 }
 
 .mapCta {
@@ -148,6 +145,7 @@
 }
 
 .testimonial {
+  background: $white;
   border: 1px solid $border-color;
   border-radius: $border-radius-lg;
   box-shadow: $box-shadow-3;
@@ -156,6 +154,11 @@
   .quote {
     font-size: 1.2em;
   }
+}
+
+.postsTitle {
+  margin-bottom: $spacer-8;
+  text-align: center;
 }
 
 .post {

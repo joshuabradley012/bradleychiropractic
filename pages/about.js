@@ -6,6 +6,16 @@ import styles from '../styles/about.module.scss';
 
 export default function About() {
   return (
-    <div className="container">About</div>
+    <section className="section">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-8">
+            <div className={styles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/MT5TtVhd568?controls=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
