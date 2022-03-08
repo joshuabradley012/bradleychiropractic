@@ -13,15 +13,15 @@
   }
 }
 
-.text {
-  color: $primary;
-  margin-left: $spacer-6;
-  transition: $transition-all;
+.iconLeft {
+  margin-right: $spacer-4;
 }
 
-.active {
-  > * {
-    color: $secondary;
-  }
+.iconRight {
+  margin-left: $spacer-4;
+}
+
+.text {
+  transition: $transition-all;
 }
 

@@ -113,6 +113,11 @@
   text-transform: uppercase;
 }
 
+.doctorIntro {
+  text-align: center;
+  margin-bottom: $spacer-8;
+}
+
 .doctor {
   display: flex;
   margin-bottom: $spacer-12;
@@ -156,9 +161,14 @@
   }
 }
 
-.postsTitle {
-  margin-bottom: $spacer-8;
+.testimonialFooter {
+  margin-top: $spacer-8;
   text-align: center;
+}
+
+.blogIntro {
+  text-align: center;
+  margin-bottom: $spacer-8;
 }
 
 .post {
@@ -210,11 +220,13 @@
   display: flex;
   margin: $spacer-8 0 0 0;
   padding: unset;
+  justify-content: center;
   text-align: left;
 
   input {
     color: $font-color;
     margin: 0 $spacer-4 0 0;
+    width: 300px;
 
     &:focus {
       border: $border;

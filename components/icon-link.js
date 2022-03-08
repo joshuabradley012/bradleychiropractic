@@ -6,7 +6,15 @@ import Icon from './icon';
 
 import styles from '../styles/icon-link.module.scss';
 
-export default function IconLink({ active, children, className, href, type, ...rest }) {
+export default function IconLink({
+  active,
+  children,
+  className,
+  href,
+  layout = 'left',
+  type,
+  ...rest
+}) {
   const [isActive, setActive] = useState(false);
 
   const handleMouseEnter = () => setActive(true);
@@ -24,8 +32,9 @@ export default function IconLink({ active, children, className, href, type, ...r
         onMouseLeave={handleMouseLeave}
         {...rest}
       >
-        <Icon type={type} />
+        {layout === 'left' ? <Icon type={type} className={styles.iconLeft} /> : null}
         {children ? <span className={styles.text}>{children}</span> : null}
+        {layout === 'right' ? <Icon type={type} className={styles.iconRight} /> : null}
       </a>
     </Link>
   );
