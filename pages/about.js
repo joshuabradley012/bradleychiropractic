@@ -11,7 +11,11 @@ export default function About() {
         <div className="row justify-content-center">
           <div className="col-8">
             <div className={styles.videoWrapper}>
-              <iframe src="https://www.youtube.com/embed/MT5TtVhd568?controls=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe
+                src="https://www.youtube.com/embed/MT5TtVhd568?controls=0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen={true}
+              ></iframe>
             </div>
           </div>
         </div>
