@@ -7,17 +7,17 @@ import IconLink from '../components/icon-link';
 
 import styles from '../styles/home.module.scss';
 
-import heroImage from '../public/placeholder.png';
-import team from '../public/placeholder.png';
+import heroImage from '../public/front-office-angled.png';
+import team from '../public/adjustment-room.png';
 import chiropractic from '../public/placeholder.png';
 import decompression from '../public/placeholder.png';
 import exercise from '../public/placeholder.png';
 import massage from '../public/placeholder.png';
 import nutrition from '../public/placeholder.png';
-import doctorImage from '../public/placeholder.png';
-import post1 from '../public/placeholder.png';
-import post2 from '../public/placeholder.png';
-import post3 from '../public/placeholder.png';
+import doctorImage from '../public/dr-bradley.png';
+import post1 from '../public/stemcell.png';
+import post2 from '../public/letting-go.png';
+import post3 from '../public/movement.png';
 
 const hero = {
   headline: <>Bakersfield&rsquo;s <br className="d-none d-md-inline"/>Best Chiropractor</>,
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="row justify-content-center">
             <div className="col-5 d-flex">
               <div className={styles.mapContent}>
-                <div className="content">
+                <div className={cn('content', styles.mapContentInner)}>
                   <h2>{directions.headline}</h2>
                   <p>{directions.caption}</p>
                   <h3>{directions.officeHoursHeadline}</h3>
@@ -192,11 +192,14 @@ export default function Home() {
         <div className="container">
           <div className="row justify-content-center">
             <div className={cn('col-8 content text-center', styles.servicesIntro)}>
-              <Image
-                src={team}
-                alt="Bradley Chiropractic Team"
-                className={styles.teamImage}
-              />
+              <div className={styles.teamImageWrapper}>
+                <Image
+                  src={team}
+                  alt="Bradley Chiropractic Team"
+                  className={styles.teamImage}
+                  layout="fill"
+                />
+              </div>
               <h2>{services.headline}</h2>
               <p>{services.caption}</p>
               <IconLink
