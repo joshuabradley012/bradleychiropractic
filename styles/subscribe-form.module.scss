@@ -1,0 +1,27 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.subscribe {
+  text-align: center;
+}
+
+.subscribeForm {
+  background: transparent;
+  border-radius: unset;
+  display: flex;
+  margin: $spacer-8 0 0 0;
+  padding: unset;
+  justify-content: center;
+  text-align: left;
+
+  input {
+    color: $font-color;
+    margin: 0 $spacer-4 0 0;
+    width: 300px;
+
+    &:focus {
+      border: $border;
+    }
+  }
+}
+

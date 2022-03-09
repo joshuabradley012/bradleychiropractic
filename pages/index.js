@@ -4,6 +4,7 @@ import cn from 'classnames';
 
 import Icon from '../components/icon';
 import IconLink from '../components/icon-link';
+import SubscribeForm from '../components/subscribe-form';
 
 import styles from '../styles/home.module.scss';
 
@@ -116,11 +117,6 @@ const blog = {
       image: post3,
     },
   ],
-};
-
-const subscribe = {
-  headline: 'Become a subscriber today!',
-  caption: 'Sign up to receive our newsletter where we share tips, special offers, and our latest content. We are dedicated to helping you achieve a higher state of health.',
 };
 
 export default function Home() {
@@ -252,8 +248,8 @@ export default function Home() {
               </div>
             </div>
             <div className="col-12">
-              <div className={styles.doctor}>
-                <div className={styles.doctorLeft}>
+              <div className={cn('row', styles.doctor)}>
+                <div className="col-4">
                   <div className={styles.doctorImageWrapper}>
                     <Image
                       src={doctorImage}
@@ -262,7 +258,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className={styles.doctorRight}>
+                <div className={cn('col-8', styles.doctorRight)}>
                   <div className="content">
                     <p className="quote">{doctor.quote}</p>
                     <p>{doctor.source}</p>
@@ -335,22 +331,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section blue">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-8">
-              <div className={cn('content', styles.subscribe)}>
-                <h2>{subscribe.headline}</h2>
-                <p>{subscribe.caption}</p>
-                <form className={styles.subscribeForm}>
-                  <input type="text" placeholder="Email" />
-                  <button className="secondary" type="submit">Subscribe</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SubscribeForm />
     </>
   );
 }

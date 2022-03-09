@@ -108,6 +108,12 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  &:hover {
+    .serviceName {
+      color: $secondary;
+    }
+  }
 }
 
 .serviceImageWrapper {
@@ -132,6 +138,7 @@
   font-weight: 500;
   margin-top: $spacer-4;
   text-transform: uppercase;
+  transition: color $transition-time;
 }
 
 .doctorIntro {
@@ -142,11 +149,6 @@
 .doctor {
   display: flex;
   margin-bottom: $spacer-12;
-}
-
-.doctorLeft {
-  flex: 0 0 25%;
-  margin-right: $spacer-12;
 }
 
 .doctorRight {
@@ -228,30 +230,6 @@
 
   h3 {
     transition: color $transition-time;
-  }
-}
-
-.subscribe {
-  text-align: center;
-}
-
-.subscribeForm {
-  background: transparent;
-  border-radius: unset;
-  display: flex;
-  margin: $spacer-8 0 0 0;
-  padding: unset;
-  justify-content: center;
-  text-align: left;
-
-  input {
-    color: $font-color;
-    margin: 0 $spacer-4 0 0;
-    width: 300px;
-
-    &:focus {
-      border: $border;
-    }
   }
 }
 
