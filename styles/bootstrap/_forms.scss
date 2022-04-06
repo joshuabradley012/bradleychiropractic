@@ -65,17 +65,17 @@ textarea,
   color: $black;
   display: block;
   font-family: $main-font;
-  height: $spacer-10;
+  height: $spacer-12;
   line-height: 1;
-  padding: ($spacer-3 - $border-width * 2) $spacer-2;
+  padding: ($spacer-4 - $border-width * 2);
   width: 100%;
 
   &:focus {
     border-color: $secondary;
-    border-top-width: $spacer-0_5;
-    border-right-width: $spacer-0_5;
-    border-bottom-width: $spacer-0_5;
-    border-left-width: $spacer-0_5;
+    border-top-width: $border-width * 2;
+    border-right-width: $border-width * 2;
+    border-bottom-width: $border-width * 2;
+    border-left-width: $border-width * 2;
     box-shadow: unset;
   }
 }
@@ -104,7 +104,7 @@ button,
   font-size: $font-size-md;
   font-weight: 500;
   line-height: 1;
-  padding: $spacer-3 $spacer-6;
+  padding: $btn-padding;
   text-align: center;
   text-decoration: none;
   transition: $transition-all;
@@ -135,7 +135,7 @@ button,
   display: inline-block;
   font-size: $font-size-md;
   line-height: 1;
-  padding: $spacer-3 $spacer-6;
+  padding: $btn-padding;
   text-align: center;
   text-decoration: none;
   transition: $transition-all;

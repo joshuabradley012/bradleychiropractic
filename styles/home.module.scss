@@ -27,6 +27,7 @@
   display: flex;
   color: $black;
   font-weight: 500;
+  justify-content: center;
 }
 
 .icon {
@@ -100,7 +101,6 @@
 }
 
 .servicesIntro {
-  margin-bottom: $spacer-12;
 }
 
 .service {
@@ -141,16 +141,6 @@
   transition: color $transition-time;
 }
 
-.doctorIntro {
-  text-align: center;
-  margin-bottom: $spacer-8;
-}
-
-.doctor {
-  display: flex;
-  margin-bottom: $spacer-12;
-}
-
 .doctorRight {
   align-items: center;
   display: flex;
@@ -184,16 +174,6 @@
   }
 }
 
-.testimonialFooter {
-  margin-top: $spacer-8;
-  text-align: center;
-}
-
-.blogIntro {
-  text-align: center;
-  margin-bottom: $spacer-8;
-}
-
 .post {
   &:hover {
     .postContent {
@@ -225,7 +205,6 @@
 
 .postContent {
   color: $font-color;
-  padding: 0 $spacer-4;
   transition: color $transition-time;
 
   h3 {
@@ -239,18 +218,38 @@
   }
 }
 
+@include media-breakpoint-down(lg) {
+  .mapCol {
+    order: 1;
+    margin-bottom: $spacer-10;
+  }
+
+  .mapContentCol {
+    order: 2;
+  }
+}
+
 @include media-breakpoint-down(md) {
   .hero {
     text-align: left;
   }
 
   .title {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   .caption {
     font-size: $font-size;
-    margin: $spacer-4 0;
+    margin: $spacer-5 0;
+  }
+
+  .cta {
+    justify-content: flex-start;
   }
 }
 
+@include media-breakpoint-down(sm) {
+  .cta {
+    flex-wrap: wrap;
+  }
+}

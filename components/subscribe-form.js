@@ -12,8 +12,8 @@ export default function SubscribeForm() {
     <section className="section blue">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-8">
-            <div className={cn('content', styles.subscribe)}>
+          <div className="col-12 col-lg-8">
+            <div className="content text-left text-lg-center">
               <h2>{subscribe.headline}</h2>
               <p>{subscribe.caption}</p>
               <form className={styles.subscribeForm}>

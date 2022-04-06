@@ -9,7 +9,7 @@ h6, .h6 {
   font-family: $main-font;
   font-weight: 700;
   line-height: $line-height-sm;
-  margin: $spacer-8 0 $spacer-4;
+  margin: $spacer-10 0 $spacer-5;
 }
 
 h1, .h1 {
@@ -62,7 +62,7 @@ a:focus {
 }
 
 p {
-  margin: $spacer-4 0;
+  margin: $spacer-5 0;
 
   a:not(.btn) {
     color: $secondary;
@@ -78,7 +78,7 @@ cite {
 
 blockquote {
   font-style: italic;
-  margin: $spacer-4 $spacer-5;
+  margin: $spacer-5;
 
   cite {
     display: block;
@@ -103,7 +103,7 @@ data::after {
 }
 
 figure {
-  margin: $spacer-4 0;
+  margin: $spacer-5 0;
   text-align: center;
 }
 
@@ -113,7 +113,7 @@ figcaption {
     font-size: $font-size-sm;
     font-weight: 400;
     text-transform: none;
-    margin: $spacer-2 0 $spacer-4;
+    margin: $spacer-2 0 $spacer-5;
   }
 }
 
@@ -129,7 +129,7 @@ hr {
 
 ul,
 ol {
-  padding: 0 0 0 $spacer-5;
+  padding: 0 0 0 $spacer-6;
 
   li {
     margin: $spacer-1 0;

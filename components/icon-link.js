@@ -32,9 +32,9 @@ export default function IconLink({
         onMouseLeave={handleMouseLeave}
         {...rest}
       >
-        {layout === 'left' ? <Icon type={type} className={styles.iconLeft} /> : null}
-        {children ? <span className={styles.text}>{children}</span> : null}
-        {layout === 'right' ? <Icon type={type} className={styles.iconRight} /> : null}
+        {layout === 'left' && <Icon type={type} className={styles.iconLeft} />}
+        {children && <span className={styles.text}>{children}</span>}
+        {layout === 'right' && <Icon type={type} className={styles.iconRight} />}
       </a>
     </Link>
   );

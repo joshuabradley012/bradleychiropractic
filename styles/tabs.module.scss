@@ -1,0 +1,48 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.tabs {
+  margin-top: $spacer-8;
+}
+
+.tabHeader {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$spacer-2);
+}
+
+.tab {
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-size: $font-size-md;
+  margin-bottom: $spacer-4;
+  padding-left: $spacer-2;
+  padding-right: $spacer-2;
+}
+
+.tabInner {
+  background: $gray-100;
+  color: $primary;
+  border-radius: $border-radius-lg;
+  padding: $spacer-3 $spacer-6;
+  text-align: center;
+  transition: $transition-time;
+}
+
+.tabActive {
+  background: $secondary;
+  color: $white;
+}
+
+.tabContent {
+  background: $gray-100;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  padding: $spacer-8;
+}
+
+@include media-breakpoint-down(sm) {
+  .tab {
+    width: 100%;
+  }
+}

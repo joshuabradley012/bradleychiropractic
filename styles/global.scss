@@ -9,10 +9,10 @@ span[style^="box-sizing:border-box;display:inline-block"] {
 .btn,
 button {
   &.secondary {
-    border: 1px solid $border-color;
+    border: $border-width solid $border-color;
     background-color: $white;
     color: $primary;
-    padding: calc(#{$spacer-3} - .1rem) calc(#{$spacer-6} - .1rem);
+    padding: calc(#{$spacer-4} - #{$border-width}) calc(#{$spacer-8} - #{$border-width});
 
     &:hover {
       background-color: $gray-300;
@@ -29,6 +29,24 @@ button {
 
     &:hover {
       color: $primary;
+    }
+  }
+}
+
+main {
+  @include media-breakpoint-down(sm) {
+    .btn,
+    button {
+      width: 100%;
+    }
+
+    // & + & is not working here
+    .btn + .btn,
+    button + button,
+    .btn + button,
+    button + .btn {
+      margin-left: 0;
+      margin-top: $spacer-5;
     }
   }
 }
@@ -75,7 +93,7 @@ button {
   }
 
   @include media-breakpoint-down(md) {
-    padding: $spacer-8 0;
+    padding: $spacer-12 0;
   }
 }
 
@@ -83,6 +101,7 @@ button {
   font-family: $sub-font;
   font-style: italic;
   font-size: 1.5em;
+  margin: $spacer-8 0;
 
   &::before {
     content: '"';

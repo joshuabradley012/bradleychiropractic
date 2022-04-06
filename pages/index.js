@@ -22,7 +22,7 @@ import post3 from '../public/movement.png';
 
 const hero = {
   headline: <>Bakersfield&rsquo;s <br className="d-none d-md-inline"/>Best Chiropractor</>,
-  caption: "Bradley Chiropractic Nutrition Center has made a name for itself by helping thousands of patients get out of pain. With a doctor and staff who authentically care about your well-being, we look forward to helping you down the road towards better health.",
+  caption: `Bradley Chiropractic Nutrition Center has made a name for itself by helping thousands of patients get out of pain. With a doctor and staff who authentically care about your well-being, we look forward to helping you.`,
 };
 
 const directions = {
@@ -33,9 +33,6 @@ const directions = {
   officeHours: <>9AM - 6PM, Monday - Thursday <br />9AM - 2PM, Friday</>,
   addressHeadline: 'Address',
   address: <>5001 Stockdale Hwy, <br/>Bakersfield, CA 93309</>,
-
-  values: {
-  }
 };
 
 const services = {
@@ -57,11 +54,6 @@ const services = {
       name: 'Corrective Exercise',
       image: exercise,
       href: '/services/corrective-exercise',
-    },
-    {
-      name: 'Massage',
-      image: massage,
-      href: '/services/massage',
     },
     {
       name: 'Nutrition',
@@ -152,7 +144,7 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-5 d-flex">
+            <div className={cn('col-12 col-lg-5 d-flex', styles.mapContentCol)}>
               <div className={styles.mapContent}>
                 <div className={cn('content', styles.mapContentInner)}>
                   <h2>{directions.headline}</h2>
@@ -169,7 +161,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-7">
+            <div className={cn('col-12 col-lg-7', styles.mapCol)}>
               <div className={styles.map}>
                 <div className={styles.mapInner}>
                   <iframe
@@ -186,8 +178,8 @@ export default function Home() {
       </section>
       <section className="section gray">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className={cn('col-8 content text-center', styles.servicesIntro)}>
+          <div className="row justify-content-center gy-8">
+            <div className={cn('col-12 col-lg-8 content text-left text-lg-center', styles.servicesIntro)}>
               <div className={styles.teamImageWrapper}>
                 <Image
                   src={team}
@@ -208,9 +200,9 @@ export default function Home() {
               </IconLink>
             </div>
             <div className="col-12">
-              <div className="row">
+              <div className="row gy-8">
                 {services.items.map(service => (
-                  <div className="col" key={service.name}>
+                  <div className="col-6 col-md" key={service.name}>
                     <Link href={service.href}>
                       <a className={styles.service}>
                         <span className={styles.serviceImageWrapper}>
@@ -233,8 +225,8 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-8">
-              <div className={cn('content', styles.doctorIntro)}>
+            <div className="col-12 col-lg-8 mb-8 mb-md-16">
+              <div className="content text-left text-lg-center">
                 <h2>{doctor.headline}</h2>
                 <p>{doctor.caption}</p>
                 <IconLink
@@ -247,9 +239,9 @@ export default function Home() {
                 </IconLink>
               </div>
             </div>
-            <div className="col-12">
-              <div className={cn('row', styles.doctor)}>
-                <div className="col-4">
+            <div className="col-12 mb-12">
+              <div className="row gy-8">
+                <div className="col-12 col-lg-4">
                   <div className={styles.doctorImageWrapper}>
                     <Image
                       src={doctorImage}
@@ -258,7 +250,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className={cn('col-8', styles.doctorRight)}>
+                <div className="col-12 col-lg-8 d-flex align-items-center">
                   <div className="content">
                     <p className="quote">{doctor.quote}</p>
                     <p>{doctor.source}</p>
@@ -267,9 +259,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row gy-8">
             {doctor.testimonials.map((testimonial, i) => (
-              <div className="col-4" key={i}>
+              <div className="col-12 col-lg-4" key={i}>
                 <div className={cn('content', styles.testimonial)}>
                   <p className="quote">{testimonial.quote}</p>
                   <p>{testimonial.source}</p>
@@ -277,7 +269,7 @@ export default function Home() {
               </div>
             ))}
             <div className="col-12">
-              <div className={cn('content', styles.testimonialFooter)}>
+              <div className="content text-left text-lg-center">
                 <IconLink
                   className="btn icon"
                   href="/testimonials"
@@ -294,8 +286,8 @@ export default function Home() {
       <section className="section gray">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-8">
-              <div className={cn('content', styles.blogIntro)}>
+            <div className="col-12 col-lg-8 mb-8">
+              <div className="content text-left text-lg-center">
                 <h2>{blog.headline}</h2>
                 <IconLink
                   className="btn icon"
@@ -308,9 +300,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="row justify-content-center">
+          <div className="row justify-content-center gy-8">
             {blog.posts.map(post => (
-              <div className="col-4" key={post.title}>
+              <div className="col-12 col-lg-4" key={post.title}>
                 <Link href={post.href}>
                   <a className={styles.post}>
                     <div className={styles.postImageWrapper}>
