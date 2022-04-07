@@ -38,7 +38,9 @@ export default function Tabs({ tabs }) {
         ))}
       </div>
       <div className={cn('content', styles.tabContent)}>
-        <ReactMarkdown children={tabs[activeTab]?.content} />
+        <ReactMarkdown>
+          {tabs[activeTab]?.content}
+        </ReactMarkdown>
       </div>
     </div>
   );

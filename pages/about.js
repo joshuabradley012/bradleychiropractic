@@ -204,7 +204,9 @@ export default function About() {
             </div>
             <div className="col-12 col-lg-8">
               <h1 className="text-left text-lg-center">{content.headline}</h1>
-              <ReactMarkdown children={content.text} />
+              <ReactMarkdown>
+                {content.text}
+              </ReactMarkdown>
               <Tabs tabs={content.faqs} />
             </div>
           </div>
