@@ -9,13 +9,11 @@ span[style^="box-sizing:border-box;display:inline-block"] {
 .btn,
 button {
   &.secondary {
-    border: $border-width solid $border-color;
-    background-color: $white;
+    background-color: $gray-300;
     color: $primary;
-    padding: calc(#{$spacer-4} - #{$border-width}) calc(#{$spacer-8} - #{$border-width});
 
     &:hover {
-      background-color: $gray-300;
+      background-color: $gray-500;
     }
   }
 

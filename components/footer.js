@@ -14,7 +14,7 @@ export default function Footer() {
       <div className={styles.bottomBar}>
         <div className={cn('container', styles.bottomBarContainer)}>
           <div className={styles.bottomBarLinks}>
-            <span className={styles.copyright}>&copy; {year} Bradley Chiropractic</span>
+            <span className={styles.copyright}>&copy; {year} Bradley Chiropractic Nutrition Center</span>
             <Link href="/privacy">
               <a>Privacy Policy</a>
             </Link>

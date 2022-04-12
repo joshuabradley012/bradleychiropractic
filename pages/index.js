@@ -30,7 +30,7 @@ const directions = {
   caption: 'On your first visit, we will have a sit down consultation to create a specialized wellness plan for you.',
   cta: 'Learn more',
   officeHoursHeadline: 'Office Hours',
-  officeHours: <>9AM - 6PM, Monday - Thursday <br />9AM - 2PM, Friday</>,
+  officeHours: <>9AM - 6PM, Monday - Thursday <br />9AM - 12PM, Friday</>,
   addressHeadline: 'Address',
   address: <>5001 Stockdale Hwy, <br/>Bakersfield, CA 93309</>,
 };
