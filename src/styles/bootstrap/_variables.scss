@@ -1,0 +1,204 @@
+@use "functions" as *;
+
+$variable-prefix: b-;
+$enable-important-utilities: false;
+
+$white: #fff;
+$gray: #adb5bd;
+$gray-100: #f1f2f1;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: $gray;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+
+$blue: #0087c8;
+$blue-300: shade-color($blue, 30%);
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray-light": $gray-100,
+  "gray": $gray-600,
+  "gray-dark": $gray-800
+);
+
+$primary: $black;
+$secondary: $blue;
+$secondary-hover: $blue-300;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+$box-shadow-1: 0 1px 2px 0 rgba($black, 0.05);
+$box-shadow-2: 0 1px 3px 0 rgba($black, 0.1), 0 1px 2px 0 rgba($black, 0.06);
+$box-shadow-3: 0 4px 6px -1px rgba($black, 0.1), 0 2px 4px -1px rgba($black, 0.06);
+$box-shadow-4: 0 5px 15px -3px rgba($black, 0.1), 0 4px 6px -2px rgba($black, 0.05);
+$box-shadow-5: 0 10px 25px -5px rgba($black, 0.1), 0 10px 10px -5px rgba($black, 0.04);
+$box-shadow-6: 0 12px 50px -12px rgba($black, 0.25);
+$box-shadow-inset: 0 2px 4px 0 inset rgba($black, 0.06);
+
+$shadows: (
+  1: $box-shadow-1,
+  2: $box-shadow-2,
+  3: $box-shadow-3,
+  4: $box-shadow-4,
+  5: $box-shadow-5,
+  6: $box-shadow-6,
+  inset: $box-shadow-inset,
+);
+
+$main-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$sub-font: 'Iowan Old Style', 'Apple Garamond', 'Baskerville', 'Times New Roman', 'Droid Serif', 'Times', 'Source Serif Pro', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$mono-font: 'Menlo', 'Consolas', 'Monaco', 'Liberation Mono', 'Lucida Console', monospace;
+$font-size-lg: 2.4rem;
+$font-size: 1.8rem;
+$font-size-md: 1.6rem;
+$font-size-sm: 1.2rem;
+$font-color: $gray-700;
+
+$line-height: 1.375;
+$line-height-sm: 1.1;
+
+$transition-time: .35s ease-in-out;
+$transition-all: all $transition-time;
+
+$spacer: .4rem;
+
+$spacer-0_25: $spacer * 0.25;
+$spacer-0_5: $spacer * 0.5;
+$spacer-1: $spacer;
+$spacer-1_5: $spacer * 1.5;
+$spacer-2: $spacer * 2;
+$spacer-2_5: $spacer * 2.5;
+$spacer-3: $spacer * 3;
+$spacer-3_5: $spacer * 3.5;
+$spacer-4: $spacer * 4;
+$spacer-5: $spacer * 5;
+$spacer-6: $spacer * 6;
+$spacer-7: $spacer * 7;
+$spacer-8: $spacer * 8;
+$spacer-9: $spacer * 9;
+$spacer-10: $spacer * 10;
+$spacer-11: $spacer * 11;
+$spacer-12: $spacer * 12;
+$spacer-13: $spacer * 13;
+$spacer-14: $spacer * 14;
+$spacer-15: $spacer * 15;
+$spacer-16: $spacer * 16;
+
+$spacers: (
+  0: 0,
+  0_25: $spacer-0_25,
+  0_5: $spacer-0_5,
+  1: $spacer-1,
+  1_5: $spacer-1_5,
+  2: $spacer-2,
+  2_5: $spacer-2_5,
+  3: $spacer-3,
+  3_5: $spacer-3_5,
+  4: $spacer-4,
+  5: $spacer-5,
+  6: $spacer-6,
+  7: $spacer-7,
+  8: $spacer-8,
+  9: $spacer-9,
+  10: $spacer-10,
+  11: $spacer-11,
+  12: $spacer-12,
+  13: $spacer-13,
+  14: $spacer-14,
+  15: $spacer-15,
+  16: $spacer-16,
+);
+
+$negative-spacers: negativify-map($spacers);
+
+$border-width: $spacer-0_25;
+$border: $border-width solid $gray-500;
+$border-radius: $spacer-1;
+$border-radius-lg: $spacer-4;
+$border-color: $gray-300;
+
+$btn-padding: $spacer-4 $spacer-8;
+
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+$grid-columns: 12;
+$grid-row-columns: 6;
+$grid-gutter-width: $spacer-12;
+$container-padding-x: $grid-gutter-width * .5;
+
+$gutters: $spacers;
+

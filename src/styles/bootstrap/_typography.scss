@@ -1,0 +1,159 @@
+@use "variables" as * ;
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $main-font;
+  font-weight: 700;
+  line-height: $line-height-sm;
+  margin: $spacer-10 0 $spacer-5;
+}
+
+h1, .h1 {
+  color: $black;
+  font-size: 2.5em;
+}
+
+h2, .h2 {
+  color: $black;
+  font-size: 2em;
+}
+
+h3, .h3 {
+  color: $black;
+  font-size: 1.2em;
+}
+
+h4, .h4 {
+  color: $black;
+  font-size: 1em;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+h5, .h5 {
+  color: $gray-600;
+  font-size: 1em;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+h6, .h6 {
+  color: $gray-600;
+  font-size: $font-size-sm;
+  font-weight: 400;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+a {
+  color: $secondary;
+  pointer-events: all;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+p {
+  margin: $spacer-5 0;
+
+  a:not(.btn) {
+    color: $secondary;
+    position: relative;
+    text-decoration: none;
+  }
+}
+
+cite {
+  color: $gray-600;
+  font-size: $font-size-sm;
+}
+
+blockquote {
+  font-style: italic;
+  margin: $spacer-5;
+
+  cite {
+    display: block;
+    font-style: normal;
+    margin: $spacer-2 0 0 ;
+  }
+}
+
+code {
+  color: $black;
+  font-family: $mono-font;
+}
+
+data::after {
+  content: ' (ID ' attr(value) ')';
+  display: none;
+  font-size: $font-size-sm;
+
+  &:hover {
+    display: inline;
+  }
+}
+
+figure {
+  margin: $spacer-5 0;
+  text-align: center;
+}
+
+figcaption {
+  > * {
+    color: $gray-600;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    text-transform: none;
+    margin: $spacer-2 0 $spacer-5;
+  }
+}
+
+del {
+  color: $gray-600;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $gray-500;
+  margin: $spacer-8 0;
+}
+
+ul,
+ol {
+  padding: 0 0 0 $spacer-6;
+
+  li {
+    margin: $spacer-1 0;
+  }
+}
+
+// Mathjax
+mjx-container {
+  overflow: scroll;
+}
+
+pre {
+  background: $white !important;
+  overflow: scroll;
+  padding: 0;
+
+  code {
+    background: transparent;
+    padding: 0;
+  }
+}
+
+var {
+  font-family: $sub-font;
+  font-weight: 600;
+}
+

@@ -1,0 +1,6 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.image-wrapper {
+  margin-bottom: $spacer-12;
+}

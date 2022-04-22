@@ -1,0 +1,40 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.subscribeForm {
+  background: transparent;
+  border-radius: unset;
+  display: flex;
+  margin: $spacer-8 0 0 0;
+  padding: unset;
+  justify-content: center;
+  text-align: left;
+
+  input {
+    color: $font-color;
+    margin: 0 $spacer-6 0 0;
+    width: 300px;
+
+    &:focus {
+      border: $border;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .subscribeForm {
+    input {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .subscribeForm {
+    flex-wrap: wrap;
+
+    input {
+      margin: 0 0 $spacer-5 0;
+    }
+  }
+}

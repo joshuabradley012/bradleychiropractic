@@ -1,0 +1,24 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.social {
+  align-items: center;
+  display: flex;
+
+  a {
+    margin: 0 $spacer-2;
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  :first-child {
+    margin-left: 0;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+}

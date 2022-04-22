@@ -1,0 +1,64 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.bottomBar {
+  background: $white;
+  font-size: $font-size-sm;
+  padding: $spacer-4 0;
+}
+
+.bottomBarContainer {
+  align-items: center;
+  display: flex;
+}
+
+.bottomBarLinks {
+  a {
+    margin: 0 $spacer-2;
+    color: $primary;
+    font-weight: 700;
+    transition: color $transition-time;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.copyright {
+  color: $gray-600;
+  margin-right: $spacer-2;
+}
+
+.bottomBarSocial {
+  margin-left: auto;
+}
+
+@include media-breakpoint-down(md) {
+  .bottomBarContainer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bottomBarLinks {
+    flex: 0 0 100%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin: 0 0 $spacer-4;
+      order: 1;
+    }
+  }
+
+  .copyright {
+    order: 2;
+  }
+
+  .bottomBarSocial {
+    margin-bottom: $spacer-4;
+    margin-left: 0;
+    order: 1;
+  }
+}

@@ -1,0 +1,50 @@
+@use "variables" as *;
+
+html {
+  box-sizing: border-box;
+  color: $gray-700;
+  font-family: $main-font;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  border-color: $secondary;
+  box-shadow: 0 0 0 $spacer-1 rgba($secondary, 25%);
+  outline: 0;
+}
+
+body {
+  background: $white;
+  font-size: $font-size;
+}
+
+img,
+[type="image"] {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+label[hidden] {
+  display: inline;
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute!important;
+  width: 1px;
+  word-wrap: normal!important;
+}
+
+svg {
+  fill: currentColor;
+  height: 100%;
+  width: 100%;
+}
+
