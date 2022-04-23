@@ -73,7 +73,7 @@
 }
 
 .mapContentInner {
-  margin-bottom: $spacer-8;
+  margin-bottom: $spacer-12;
 }
 
 .mapCta {
@@ -148,7 +148,7 @@
 }
 
 .doctorImageWrapper {
-  border-radius: $border-radius-lg;
+  border-radius: 50%;
   position: relative;
   overflow: hidden;
 
@@ -187,7 +187,7 @@
 
 .postImageWrapper {
   border-radius: $border-radius-lg;
-  margin-bottom: $spacer-5;
+  margin-bottom: $spacer-6;
   overflow: hidden;
   position: relative;
 

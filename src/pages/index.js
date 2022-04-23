@@ -177,7 +177,7 @@ export default function Home() {
       </section>
       <section className="section gray">
         <div className="container">
-          <div className="row justify-content-center gy-8">
+          <div className="row justify-content-center gy-12">
             <div className={cn('col-12 col-lg-8 content text-left text-lg-center', styles.servicesIntro)}>
               <div className={styles.teamImageWrapper}>
                 <Image
@@ -224,7 +224,7 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8 mb-8 mb-md-16">
+            <div className="col-12 col-lg-8 mb-8 mb-md-12">
               <div className="content text-left text-lg-center">
                 <h2>{doctor.headline}</h2>
                 <p>{doctor.caption}</p>
@@ -285,7 +285,7 @@ export default function Home() {
       <section className="section gray">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8 mb-8">
+            <div className="col-12 col-lg-8 mb-12">
               <div className="content text-left text-lg-center">
                 <h2>{blog.headline}</h2>
                 <IconLink

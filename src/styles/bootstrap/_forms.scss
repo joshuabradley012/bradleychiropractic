@@ -4,8 +4,8 @@
 form {
   background: $white;
   border-radius: $border-radius-lg;
-  margin: $spacer-8 0;
-  padding: $spacer-8;
+  margin: $spacer-9 0;
+  padding: $spacer-9;
 
   @include media-breakpoint-down(sm) {
     border-radius: 0;
