@@ -25,9 +25,9 @@
 .logo {
   border-radius: 50%;
   display: block;
-  height: 64px;
+  height: 60px;
   overflow: hidden;
-  width: 64px;
+  width: 60px;
   margin-right: $spacer-4;
 }
 
@@ -53,11 +53,6 @@
 }
 
 @include media-breakpoint-down(md) {
-  .logo {
-    width: 52px;
-    height: 52px;
-  }
-
   .hamburger {
     display: block;
   }

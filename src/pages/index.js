@@ -251,7 +251,7 @@ export default function Home() {
                 </div>
                 <div className="col-12 col-lg-8 d-flex align-items-center">
                   <div className="content">
-                    <p className="quote">{doctor.quote}</p>
+                    <blockquote>{doctor.quote}</blockquote>
                     <p>{doctor.source}</p>
                   </div>
                 </div>
@@ -262,7 +262,7 @@ export default function Home() {
             {doctor.testimonials.map((testimonial, i) => (
               <div className="col-12 col-lg-4" key={i}>
                 <div className={cn('content', styles.testimonial)}>
-                  <p className="quote">{testimonial.quote}</p>
+                  <blockquote>{testimonial.quote}</blockquote>
                   <p>{testimonial.source}</p>
                 </div>
               </div>
