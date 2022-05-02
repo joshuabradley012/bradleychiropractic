@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
+
 import markdown from '@/lib/markdown';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 
@@ -24,7 +25,7 @@ export default function Post({ post, morePosts, preview }) {
     <>
       <Head>
         <title>{post.title} | BCNC Blog</title>
-        <meta property="og:image" content={post.ogImage.url} />
+        <meta property="og:image" content={post.coverImage} />
       </Head>
       <section className="section pt-0">
         <div className="container">
@@ -76,11 +77,10 @@ export async function getStaticProps({ params }) {
     'slug',
     'author',
     'content',
-    'ogImage',
     'coverImage',
-  ])
+  ]);
 
-  const content = await markdown(post.content || '')
+  const content = await markdown(post.content || '');
 
   return {
     props: {
@@ -89,11 +89,11 @@ export async function getStaticProps({ params }) {
         content,
       },
     },
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug']);
 
   return {
     paths: posts.map((post) => {
@@ -104,5 +104,5 @@ export async function getStaticPaths() {
       }
     }),
     fallback: false,
-  }
+  };
 }

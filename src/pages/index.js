@@ -2,9 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
 
+import { getAllPosts } from '@/lib/api';
+
 import Icon from '@/components/icon';
 import IconLink from '@/components/icon-link';
 import SubscribeForm from '@/components/subscribe-form';
+import BlogCards from '@/components/blog-cards';
 
 import styles from '@/styles/home.module.scss';
 
@@ -88,29 +91,10 @@ const doctor = {
 const blog = {
   headline: 'Learn More About Health',
   cta: 'Read our articles',
-  posts: [
-    {
-      title: 'Stem Cells: Should you believe the hype?',
-      description: 'Is it possible you are paying for dead stem cells?',
-      href: '/blog/stem-cells-should-you-believe-the-hype',
-      image: post1,
-    },
-    {
-      title: 'Letting Go',
-      description: 'How can letting go help a sports injury heal?',
-      href: '/blog/letting-go',
-      image: post2,
-    },
-    {
-      title: 'Movement is Life, Life is Movement',
-      description: 'Learn how to improve your overall health through better movement.',
-      href: '/blog/movement-is-life-life-is-movement',
-      image: post3,
-    },
-  ],
+  ctaLink: '/blog',
 };
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <section className="section">
@@ -290,7 +274,7 @@ export default function Home() {
                 <h2>{blog.headline}</h2>
                 <IconLink
                   className="btn icon"
-                  href="/blog"
+                  href={blog.ctaLink}
                   layout="right"
                   type="arrow"
                 >
@@ -299,30 +283,25 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="row justify-content-center gy-8">
-            {blog.posts.map(post => (
-              <div className="col-12 col-lg-4" key={post.title}>
-                <Link href={post.href}>
-                  <a className={styles.post}>
-                    <div className={styles.postImageWrapper}>
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        layout="fill"
-                      />
-                    </div>
-                    <div className={cn('content', styles.postContent)}>
-                      <h3>{post.title}</h3>
-                      <p>{post.description}</p>
-                    </div>
-                  </a>
-                </Link>
-              </div>
-            ))}
-          </div>
+          <BlogCards content={posts} />
         </div>
       </section>
       <SubscribeForm />
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const posts = getAllPosts([
+    'title',
+    'excerpt',
+    'slug',
+    'coverImage',
+  ], 3);
+
+  return {
+    props: {
+      posts: posts,
+    }
+  };
 }

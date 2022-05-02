@@ -7,8 +7,6 @@ category: 'health'
 author:
   name: Dr. Brendon Bradley
   image: '/dr-bradley.png'
-ogImage:
-  url: '/letting-go.png'
 ---
 
 For those who don’t know this about me, I must admit that I am a huge fan of mixed martial arts (MMA), and particularly the UFC. I know that for some this seems controversial because of the violent nature of the sport. For the sake of avoiding an argument and distracting from the intent of this article, let me just say that I believe that two consenting adults should be allowed to engage in a contact sport, and that although, yes there is no doubt that it is brutal and violent, they are willingly participating. Having said that, in my opinion there is not any other sport like it, the physical and psychological demands of the sport are extreme with absolutely no room for error. It is the purest form of competition out there, one that requires an athlete to absolutely live in the “now”.

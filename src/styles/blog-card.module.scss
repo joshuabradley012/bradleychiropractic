@@ -1,0 +1,40 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.post {
+  &:hover {
+    .postContent {
+      color: $secondary;
+
+      h3 {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.postImageWrapper {
+  border-radius: $border-radius-lg;
+  margin-bottom: $spacer-6;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.postContent {
+  color: $font-color;
+  transition: color $transition-time;
+
+  h3 {
+    transition: color $transition-time;
+  }
+}

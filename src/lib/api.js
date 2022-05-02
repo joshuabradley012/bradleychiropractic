@@ -21,6 +21,7 @@ export function getPostBySlug(slug, fields = []) {
     if (field === 'slug') {
       items[field] = realSlug
     }
+
     if (field === 'content') {
       items[field] = content
     }
@@ -33,8 +34,13 @@ export function getPostBySlug(slug, fields = []) {
   return items
 }
 
-export function getAllPosts(fields = []) {
-  const slugs = getPostSlugs()
+export function getAllPosts(fields = [], count) {
+  let slugs = getPostSlugs()
+
+  if (count > 0) {
+    slugs = slugs.slice(0, count);
+  }
+
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
