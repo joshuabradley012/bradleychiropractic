@@ -2,7 +2,7 @@
 title: 'Letting Go'
 excerpt: 'How can letting go help a sports injury heal?'
 coverImage: '/letting-go.png'
-date: '2020-03-16T05:35:07.322Z'
+date: '2017-02-13T05:35:07.322Z'
 category: 'health'
 author:
   name: Dr. Brendon Bradley

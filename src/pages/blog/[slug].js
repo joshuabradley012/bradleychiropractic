@@ -41,6 +41,7 @@ export default function Post({ post, morePosts, preview }) {
                   src={post.coverImage}
                   width={1272}
                   height={715}
+                  layout="fill"
                 />
               </div>
             </div>
@@ -49,8 +50,8 @@ export default function Post({ post, morePosts, preview }) {
                 <div className={styles.authorImage}>
                   <Image
                     src={post.author.image}
-                    width={120}
-                    height={120}
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <small className={styles.author}>{post.author.name}</small>

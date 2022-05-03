@@ -15,7 +15,6 @@
 
 .postImageWrapper {
   border-radius: $border-radius-lg;
-  margin-bottom: $spacer-6;
   overflow: hidden;
   position: relative;
 
@@ -32,6 +31,7 @@
 
 .postContent {
   color: $font-color;
+  padding-top: $spacer-6;
   transition: color $transition-time;
 
   h3 {

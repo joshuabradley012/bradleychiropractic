@@ -2,9 +2,20 @@
 @use 'bootstrap/mixins/breakpoints' as *;
 
 .imageWrapper {
+  border-radius: $border-radius-lg;
   margin: $spacer-12 0;
   overflow: hidden;
-  border-radius: $border-radius-lg;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  img {
+    object-fit: cover;
+  }
 }
 
 .excerpt {

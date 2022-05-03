@@ -103,6 +103,7 @@ export default function Home({ posts }) {
             src={heroImage}
             alt="Bradley Chiropractic Hero Image"
             layout="fill"
+            priority={true}
           />
         </div>
         <div className="container">

@@ -1,8 +1,8 @@
 ---
 title: 'Movement is Life, Life is Movement'
-excerpt: 'Learn hot to improve your overall health through better movement.'
+excerpt: 'Learn how to improve your overall health through better movement.'
 coverImage: '/movement.png'
-date: '2020-03-16T05:35:07.322Z'
+date: '2017-02-27T05:35:07.322Z'
 category: 'health'
 author:
   name: Dr. Brendon Bradley
