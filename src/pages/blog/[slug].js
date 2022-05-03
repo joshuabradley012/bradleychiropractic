@@ -39,6 +39,7 @@ export default function Post({ post, morePosts, preview }) {
               <div className={styles.imageWrapper}>
                 <Image
                   src={post.coverImage}
+                  alt={`Cover image for: ${post.title}`}
                   width={1272}
                   height={715}
                   layout="fill"
@@ -50,6 +51,7 @@ export default function Post({ post, morePosts, preview }) {
                 <div className={styles.authorImage}>
                   <Image
                     src={post.author.image}
+                    alt={post.author.name}
                     width={60}
                     height={60}
                   />
