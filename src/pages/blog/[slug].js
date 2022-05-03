@@ -25,6 +25,8 @@ export default function Post({ post, morePosts, preview }) {
     <>
       <Head>
         <title>{post.title} | BCNC Blog</title>
+        <meta name="description" content={post.excerpt} />
+        <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.coverImage} />
       </Head>
       <section className="section pt-0">
