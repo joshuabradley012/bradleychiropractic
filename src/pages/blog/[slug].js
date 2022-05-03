@@ -42,8 +42,6 @@ export default function Post({ post, morePosts, preview }) {
                 <Image
                   src={post.coverImage}
                   alt={`Cover image for: ${post.title}`}
-                  width={1272}
-                  height={715}
                   layout="fill"
                 />
               </div>

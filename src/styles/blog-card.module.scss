@@ -2,6 +2,8 @@
 @use 'bootstrap/mixins/breakpoints' as *;
 
 .post {
+  display: block;
+
   &:hover {
     .postContent {
       color: $secondary;

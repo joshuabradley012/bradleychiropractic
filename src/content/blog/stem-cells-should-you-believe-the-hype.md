@@ -5,7 +5,7 @@ coverImage: '/stemcell.png'
 date: '2018-03-16T05:35:07.322Z'
 author:
   name: Dr. Brendon Bradley
-  picture: '/dr-bradley.png'
+  image: '/dr-bradley.png'
 ---
 
 Please let me begin by saying that I believe stem cell therapy is going to change the future of health and medicine in our near future. I am excited about the potential for healing with stem cell therapy and have been following the trend for quite some time. I look forward to the future of being able to reverse many chronic degenerative conditions with this incredible therapy. However, at this point in the United States, with regards to stem cell therapy, we need to take a long hard look to understand the landscape of what is the legitimate use stem cells and what is hype.
