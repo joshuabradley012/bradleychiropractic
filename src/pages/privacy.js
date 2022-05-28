@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import ReactMarkdown from 'react-markdown';
+
+import Markdown from '@/components/markdown';
 
 import content from '@/content/privacy';
 
@@ -15,9 +16,9 @@ export default function Privacy() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8">
-              <ReactMarkdown>
+              <Markdown>
                 {content.text}
-              </ReactMarkdown>
+              </Markdown>
             </div>
           </div>
         </div>

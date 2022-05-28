@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
 import cn from 'classnames';
 
+import Markdown from '@/components/markdown';
 import SubscribeForm from '@/components/subscribe-form';
 import Tabs from '@/components/tabs';
 
@@ -33,9 +33,9 @@ export default function About() {
             </div>
             <div className="col-12 col-lg-8">
               <h1 className="text-left text-lg-center">{content.headline}</h1>
-              <ReactMarkdown>
+              <Markdown>
                 {content.text}
-              </ReactMarkdown>
+              </Markdown>
               <Tabs tabs={content.faqs} />
             </div>
           </div>

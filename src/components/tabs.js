@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
 import cn from 'classnames';
 
+import Markdown from '@/components/markdown';
 import styles from '@/styles/tabs.module.scss';
 
 export default function Tabs({ tabs }) {
@@ -38,9 +38,9 @@ export default function Tabs({ tabs }) {
         ))}
       </div>
       <div className={cn('content', styles.tabContent)}>
-        <ReactMarkdown>
+        <Markdown>
           {tabs[activeTab]?.content}
-        </ReactMarkdown>
+        </Markdown>
       </div>
     </div>
   );
