@@ -7,10 +7,15 @@
   font-size: $font-size-md;
   line-height: 1;
   text-decoration: none;
+  transition: all $transition-time;
 
   &:focus {
     box-shadow: none;
   }
+}
+
+.active {
+  color: $primary;
 }
 
 .iconLeft {
@@ -19,9 +24,5 @@
 
 .iconRight {
   margin-left: $spacer-4;
-}
-
-.text {
-  transition: $transition-all;
 }
 

@@ -109,7 +109,7 @@ export default function Home({ posts, testimonials }) {
               <h2>{services.headline}</h2>
               <p>{services.caption}</p>
               <IconLink
-                className="btn icon"
+                className="icon-link"
                 href="/services"
                 layout="right"
                 type="arrow"
@@ -148,7 +148,7 @@ export default function Home({ posts, testimonials }) {
                 <h2>{doctor.headline}</h2>
                 <p>{doctor.caption}</p>
                 <IconLink
-                  className="btn icon"
+                  className="icon-link"
                   href="/about"
                   layout="right"
                   type="arrow"
@@ -184,7 +184,7 @@ export default function Home({ posts, testimonials }) {
             <div className="col-12">
               <div className="content text-left text-lg-center">
                 <IconLink
-                  className="btn icon"
+                  className="icon-link"
                   href="/testimonials"
                   layout="right"
                   type="arrow"
@@ -203,7 +203,7 @@ export default function Home({ posts, testimonials }) {
               <div className="content text-left text-lg-center">
                 <h2>{blog.headline}</h2>
                 <IconLink
-                  className="btn icon"
+                  className="icon-link"
                   href={blog.ctaLink}
                   layout="right"
                   type="arrow"

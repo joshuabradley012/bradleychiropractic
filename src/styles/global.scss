@@ -16,19 +16,12 @@ button {
       background-color: $gray-500;
     }
   }
+}
 
-  &.icon {
-    background-color: transparent;
-    border-radius: 0;
-    color: $secondary;
-    font-weight: 700;
-    font-size: $font-size;
-    padding: 0;
-
-    &:hover {
-      color: $primary;
-    }
-  }
+.icon-link {
+  font-weight: 700;
+  font-size: $font-size;
+  padding: 0;
 }
 
 main {

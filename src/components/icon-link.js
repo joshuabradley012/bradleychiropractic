@@ -33,7 +33,7 @@ export default function IconLink({
         {...rest}
       >
         {layout === 'left' && <Icon type={type} className={styles.iconLeft} />}
-        {children && <span className={styles.text}>{children}</span>}
+        {children && <span>{children}</span>}
         {layout === 'right' && <Icon type={type} className={styles.iconRight} />}
       </a>
     </Link>
