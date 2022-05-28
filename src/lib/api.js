@@ -1,41 +1,42 @@
-import fs from 'fs'
-import { join } from 'path'
-import matter from 'gray-matter'
+import fs from 'fs';
+import { join } from 'path';
+import matter from 'gray-matter';
 
-const postsDirectory = join(process.cwd(), 'src/content/blog')
+const postsDirectory = join(process.cwd(), 'src/content/blog');
+const testimonialsDirectory = join(process.cwd(), 'src/content/testimonials');
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory)
+function getSlugs(dir) {
+  return fs.readdirSync(dir);
 }
 
-export function getPostBySlug(slug, fields = []) {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
+function getBySlug(dir, slug, fields = []) {
+  const realSlug = slug.replace(/\.md$/, '');
+  const fullPath = join(dir, `${realSlug}.md`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const { data, content } = matter(fileContents);
 
-  const items = {}
+  const items = {};
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === 'slug') {
-      items[field] = realSlug
+      items[field] = realSlug;
     }
 
     if (field === 'content') {
-      items[field] = content
+      items[field] = content;
     }
 
     if (typeof data[field] !== 'undefined') {
-      items[field] = data[field]
+      items[field] = data[field];
     }
   })
 
-  return items
+  return items;
 }
 
-export function getAllPosts(fields = [], count) {
-  const slugs = getPostSlugs()
+function getAll(dir, fields = [], count) {
+  const slugs = getSlugs(dir);
 
   const hasDate = fields.includes('date');
 
@@ -43,19 +44,46 @@ export function getAllPosts(fields = [], count) {
     fields.push('date');
   }
 
-  let posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => {
-      const date1 = new Date(post1.date);
-      const date2 = new Date(post2.date);
-      const date1IsNewer = date1.getTime() > date2.getTime();
-      return date1IsNewer ? -1 : 1
-    })
+  let items = slugs
+    .map((slug) => getBySlug(dir, slug, fields))
+    .sort((item1, item2) => {
+      if (item1.date && item2.date) {
+        const date1 = new Date(item1.date);
+        const date2 = new Date(item2.date);
+        const date1IsNewer = date1.getTime() > date2.getTime();
+        return date1IsNewer ? -1 : 1
+      }
+      return 1;
+    });
 
   if (count > 0) {
-    posts = posts.slice(0, count);
+    items = items.slice(0, count);
   }
 
-  return posts
+  return items;
 }
+
+export function getPostSlugs() {
+  return getSlugs(postsDirectory);
+}
+
+export function getPostBySlug(slug, fields = []) {
+  return getBySlug(postsDirectory, slug, fields);
+}
+
+export function getAllPosts(fields = [], count) {
+  return getAll(postsDirectory, fields, count);
+}
+
+export function getTestimonialSlugs() {
+  return getSlugs(testimonialsDirectory);
+}
+
+export function getTestimonialBySlug(slug, fields = []) {
+  return getBySlug(testimonialsDirectory, slug, fields);
+}
+
+export function getAllTestimonials(fields = [], count) {
+  return getAll(testimonialsDirectory, fields, count);
+}
+

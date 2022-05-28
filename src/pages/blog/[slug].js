@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
 
-import markdown from '@/lib/markdown';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 
+import Markdown from '@/components/markdown';
 import SubscribeForm from '@/components/subscribe-form';
 
 import styles from '@/styles/blog.module.scss';
@@ -61,7 +61,7 @@ export default function Post({ post, morePosts, preview }) {
               <p>
                 <small>{formattedDate}</small>
               </p>
-              <div className="content" dangerouslySetInnerHTML={{ __html: post.content }} />
+              <Markdown className="content">{post.content}</Markdown>
             </div>
           </div>
         </div>
@@ -83,14 +83,9 @@ export async function getStaticProps({ params }) {
     'coverImage',
   ]);
 
-  const content = await markdown(post.content || '');
-
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      post,
     },
   };
 }

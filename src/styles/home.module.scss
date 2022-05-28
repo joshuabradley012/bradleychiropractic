@@ -163,12 +163,6 @@
   }
 }
 
-.testimonial {
-  background: $gray-100;
-  border-radius: $border-radius-lg;
-  padding: $spacer-8;
-}
-
 @include media-breakpoint-down(xl) {
   .title {
     font-size: 80px;

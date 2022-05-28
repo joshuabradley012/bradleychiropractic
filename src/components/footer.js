@@ -18,9 +18,6 @@ export default function Footer() {
             <Link href="/privacy">
               <a>Privacy Policy</a>
             </Link>
-            <Link href="/terms">
-              <a>Terms of Service</a>
-            </Link>
           </div>
           <Social className={styles.bottomBarSocial} />
         </div>

@@ -1,0 +1,9 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.testimonial {
+  background: $gray-100;
+  border-radius: $border-radius-lg;
+  padding: $spacer-8;
+}
+

@@ -3,6 +3,7 @@ title: 'Stem Cells: Should you believe the hype?'
 excerpt: 'Is it possible you are paying for dead stem cells?'
 coverImage: '/stemcell.png'
 date: '2018-03-16T05:35:07.322Z'
+category: 'health'
 author:
   name: Dr. Brendon Bradley
   image: '/dr-bradley.png'

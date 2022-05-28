@@ -2,105 +2,33 @@ import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
 
-import { getAllPosts } from '@/lib/api';
+import { getAllPosts, getTestimonialBySlug } from '@/lib/api';
+import useScript from '@/hooks/useScript';
 
 import Icon from '@/components/icon';
 import IconLink from '@/components/icon-link';
 import SubscribeForm from '@/components/subscribe-form';
 import BlogCards from '@/components/blog-cards';
+import TestimonialCards from '@/components/testimonial-cards';
 
+import content from '@/content/index';
 import styles from '@/styles/home.module.scss';
 
-import heroImage from '@/public/front-office-angled.png';
-import team from '@/public/adjustment-room.png';
-import chiropractic from '@/public/chiropractic.jpg';
-import decompression from '@/public/decompression.jpg';
-import exercise from '@/public/exercise.jpg';
-import nutrition from '@/public/nutrition.jpg';
-import doctorImage from '@/public/dr-bradley.png';
-import post1 from '@/public/stemcell.png';
-import post2 from '@/public/letting-go.png';
-import post3 from '@/public/movement.png';
+export default function Home({ posts, testimonials }) {
+  const {
+    hero,
+    directions,
+    services,
+    doctor,
+    blog,
+  } = content;
 
-const hero = {
-  headline: <>Bakersfield&rsquo;s <br className="d-none d-md-inline"/>Best Chiropractor</>,
-  caption: `Bradley Chiropractic Nutrition Center has made a name for itself by helping thousands of patients get out of pain. With a doctor and staff who authentically care about your well-being, we look forward to helping you.`,
-};
-
-const directions = {
-  headline: 'Visit Our Office',
-  caption: 'On your first visit, we will have a sit down consultation to create a specialized wellness plan for you.',
-  cta: 'Learn more',
-  officeHoursHeadline: 'Office Hours',
-  officeHours: <>9AM - 6PM, Monday - Thursday <br />9AM - 12PM, Friday</>,
-  addressHeadline: 'Address',
-  address: <>5001 Stockdale Hwy, <br/>Bakersfield, CA 93309</>,
-};
-
-const services = {
-  headline: "Our Approach to Chiropractic Care",
-  caption: "We take a holistic approach to health. We identify the root cause of your symptoms and treat it with a comprehensive plan that addresses your physical, nutritional, and emotional wellbeing.",
-  cta: 'See all services',
-  items: [
-    {
-      name: 'Chiropractic',
-      image: chiropractic,
-      href: '/services/chiropractic',
-    },
-    {
-      name: 'Spinal Decompression',
-      image: decompression,
-      href: '/services/spinal-decompression',
-    },
-    {
-      name: 'Corrective Exercise',
-      image: exercise,
-      href: '/services/corrective-exercise',
-    },
-    {
-      name: 'Nutrition',
-      image: nutrition,
-      href: '/services/nutrition',
-    },
-  ],
-};
-
-const doctor = {
-  headline: 'Meet the Doctor',
-  caption: 'With over 20 years of experience, Dr. Bradley has helped thousands of patients get out of pain.',
-  cta: 'About Dr. Bradley',
-  quote: "I see chiropractic as a science, philosophy, and art. A science because it is the study of how the body is a system of nerves, muscles, and bones that all work in synchronization, and how misalignments in that system can affect health. A philosophy because it is the idea that putting the body in alignment allows the nervous system to work optimally, relieving pain and giving the body a proper healing environment. And an art because of the practice it takes to perfect the technique of effectively restoring alignment to the body. I am passionate about using my knowledge and skills to bring people to a higher state of health.",
-  source: 'Dr. Brendon Bradley',
-  testimonials: [
-    {
-      quote: "After seeing Dr. Bradley I am now living a normal life and having fun, something I never thought I'd be able to say again. All thanks to the care I received by Dr. Bradley and his staff.",
-      source: 'John Doe',
-    },
-    {
-      quote: "The back pain I had suffered from my whole life became severe. I was told the only thing that would help was surgery. I tried several other chiropractors and still did not receive any relief. Now, after only fifteen treatments on spinal decompression, I am pain free!",
-      source: 'Jane Doe',
-    },
-    {
-      quote: "I have better mobility and the pain I was feeling in my back everyday is almost completely gone! I now have a much brighter future.",
-      source: 'Joe Schmo',
-    },
-  ],
-  testimonialsCta: 'See all testimonials',
-};
-
-const blog = {
-  headline: 'Learn More About Health',
-  cta: 'Read our articles',
-  ctaLink: '/blog',
-};
-
-export default function Home({ posts }) {
   return (
     <>
       <section className="section">
         <div className="bg-image">
           <Image
-            src={heroImage}
+            src={hero.heroImage}
             alt="Bradley Chiropractic Hero Image"
             layout="fill"
             priority={true}
@@ -166,7 +94,7 @@ export default function Home({ posts }) {
             <div className={cn('col-12 col-lg-8 content text-left text-lg-center', styles.servicesIntro)}>
               <div className={styles.teamImageWrapper}>
                 <Image
-                  src={team}
+                  src={services.teamImage}
                   alt="Bradley Chiropractic Team"
                   className={styles.teamImage}
                   layout="fill"
@@ -228,7 +156,7 @@ export default function Home({ posts }) {
                 <div className="col-12 col-lg-4">
                   <div className={styles.doctorImageWrapper}>
                     <Image
-                      src={doctorImage}
+                      src={doctor.doctorImage}
                       alt="Portrait of Dr. Brendon Bradley"
                       layout="fill"
                     />
@@ -236,22 +164,17 @@ export default function Home({ posts }) {
                 </div>
                 <div className="col-12 col-lg-8 d-flex align-items-center">
                   <div className="content">
-                    <blockquote>{doctor.quote}</blockquote>
-                    <p>{doctor.source}</p>
+                    <blockquote>
+                      {doctor.quote}
+                      <cite>{doctor.source}</cite>
+                    </blockquote>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="row gy-8">
-            {doctor.testimonials.map((testimonial, i) => (
-              <div className="col-12 col-lg-4" key={i}>
-                <div className={cn('content', styles.testimonial)}>
-                  <blockquote>{testimonial.quote}</blockquote>
-                  <p>{testimonial.source}</p>
-                </div>
-              </div>
-            ))}
+          <TestimonialCards content={testimonials} />
+          <div className="row mt-8">
             <div className="col-12">
               <div className="content text-left text-lg-center">
                 <IconLink
@@ -300,9 +223,20 @@ export async function getStaticProps(context) {
     'coverImage',
   ], 3);
 
+  const testimonials = [];
+
+  content.doctor.testimonials.forEach(slug => (
+    testimonials.push(getTestimonialBySlug(slug, [
+      'slug',
+      'content',
+      'source',
+    ]))
+  ));
+
   return {
     props: {
-      posts: posts,
+      posts,
+      testimonials,
     }
   };
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import useDimensions from './useDimensions';
 
-// These values must match $grid-breakpoints from scss/variables
+// These values must match $grid-breakpoints from styles/bootstrap/_variables.scss
 const defaultBreakpoints = {
   xs: 0,
   sm: 576,
