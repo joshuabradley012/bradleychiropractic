@@ -1,4 +1,6 @@
 const content = {
+  seoTitle: 'Privacy Policy for Bradley Chiropractic Nutrition Center',
+  seoDescription: 'Learn about the privacy policy in place on our website. We respect your privacy.',
   text: `
 # Privacy Policy
 

@@ -4,18 +4,15 @@ import { getAllPosts } from '@/lib/api';
 
 import BlogCards from '@/components/blog-cards';
 
-const content = {
-  brow: 'Health Blog',
-  title: 'Eat, Exercise, and Be Healthy',
-};
+import content from '@/content/blog';
 
 export default function Blog({ posts }) {
   return (
     <>
       <Head>
-        <title>Health Blog by Bradley Chiropractic Nutrition Center</title>
-        <meta name="description" content="Our blog is focused on guiding average people to elite health. Read more on how to build a healthy mind, body, and soul." />
-        <meta property="og:description" content="Our blog is focused on guiding average people to elite health. Read more on how to build a healthy mind, body, and soul." />
+        <title>{content.seoTitle}</title>
+        <meta name="description" content={content.seoDescription} />
+        <meta property="og:description" content={content.seoDescription} />
       </Head>
       <section className="section gray">
         <div className="container">

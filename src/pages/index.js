@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
@@ -25,6 +26,11 @@ export default function Home({ posts, testimonials }) {
 
   return (
     <>
+      <Head>
+        <title>{content.seoTitle}</title>
+        <meta name="description" content={content.seoDescription} />
+        <meta property="og:description" content={content.seoDescription} />
+      </Head>
       <section className="section">
         <div className="bg-image">
           <Image

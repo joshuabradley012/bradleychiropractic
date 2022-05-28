@@ -1,4 +1,6 @@
 const content = {
+  seoTitle: 'About Bradley Chiropractic Nutrition Center, a Chiropractor in Bakersfield',
+  seoDescription: 'Dr. Bradley and his team form the best chiropractic office in Bakersfield, CA. We use holistic methods to facilitate real, lasting healing and health.',
   video: 'https://www.youtube.com/embed/MT5TtVhd568?controls=0',
   headline: 'About Dr. Bradley',
   text: `

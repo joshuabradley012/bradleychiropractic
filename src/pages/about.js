@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
@@ -13,6 +14,11 @@ import content from '@/content/about';
 export default function About() {
   return (
     <>
+      <Head>
+        <title>{content.seoTitle}</title>
+        <meta name="description" content={content.seoDescription} />
+        <meta property="og:description" content={content.seoDescription} />
+      </Head>
       <section className="section pt-0">
         <div className="container">
           <div className="row justify-content-center">

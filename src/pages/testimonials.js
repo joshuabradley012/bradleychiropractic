@@ -4,18 +4,15 @@ import { getAllTestimonials } from '@/lib/api';
 
 import TestimonialMasonry from '@/components/testimonial-masonry';
 
-const content = {
-  brow: 'Testimonials',
-  title: 'What our patients have to say.',
-};
+import content from '@/content/testimonials';
 
 export default function Testimonials({ testimonials }) {
   return (
     <>
       <Head>
-        <title>Testimonials for Bradley Chiropractic Nutrition Center</title>
-        <meta name="description" content="Bradley Chiropractic Nutrition Center has helped people get out of pain for over 20 years. Here is what our patients have to say." />
-        <meta property="og:description" content="Bradley Chiropractic Nutrition Center has helped people get out of pain for over 20 years. Here is what our patients have to say." />
+        <title>{content.seoTitle}</title>
+        <meta name="description" content={content.seoDescription} />
+        <meta property="og:description" content={content.seoDescription} />
       </Head>
       <section className="section">
         <div className="container">
