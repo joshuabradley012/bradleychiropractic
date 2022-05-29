@@ -8,6 +8,7 @@ import useScript from '@/hooks/useScript';
 
 import Icon from '@/components/icon';
 import IconLink from '@/components/icon-link';
+import Review from '@/components/review';
 import SubscribeForm from '@/components/subscribe-form';
 import BlogCards from '@/components/blog-cards';
 import TestimonialMasonry from '@/components/testimonial-masonry';
@@ -19,6 +20,7 @@ export default function Home({ posts, testimonials }) {
   const {
     hero,
     directions,
+    reviews,
     services,
     doctor,
     blog,
@@ -47,7 +49,7 @@ export default function Home({ posts, testimonials }) {
                 <h1 className={styles.title}>{hero.headline}</h1>
                 <p className={styles.caption}>{hero.caption}</p>
                 <div className={styles.cta}>
-                  <Link href="/contact">
+                  <Link href="/schedule">
                     <a className="btn">Schedule</a>
                   </Link>
                   <a className={cn('btn secondary', styles.phone)} href="tel:+16616176160">
@@ -56,6 +58,17 @@ export default function Home({ posts, testimonials }) {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="section banner">
+        <div className="container">
+          <div className="row gy-12">
+            {reviews.map(review => (
+              <div className="col-6 col-lg-3" key={review.platform}>
+                <Review {...review} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -179,7 +192,7 @@ export default function Home({ posts, testimonials }) {
         <div className="container">
           <div className="row gy-12 justify-content-center">
             <div className={cn('col-12 col-md-6', styles.imageCol)}>
-              <Link href="/contact">
+              <Link href="/schedule">
                 <a>
                   <div className={styles.teamImageWrapper}>
                     <Image
@@ -211,7 +224,7 @@ export default function Home({ posts, testimonials }) {
                   <p>{directions.caption}</p>
                 </div>
                 <div className={styles.copyCta}>
-                  <Link href="/contact">
+                  <Link href="/schedule">
                     <a className="btn">{directions.cta}</a>
                   </Link>
                 </div>

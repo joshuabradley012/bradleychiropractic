@@ -24,7 +24,7 @@ export default function About() {
           <div className="row justify-content-center">
             <div className="col-12 content-col">
               <h6>{content.brow}</h6>
-              <h1>{content.title}</h1>
+              <h1 className="mb-0">{content.title}</h1>
             </div>
             <div className="col-12">
               <div className={styles.videoWrapper}>
@@ -36,7 +36,7 @@ export default function About() {
               </div>
             </div>
             <div className="col-12 content-col">
-              <Markdown>
+              <Markdown className="content">
                 {content.text}
               </Markdown>
               <h2>{content.faqTitle}</h2>

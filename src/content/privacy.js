@@ -109,7 +109,7 @@ We are committed to conducting our business in accordance with these principles 
 
 ## Contact
 
-If you have any questions regarding this policy, or your dealings with our website, please contact us here: https://bradleychiropracticnutrition.com/contact-us/
+If you have any questions regarding this policy, or your dealings with our website, please contact us here: https://bradleychiropracticnutrition.com/schedule
 
 Bradley Chiropractic Nutrition Center 5001 Stockdale Hwy, Bakersfield, CA 93309
   `,

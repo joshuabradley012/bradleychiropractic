@@ -11,12 +11,14 @@ export default function Stars({ count }) {
     stars.push(<Icon type="star" key={i} />);
   }
 
-  if (remainder > 0) {
-    stars.push(<Icon type="star-half" key="half" />);
+  if (remainder > 0 && remainder < .51) {
+    stars.push(<Icon type="star-half" key={remainder} />);
+  } else if (remainder > .5) {
+    stars.push(<Icon type="star" key={remainder} />);
   }
 
   return (
-    <div className={styles.stars}>
+    <div className={styles.stars} title={`${count} stars`}>
       {stars}
     </div>
   );

@@ -36,7 +36,7 @@ export default function Navbar() {
           <Navlinks className="d-none d-md-flex" handleClick={handleNavigation} />
 
           <div className={styles.cta}>
-            <ActiveLink href="/contact" activeClassName={styles.active}>
+            <ActiveLink href="/schedule" activeClassName={styles.active}>
               <a className="btn">Schedule</a>
             </ActiveLink>
           </div>

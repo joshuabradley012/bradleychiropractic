@@ -9,11 +9,39 @@ import teamImage from '@/public/adjustment-room.png';
 const content = {
   seoTitle: 'Bradley Chiropractic Nutrition Center | Bakersfield Chiropractor',
   seoDescription: 'Dr. Bradley is passionate about giving the best chiropractic care possible by using many methods; including spinal decompressions, exercise, and nutrition.',
+
   hero: {
     heroImage,
     headline: <>Bakersfield&rsquo;s <br className="d-none d-md-inline"/>Best Chiropractor</>,
     caption: `Bradley Chiropractic Nutrition Center has made a name for itself by helping thousands of patients get out of pain. With a doctor and staff who authentically care about your well-being, we look forward to helping you.`,
   },
+
+  reviews: [
+    {
+      platform: 'Google',
+      rating: 4.8,
+      count: 48,
+      content: 'Dr. Bradley is the best. Been a customer since 2005.',
+    },
+    {
+      platform: 'DemandForce',
+      rating: 5,
+      count: 28,
+      content: 'Dr. Bradley has always helped me with my back issues. I highly recommend him!',
+    },
+    {
+      platform: 'Facebook',
+      rating: 5,
+      count: 15,
+      content: 'Have to say Dr Bradley is one of the best chiropractors ever!',
+    },
+    {
+      platform: 'Yelp',
+      rating: 5,
+      count: 11,
+      content: 'Almost two months of treatment and I can finally say that my pain is finally gone.',
+    },
+  ],
 
   services: {
     teamImage,

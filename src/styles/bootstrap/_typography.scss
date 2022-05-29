@@ -161,6 +161,10 @@ pre {
   }
 }
 
+small {
+  font-size: $font-size-sm;
+}
+
 var {
   font-family: $sub-font;
   font-weight: 600;

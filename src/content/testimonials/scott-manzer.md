@@ -1,7 +1,7 @@
 ---
 source: 'Scott Manzer'
 services: 'chiropractic'
-platform: 'Demandforce'
+platform: 'DemandForce'
 rating: 5
 ---
 

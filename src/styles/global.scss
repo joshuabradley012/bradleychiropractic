@@ -61,6 +61,10 @@ main {
   padding: $spacer-12 * 2 0;
   position: relative;
 
+  &.banner {
+    padding: $spacer-12 0;
+  }
+
   @include colors();
 
   @include media-breakpoint-down(md) {
