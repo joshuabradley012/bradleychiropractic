@@ -33,7 +33,7 @@ const content = {
       platform: 'Facebook',
       rating: 5,
       count: 15,
-      content: 'Have to say Dr Bradley is one of the best chiropractors ever!',
+      content: 'Have to say Dr. Bradley is one of the best chiropractors ever!',
     },
     {
       platform: 'Yelp',
