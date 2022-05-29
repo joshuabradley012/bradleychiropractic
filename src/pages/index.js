@@ -62,7 +62,7 @@ export default function Home({ posts, testimonials }) {
       <section className="section gray">
         <div className="container">
           <div className="row justify-content-center gy-12">
-            <div className={cn('col-12 col-lg-8 content text-left text-lg-center', styles.servicesIntro)}>
+            <div className={cn('col-12 content-col content text-left text-lg-center', styles.servicesIntro)}>
               <h2>{services.headline}</h2>
               <p>{services.caption}</p>
               <IconLink
@@ -102,7 +102,7 @@ export default function Home({ posts, testimonials }) {
       <section className="section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8 mb-12 mb-md-12">
+            <div className="col-12 content-col mb-12 mb-md-12">
               <div className="content text-left text-lg-center">
                 <h2>{doctor.headline}</h2>
                 <p>{doctor.caption}</p>
@@ -158,7 +158,7 @@ export default function Home({ posts, testimonials }) {
       <section className="section gray">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8 mb-12">
+            <div className="col-12 content-col mb-12">
               <div className="content text-left text-lg-center">
                 <h2>{blog.headline}</h2>
                 <IconLink
