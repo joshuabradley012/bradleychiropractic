@@ -18,7 +18,7 @@ const content = {
   services: {
     teamImage,
     headline: "Complete Chiropractic Care",
-    caption: "We take a holistic approach to health, identifying the root cause of your symptoms and treating it with a comprehensive plan that addresses your physical, nutritional, and emotional wellbeing.",
+    caption: "We take a holistic approach to health, identifying the root cause of your symptoms and treating it with a comprehensive plan that addresses your structural, physical, and nutritional wellbeing.",
     cta: 'See all services',
     items: [
       {
