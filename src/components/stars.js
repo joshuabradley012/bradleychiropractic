@@ -8,11 +8,11 @@ export default function Stars({ count }) {
   const limit = count - remainder;
 
   for (let i = 0; i < limit; i++) {
-    stars.push(<Icon type="star" />);
+    stars.push(<Icon type="star" key={i} />);
   }
 
   if (remainder > 0) {
-    stars.push(<Icon type="star-half" />);
+    stars.push(<Icon type="star-half" key="half" />);
   }
 
   return (

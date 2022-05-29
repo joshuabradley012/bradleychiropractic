@@ -2,7 +2,8 @@ const content = {
   seoTitle: 'About Bradley Chiropractic Nutrition Center, a Chiropractor in Bakersfield',
   seoDescription: 'Dr. Bradley and his team form the best chiropractic office in Bakersfield, CA. We use holistic methods to facilitate real, lasting healing and health.',
   video: 'https://www.youtube.com/embed/MT5TtVhd568?controls=0',
-  title: 'About Dr. Bradley',
+  brow: 'About',
+  title: 'Dr. Bradley\'s Experience and Credentials',
   text: `
 Dr. Bradley has been a practicing chiropractor for the past 20 years, the last 19 of those were spent here in Bakersfield, CA. He attended the University of San Diego for his undergraduate degree and then went on to Southern California University of Health Sciences completing his Doctorate of Chiropractic in 1995.
 

@@ -23,8 +23,9 @@
 }
 
 .logo {
+  align-items: center;
   border-radius: 50%;
-  display: block;
+  display: flex;
   height: 60px;
   overflow: hidden;
   width: 60px;
@@ -40,8 +41,10 @@
 .hamburger {
   display: none;
   cursor: pointer;
+  height: 2.4rem;
   margin-left: $spacer-6;
   transition: $transition-all;
+  width: 2.4rem;
 
   &:hover {
     color: $secondary;
@@ -71,5 +74,10 @@
 
   .drawerOpen {
     transform: translateY(0);
+  }
+
+  .cta {
+    margin-right: auto;
+    margin-left: $spacer-4;
   }
 }

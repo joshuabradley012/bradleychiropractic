@@ -22,6 +22,10 @@ export default function About() {
       <section className="section pt-0">
         <div className="container">
           <div className="row justify-content-center">
+            <div className="col-12 col-lg-8">
+              <h6>{content.brow}</h6>
+              <h1>{content.title}</h1>
+            </div>
             <div className="col-12">
               <div className={styles.videoWrapper}>
                 <iframe
@@ -32,7 +36,6 @@ export default function About() {
               </div>
             </div>
             <div className="col-12 col-lg-8">
-              <h1>{content.title}</h1>
               <Markdown>
                 {content.text}
               </Markdown>

@@ -43,7 +43,7 @@ export default function Home({ posts, testimonials }) {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12">
-              <div className={cn('content', styles.hero)}>
+              <div className="content">
                 <h1 className={styles.title}>{hero.headline}</h1>
                 <p className={styles.caption}>{hero.caption}</p>
                 <div className={styles.cta}>
@@ -110,7 +110,7 @@ export default function Home({ posts, testimonials }) {
             </div>
             <div className="col-12 mb-12">
               <div className="row gy-8">
-                <div className="col-12 col-lg-4">
+                <div className="col-12 col-md-4">
                   <div className={styles.doctorImageWrapper}>
                     <Image
                       src={doctor.doctorImage}
@@ -119,7 +119,7 @@ export default function Home({ posts, testimonials }) {
                     />
                   </div>
                 </div>
-                <div className="col-12 col-lg-8 d-flex align-items-center">
+                <div className="col-12 col-md-8 d-flex align-items-center">
                   <div className="content">
                     <blockquote>
                       {doctor.quote}
@@ -178,17 +178,21 @@ export default function Home({ posts, testimonials }) {
       <section className="section">
         <div className="container">
           <div className="row gy-12 justify-content-center">
-            <div className={cn('col-12 col-lg-6', styles.imageCol)}>
-              <div className={styles.teamImageWrapper}>
-                <Image
-                  src={services.teamImage}
-                  alt="Bradley Chiropractic Team"
-                  className={styles.teamImage}
-                  layout="fill"
-                />
-              </div>
+            <div className={cn('col-12 col-md-6', styles.imageCol)}>
+              <Link href="/contact">
+                <a>
+                  <div className={styles.teamImageWrapper}>
+                    <Image
+                      src={services.teamImage}
+                      alt="Bradley Chiropractic Team"
+                      className={styles.teamImage}
+                      layout="fill"
+                    />
+                  </div>
+                </a>
+              </Link>
             </div>
-            <div className={cn('col-12 col-lg-6', styles.mapCol)}>
+            <div className={cn('col-12 col-md-6', styles.mapCol)}>
               <div className={styles.map}>
                 <div className={styles.mapInner}>
                   <iframe
@@ -200,7 +204,7 @@ export default function Home({ posts, testimonials }) {
                 </div>
               </div>
             </div>
-            <div className={cn('col-12 col-lg-6 d-flex', styles.copyCol)}>
+            <div className={cn('col-12 col-md-6 d-flex', styles.copyCol)}>
               <div className={styles.copy}>
                 <div className={cn('content', styles.copyInner)}>
                   <h2>{directions.headline}</h2>
@@ -208,12 +212,12 @@ export default function Home({ posts, testimonials }) {
                 </div>
                 <div className={styles.copyCta}>
                   <Link href="/contact">
-                    <a className="btn secondary">{directions.cta}</a>
+                    <a className="btn">{directions.cta}</a>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className={cn('col-12 col-lg-6 d-flex', styles.directionsCol)}>
+            <div className={cn('col-12 col-md-6 d-flex', styles.directionsCol)}>
               <div className="content">
                 <h3>{directions.officeHoursHeadline}</h3>
                 <p>{directions.officeHours}</p>
