@@ -20,7 +20,7 @@ export default function TestimonialCard({ content, className, platform, rating, 
   const platformType = platformTypes[platform];
 
   return (
-    <div className={cn(styles.testimonial, className)}>
+    <div className={cn('box gray', className)}>
       {(platform || rating) && (
         <div className={styles.review}>
           {platformType ? (

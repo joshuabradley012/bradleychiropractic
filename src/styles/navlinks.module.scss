@@ -27,16 +27,22 @@
   }
 }
 
+@include media-breakpoint-only(md) {
+  .link {
+    font-size: $font-size-md;
+  }
+}
+
 @include media-breakpoint-down(md) {
   .links {
     padding: 0 0 $spacer-2;
     top: 100%;
     width: 100%;
+  }
 
-    .link {
-      display: block;
-      margin: 0;
-      padding: $spacer-2 0;
-    }
+  .link {
+    display: block;
+    margin: 0;
+    padding: $spacer-2 0;
   }
 }

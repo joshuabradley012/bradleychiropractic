@@ -4,7 +4,7 @@ import cn from 'classnames';
 import Markdown from '@/components/markdown';
 import styles from '@/styles/tabs.module.scss';
 
-export default function Tabs({ tabs }) {
+export default function Tabs({ className, tabs }) {
   const [tabNames, setTabNames] = useState([]);
   const [activeTab, setActiveTab] = useState(0);
 
@@ -17,7 +17,7 @@ export default function Tabs({ tabs }) {
   };
 
   return (
-    <div className={styles.tabs}>
+    <div className={className}>
       <div className={styles.tabHeader}>
         {tabs.map((tab, i) => (
           <div
@@ -37,7 +37,7 @@ export default function Tabs({ tabs }) {
           </div>
         ))}
       </div>
-      <div className={styles.tabContent}>
+      <div className={cn('box gray', styles.tabContent)}>
         <Markdown className="content">
           {tabs[activeTab]?.content}
         </Markdown>

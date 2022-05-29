@@ -34,7 +34,7 @@ export default function TestimoniaMasonry({ content }) {
       {columns.map((column, i) => (
         <div className={cn(colClass, styles.masonryCol)} key={i}>
           {column.map(testimonial => (
-            <TestimonialCard className="mb-8" key={testimonial.slug} {...testimonial} />
+            <TestimonialCard className="mb-12" key={testimonial.slug} {...testimonial} />
           ))}
         </div>
       ))}

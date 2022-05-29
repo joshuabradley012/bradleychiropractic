@@ -32,7 +32,7 @@ export default function Post({ post, morePosts, preview }) {
       <section className="section pt-0">
         <div className="container">
           <div className="row justify-content-center">
-            <div className={cn('col-12', styles.contentCol)}>
+            <div className="col-12 content-col">
               <h6>{post.category}</h6>
               <h1>{post.title}</h1>
               <p className={styles.excerpt}>{post.excerpt}</p>
@@ -46,7 +46,7 @@ export default function Post({ post, morePosts, preview }) {
                 />
               </div>
             </div>
-            <div className={cn('col-12', styles.contentCol)}>
+            <div className="col-12 content-col">
               <div className={styles.authorBox}>
                 <div className={styles.authorImage}>
                   <Image

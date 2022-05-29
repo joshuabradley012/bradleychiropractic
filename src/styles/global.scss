@@ -53,6 +53,10 @@ main {
   }
 }
 
+.content-col {
+  max-width: 660px;
+}
+
 .section {
   padding: $spacer-12 * 2 0;
   position: relative;
@@ -60,14 +64,14 @@ main {
   @include colors();
 
   @include media-breakpoint-down(md) {
-    padding: $spacer-12 0;
+    padding: $spacer-12 * 1.5 0;
   }
 }
 
 .box {
   background: $white;
   border-radius: $border-radius-lg;
-  padding: $spacer-12;
+  padding: $spacer-9;
 
   @include colors();
 }

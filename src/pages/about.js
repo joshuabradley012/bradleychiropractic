@@ -22,7 +22,7 @@ export default function About() {
       <section className="section pt-0">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8">
+            <div className="col-12 content-col">
               <h6>{content.brow}</h6>
               <h1>{content.title}</h1>
             </div>
@@ -35,7 +35,7 @@ export default function About() {
                 ></iframe>
               </div>
             </div>
-            <div className="col-12 col-lg-8">
+            <div className="col-12 content-col">
               <Markdown>
                 {content.text}
               </Markdown>

@@ -4,7 +4,7 @@ import styles from '@/styles/subscribe-form.module.scss';
 
 const subscribe = {
   headline: 'Become a subscriber today!',
-  caption: 'Sign up to receive our newsletter where we share tips, special offers, and our latest content. We are dedicated to helping you achieve a higher state of health.',
+  caption: 'Sign up to receive our newsletter where we share tips, special offers, and our latest content. We are dedicated to helping you achieve better health.',
 };
 
 export default function SubscribeForm() {
@@ -12,7 +12,7 @@ export default function SubscribeForm() {
     <section className="section blue">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-12 col-lg-8">
+          <div className="col-12 content-col">
             <div className="content text-left text-lg-center">
               <h2>{subscribe.headline}</h2>
               <p>{subscribe.caption}</p>

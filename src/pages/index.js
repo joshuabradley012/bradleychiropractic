@@ -76,7 +76,7 @@ export default function Home({ posts, testimonials }) {
             </div>
             <div className="col-12">
               <div className="box">
-                <div className="row gy-8">
+                <div className="row gy-12">
                   {services.items.map(service => (
                     <div className="col-6 col-lg" key={service.name}>
                       <Link href={service.href}>
@@ -102,14 +102,14 @@ export default function Home({ posts, testimonials }) {
       <section className="section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8 mb-8 mb-md-12">
+            <div className="col-12 col-lg-8 mb-12 mb-md-12">
               <div className="content text-left text-lg-center">
                 <h2>{doctor.headline}</h2>
                 <p>{doctor.caption}</p>
               </div>
             </div>
             <div className="col-12 mb-12">
-              <div className="row gy-8">
+              <div className="row gy-6">
                 <div className="col-12 col-md-4">
                   <div className={styles.doctorImageWrapper}>
                     <Image
@@ -139,7 +139,7 @@ export default function Home({ posts, testimonials }) {
             </div>
           </div>
           <TestimonialMasonry content={testimonials} />
-          <div className="row mt-8">
+          <div className="row mt-12">
             <div className="col-12">
               <div className="content text-left text-lg-center">
                 <IconLink

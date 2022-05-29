@@ -1,12 +1,6 @@
 @use 'bootstrap/variables' as *;
 @use 'bootstrap/mixins/breakpoints' as *;
 
-.testimonial {
-  background: $gray-100;
-  border-radius: $border-radius-lg;
-  padding: $spacer-8;
-}
-
 .review {
   margin-bottom: $spacer-6;
 }
@@ -15,6 +9,10 @@
   height: $spacer-6;
   margin-bottom: $spacer-3;
   width: $spacer-6;
+
+  svg {
+    fill: $black;
+  }
 }
 
 .logoText {

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { getAllPosts } from '@/lib/api';
 
 import BlogCards from '@/components/blog-cards';
+import SubscribeForm from '@/components/subscribe-form';
 
 import content from '@/content/blog';
 
@@ -27,6 +28,7 @@ export default function Blog({ posts }) {
           <BlogCards content={posts} />
         </div>
       </section>
+      <SubscribeForm />
     </>
   );
 }

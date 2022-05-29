@@ -15,7 +15,7 @@ export default function Privacy() {
       <section className="section pt-0">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8">
+            <div className="col-12 content-col">
               <Markdown>
                 {content.text}
               </Markdown>

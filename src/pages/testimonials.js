@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { getAllTestimonials } from '@/lib/api';
 
 import TestimonialMasonry from '@/components/testimonial-masonry';
+import SubscribeForm from '@/components/subscribe-form';
 
 import content from '@/content/testimonials';
 
@@ -27,6 +28,7 @@ export default function Testimonials({ testimonials }) {
           <TestimonialMasonry content={testimonials} />
         </div>
       </section>
+      <SubscribeForm />
     </>
   );
 }

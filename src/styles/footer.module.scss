@@ -35,6 +35,10 @@
 }
 
 @include media-breakpoint-down(md) {
+  .bottomBar {
+    padding: $spacer-9 0;
+  }
+
   .bottomBarContainer {
     align-items: flex-start;
     flex-direction: column;

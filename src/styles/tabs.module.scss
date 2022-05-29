@@ -1,30 +1,27 @@
 @use 'bootstrap/variables' as *;
 @use 'bootstrap/mixins/breakpoints' as *;
 
-.tabs {
-  margin-top: $spacer-8;
-}
-
 .tabHeader {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 (-$spacer-2);
+  margin: 0 (-$spacer-3);
 }
 
 .tab {
   cursor: pointer;
   flex: 0 0 auto;
   font-size: $font-size-md;
-  margin-bottom: $spacer-4;
-  padding-left: $spacer-2;
-  padding-right: $spacer-2;
+  margin-bottom: $spacer-6;
+  padding-left: $spacer-3;
+  padding-right: $spacer-3;
+  width: 50%;
 }
 
 .tabInner {
   background: $gray-100;
   color: $primary;
   border-radius: $border-radius-lg;
-  padding: $spacer-3 $spacer-6;
+  padding: $spacer-6;
   text-align: center;
   transition: $transition-time;
 }
@@ -35,13 +32,10 @@
 }
 
 .tabContent {
-  background: $gray-100;
-  border-radius: $border-radius-lg;
   overflow: hidden;
-  padding: $spacer-8;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .tab {
     width: 100%;
   }
