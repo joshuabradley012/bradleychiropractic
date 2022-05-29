@@ -1,5 +1,4 @@
 ---
-title: 'Dr Bradley helped me after my car accident! What an'
 source: "Jeanil Willingham'Harris"
 services: 'chiropractic'
 platform: 'Facebook'

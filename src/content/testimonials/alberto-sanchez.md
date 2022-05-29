@@ -1,5 +1,4 @@
 ---
-title: 'I highly recommend Dr. Bradley. I have chronic Si joint'
 source: 'Alberto Sanchez'
 services: 'chiropractic'
 platform: 'Google'

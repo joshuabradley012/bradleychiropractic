@@ -1,8 +1,7 @@
 ---
-title: 'I was in severe pain'
 source: 'Scott Henderson'
 services: 'spinal decompression'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

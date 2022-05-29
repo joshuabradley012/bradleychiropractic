@@ -1,8 +1,7 @@
 ---
-title: 'I had suffered for ten months'
 source: 'Andrea Lomeli'
 services: 'chiropractic'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

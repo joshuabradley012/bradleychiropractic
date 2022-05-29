@@ -1,8 +1,7 @@
 ---
-title: 'I was experiencing pain and tension in me neck'
 source: 'Kain Brown'
 services: 'chiropractic, exercise, massage'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

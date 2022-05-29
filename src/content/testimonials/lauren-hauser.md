@@ -1,8 +1,7 @@
 ---
-title: 'I believe in maintaining good health through chiropractic care'
 source: 'Lauren Hauser'
 services: 'chiropractic'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

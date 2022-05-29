@@ -1,0 +1,18 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.stars {
+  display: flex;
+
+    svg {
+     fill: #ffb800;
+    }
+
+   > * {
+     margin-right: $spacer-1;
+   }
+
+   :last-child {
+     margin-right: 0;
+   }
+}

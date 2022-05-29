@@ -1,8 +1,7 @@
 ---
-title: 'I have had two back surgeries'
 source: 'Gibby Forster'
 services: 'spinal decompression'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

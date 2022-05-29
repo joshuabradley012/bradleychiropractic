@@ -1,8 +1,7 @@
 ---
-title: 'I had suffered from low back pain'
 source: 'James Reed'
 services: 'chiropractic'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: 'Im very impressed and excited about this new program especially'
 source: 'Derek Lyons'
 services: 'chiropractic'
 platform: 'Google'

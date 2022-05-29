@@ -12,7 +12,7 @@ import SubscribeForm from '@/components/subscribe-form';
 import BlogCards from '@/components/blog-cards';
 import TestimonialCards from '@/components/testimonial-cards';
 
-import content from '@/content/index';
+import content from '@/content/home';
 import styles from '@/styles/home.module.scss';
 
 export default function Home({ posts, testimonials }) {
@@ -233,8 +233,10 @@ export async function getStaticProps(context) {
 
   content.doctor.testimonials.forEach(slug => (
     testimonials.push(getTestimonialBySlug(slug, [
-      'slug',
       'content',
+      'platform',
+      'rating',
+      'slug',
       'source',
     ]))
   ));

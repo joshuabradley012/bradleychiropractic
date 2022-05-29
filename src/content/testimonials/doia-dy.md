@@ -1,5 +1,4 @@
 ---
-title: '2012 I was working as an ICU/CCU nurse in one'
 source: 'Doia Dy'
 services: 'chiropractic'
 platform: 'Yelp'
@@ -13,4 +12,4 @@ Dr. Bradley, he is my miracle worker!!! He had been my generous guide and healer
 He is so good, that even if he's not cover by my insurance, I keep coming back. I would "never" let any chiropractor touch my back. May you always be well and healthy, and blessed Dr Bradley!!!
 
 Thank you so much Dr Bradley!!!
-    
+

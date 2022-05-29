@@ -1,8 +1,7 @@
 ---
-title: 'For most of my adult life I had low back pain'
 source: 'Viola Hart'
 services: 'chiropractic'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

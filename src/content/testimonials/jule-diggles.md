@@ -1,8 +1,7 @@
 ---
-title: 'I had suffered with low back pain for several months'
 source: 'Fred Broderick'
 services: 'chiropractic'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

@@ -33,8 +33,10 @@ export default function Testimonials({ testimonials }) {
 
 export async function getStaticProps(context) {
   const testimonials = getAllTestimonials([
-    'slug',
     'content',
+    'platform',
+    'rating',
+    'slug',
     'source',
   ]);
 

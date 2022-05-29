@@ -1,5 +1,4 @@
 ---
-title: 'Who would ever think'
 source: 'Scott Manzer'
 services: 'chiropractic'
 platform: 'Google'

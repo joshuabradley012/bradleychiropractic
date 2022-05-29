@@ -1,8 +1,7 @@
 ---
-title: 'I had suffered for two months with sciatica'
 source: 'Hazel Bibee'
 services: 'chiropractic'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

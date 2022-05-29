@@ -1,5 +1,4 @@
 ---
-title: 'The ladys in the office are wonderful'
 source: 'Twila Hair'
 services: 'chiropractic'
 platform: 'Google'

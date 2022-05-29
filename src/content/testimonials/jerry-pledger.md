@@ -1,8 +1,7 @@
 ---
-title: 'I saw the ad in the newspaper'
 source: 'Jerry Pledger'
 services: 'spinal decompression'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

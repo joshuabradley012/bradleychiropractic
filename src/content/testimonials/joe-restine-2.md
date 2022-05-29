@@ -1,8 +1,7 @@
 ---
-title: 'I had suffered with low back pain'
 source: 'Joe Restine'
 services: 'spinal decompression'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

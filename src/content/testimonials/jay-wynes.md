@@ -1,5 +1,4 @@
 ---
-title: 'Im 46 years old and was in serious pain'
 source: 'Jay Wynes'
 services: 'chiropractic'
 platform: 'Facebook'

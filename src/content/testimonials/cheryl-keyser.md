@@ -1,5 +1,4 @@
 ---
-title: 'Besides being greeted with encouraging words each visit, Dr. Bradley,'
 source: 'Cheryl Keyser'
 services: 'chiropractic'
 platform: 'Facebook'
@@ -10,5 +9,5 @@ Besides being greeted with encouraging words each visit, Dr. Bradley, Joshua and
 
 In addition, Joshua Bradley is a Check Exercise Coach. He sees his clients in a completely equipped work out studio. With the use of the Check Exercise Coach program, Joshua has tailored a stability and balance exercise program for me, targeting posture, breathing, and deep core weaknesses. This approach to achieving proper alignment has caused me to become stronger, pain free in my knees, shoulders, hips and ankles. My posture and improved abdominal breathing have dramatically improved.
 
-Since becoming a patient/client of Bradley Chiropractic and Nutritional Center, I am achieving my 2016 goals for increased health, fitness and inner strength. 
-    
+Since becoming a patient/client of Bradley Chiropractic and Nutritional Center, I am achieving my 2016 goals for increased health, fitness and inner strength.
+

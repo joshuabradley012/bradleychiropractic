@@ -1,5 +1,4 @@
 ---
-title: 'I went in for lower back pain within a couple'
 source: 'Aaron Ray'
 services: 'chiropractic'
 platform: 'Google'

@@ -1,8 +1,7 @@
 ---
-title: 'I had suffered from headaches'
 source: 'Anna Blay'
 services: 'chiropractic'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

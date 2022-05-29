@@ -1,8 +1,7 @@
 ---
-title: 'The back pain I had suffered'
 source: 'Joe Restine'
 services: 'chiropractic, massage'
-platform: 'In-person'
+platform: 'Testimonial'
 rating: 5
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: 'Where do I even start. Obviously our first impression was'
 source: 'Belen Montalvo'
 services: 'chiropractic'
 platform: 'Yelp'
@@ -13,4 +12,4 @@ Well I would have to say my experience with Dr. Bradley was extraordinary! I've 
 As for my husband, he was in extreme pain when he first began to see Dr. Bradley. He is now back to normal and has no pain at all.
 
 I can't say this enough, but we are so grateful for Dr. Bradley. Without him my husband and I would most likely still be in a lot of pain. Dr. Bradley is stuck with us for a long time :)
-    
+

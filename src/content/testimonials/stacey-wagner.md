@@ -1,5 +1,4 @@
 ---
-title: 'Dr Bradley and his staff are the best! Ive been'
 source: 'Stacey Wagner'
 services: 'chiropractic'
 platform: 'Yelp'
