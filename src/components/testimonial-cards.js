@@ -4,7 +4,7 @@ export default function TestimonialCards({ content }) {
   return (
     <div className="row gy-8">
       {content.map(testimonial => (
-        <div className="col-12 col-lg-4" key={testimonial.slug}>
+        <div className="col-12 col-md-6 col-lg-4" key={testimonial.slug}>
           <TestimonialCard {...testimonial} />
         </div>
       ))}

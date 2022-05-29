@@ -37,8 +37,8 @@ export default function Tabs({ tabs }) {
           </div>
         ))}
       </div>
-      <div className={cn('content', styles.tabContent)}>
-        <Markdown>
+      <div className={styles.tabContent}>
+        <Markdown className="content">
           {tabs[activeTab]?.content}
         </Markdown>
       </div>

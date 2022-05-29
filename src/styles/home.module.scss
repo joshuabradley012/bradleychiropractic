@@ -67,22 +67,21 @@
   }
 }
 
-.mapContent {
+.copy {
   display: flex;
   flex-direction: column;
 }
 
-.mapContentInner {
+.copyInner {
   margin-bottom: $spacer-12;
 }
 
-.mapCta {
+.copyCta {
   margin-top: auto;
 }
 
 .teamImageWrapper {
   border-radius: $border-radius-lg;
-  margin-bottom: $spacer-8;
   overflow: hidden;
   position: relative;
 
@@ -170,13 +169,20 @@
 }
 
 @include media-breakpoint-down(lg) {
-  .mapCol {
-    order: 1;
-    margin-bottom: $spacer-10;
+  .imageCol {
+    order: 2;
   }
 
-  .mapContentCol {
+  .copyCol {
     order: 2;
+  }
+
+  .mapCol {
+    order: 3;
+  }
+
+  .directionsCol {
+    order: 4
   }
 }
 

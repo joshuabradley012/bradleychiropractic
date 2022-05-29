@@ -1,6 +1,10 @@
+import cn from 'classnames';
+
 import useBreakpoint from '@/hooks/useBreakpoint';
 
 import TestimonialCard from '@/components/testimonial-card';
+
+import styles from '@/styles/testimonial-masonry.module.scss';
 
 export default function TestimoniaMasonry({ content }) {
   const breakpoint = useBreakpoint();
@@ -28,7 +32,7 @@ export default function TestimoniaMasonry({ content }) {
   return (
     <div className="row">
       {columns.map((column, i) => (
-        <div className={colClass} key={i}>
+        <div className={cn(colClass, styles.masonryCol)} key={i}>
           {column.map(testimonial => (
             <TestimonialCard className="mb-8" key={testimonial.slug} {...testimonial} />
           ))}

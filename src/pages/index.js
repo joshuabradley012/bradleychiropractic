@@ -10,7 +10,7 @@ import Icon from '@/components/icon';
 import IconLink from '@/components/icon-link';
 import SubscribeForm from '@/components/subscribe-form';
 import BlogCards from '@/components/blog-cards';
-import TestimonialCards from '@/components/testimonial-cards';
+import TestimonialMasonry from '@/components/testimonial-masonry';
 
 import content from '@/content/home';
 import styles from '@/styles/home.module.scss';
@@ -59,53 +59,10 @@ export default function Home({ posts, testimonials }) {
           </div>
         </div>
       </section>
-      <section className="section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className={cn('col-12 col-lg-5 d-flex', styles.mapContentCol)}>
-              <div className={styles.mapContent}>
-                <div className={cn('content', styles.mapContentInner)}>
-                  <h2>{directions.headline}</h2>
-                  <p>{directions.caption}</p>
-                  <h3>{directions.officeHoursHeadline}</h3>
-                  <p>{directions.officeHours}</p>
-                  <h3>{directions.addressHeadline}</h3>
-                  <p>{directions.address}</p>
-                </div>
-                <div className={styles.mapCta}>
-                  <Link href="/contact">
-                    <a className="btn secondary">{directions.cta}</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className={cn('col-12 col-lg-7 d-flex align-items-center', styles.mapCol)}>
-              <div className={styles.map}>
-                <div className={styles.mapInner}>
-                  <iframe
-                    loading="lazy"
-                    allowFullScreen={true}
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0D0k2ChjLuOipeyDacW0pZsfR708ueC4
-                      &q=Bradley+Chiropractic+Nutrition+Center,Bakersfield+CA"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="section gray">
         <div className="container">
           <div className="row justify-content-center gy-12">
             <div className={cn('col-12 col-lg-8 content text-left text-lg-center', styles.servicesIntro)}>
-              <div className={styles.teamImageWrapper}>
-                <Image
-                  src={services.teamImage}
-                  alt="Bradley Chiropractic Team"
-                  className={styles.teamImage}
-                  layout="fill"
-                />
-              </div>
               <h2>{services.headline}</h2>
               <p>{services.caption}</p>
               <IconLink
@@ -118,23 +75,25 @@ export default function Home({ posts, testimonials }) {
               </IconLink>
             </div>
             <div className="col-12">
-              <div className="row gy-8">
-                {services.items.map(service => (
-                  <div className="col-6 col-md" key={service.name}>
-                    <Link href={service.href}>
-                      <a className={styles.service}>
-                        <span className={styles.serviceImageWrapper}>
-                          <Image
-                            src={service.image}
-                            alt={service.name}
-                            layout="fill"
-                          />
-                        </span>
-                        <span className={styles.serviceName}>{service.name}</span>
-                      </a>
-                    </Link>
-                  </div>
-                ))}
+              <div className="box">
+                <div className="row gy-8">
+                  {services.items.map(service => (
+                    <div className="col-6 col-lg" key={service.name}>
+                      <Link href={service.href}>
+                        <a className={styles.service}>
+                          <span className={styles.serviceImageWrapper}>
+                            <Image
+                              src={service.image}
+                              alt={service.name}
+                              layout="fill"
+                            />
+                          </span>
+                          <span className={styles.serviceName}>{service.name}</span>
+                        </a>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -147,14 +106,6 @@ export default function Home({ posts, testimonials }) {
               <div className="content text-left text-lg-center">
                 <h2>{doctor.headline}</h2>
                 <p>{doctor.caption}</p>
-                <IconLink
-                  className="icon-link"
-                  href="/about"
-                  layout="right"
-                  type="arrow"
-                >
-                  {doctor.cta}
-                </IconLink>
               </div>
             </div>
             <div className="col-12 mb-12">
@@ -174,12 +125,20 @@ export default function Home({ posts, testimonials }) {
                       {doctor.quote}
                       <cite>{doctor.source}</cite>
                     </blockquote>
+                    <IconLink
+                      className="icon-link"
+                      href="/about"
+                      layout="right"
+                      type="arrow"
+                    >
+                      {doctor.cta}
+                    </IconLink>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <TestimonialCards content={testimonials} />
+          <TestimonialMasonry content={testimonials} />
           <div className="row mt-8">
             <div className="col-12">
               <div className="content text-left text-lg-center">
@@ -214,6 +173,55 @@ export default function Home({ posts, testimonials }) {
             </div>
           </div>
           <BlogCards content={posts} />
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="row gy-12 justify-content-center">
+            <div className={cn('col-12 col-lg-6', styles.imageCol)}>
+              <div className={styles.teamImageWrapper}>
+                <Image
+                  src={services.teamImage}
+                  alt="Bradley Chiropractic Team"
+                  className={styles.teamImage}
+                  layout="fill"
+                />
+              </div>
+            </div>
+            <div className={cn('col-12 col-lg-6', styles.mapCol)}>
+              <div className={styles.map}>
+                <div className={styles.mapInner}>
+                  <iframe
+                    loading="lazy"
+                    allowFullScreen={true}
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0D0k2ChjLuOipeyDacW0pZsfR708ueC4
+                      &q=Bradley+Chiropractic+Nutrition+Center,Bakersfield+CA"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={cn('col-12 col-lg-6 d-flex', styles.copyCol)}>
+              <div className={styles.copy}>
+                <div className={cn('content', styles.copyInner)}>
+                  <h2>{directions.headline}</h2>
+                  <p>{directions.caption}</p>
+                </div>
+                <div className={styles.copyCta}>
+                  <Link href="/contact">
+                    <a className="btn secondary">{directions.cta}</a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={cn('col-12 col-lg-6 d-flex', styles.directionsCol)}>
+              <div className="content">
+                <h3>{directions.officeHoursHeadline}</h3>
+                <p>{directions.officeHours}</p>
+                <h3>{directions.addressHeadline}</h3>
+                <p>{directions.address}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <SubscribeForm />

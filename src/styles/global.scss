@@ -1,5 +1,6 @@
 @use 'bootstrap/variables' as *;
 @use 'bootstrap/mixins/breakpoints' as *;
+@use 'mixins' as *;
 
 // Fix Next.js images
 span[style^="box-sizing:border-box;display:inline-block"] {
@@ -56,36 +57,19 @@ main {
   padding: $spacer-12 * 2 0;
   position: relative;
 
-  &.gray {
-    background-color: $gray-100;
-  }
-
-  &.blue {
-    background-color: $blue;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a,
-    span,
-    ul,
-    ol,
-    li,
-    blockquote,
-    cite,
-    var,
-    label {
-      color: $white;
-    }
-  }
+  @include colors();
 
   @include media-breakpoint-down(md) {
     padding: $spacer-12 0;
   }
+}
+
+.box {
+  background: $white;
+  border-radius: $border-radius-lg;
+  padding: $spacer-12;
+
+  @include colors();
 }
 
 .quote {

@@ -32,10 +32,11 @@ export default function About() {
               </div>
             </div>
             <div className="col-12 col-lg-8">
-              <h1 className="text-left text-lg-center">{content.headline}</h1>
+              <h1>{content.title}</h1>
               <Markdown>
                 {content.text}
               </Markdown>
+              <h2>{content.faqTitle}</h2>
               <Tabs tabs={content.faqs} />
             </div>
           </div>

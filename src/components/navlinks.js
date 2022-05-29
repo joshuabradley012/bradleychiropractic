@@ -21,6 +21,10 @@ export default function Navlinks({ className, handleClick }) {
       href: '/blog',
       name: 'Blog',
     },
+    {
+      href: '/testimonials',
+      name: 'Testimonials',
+    },
   ];
 
   return (

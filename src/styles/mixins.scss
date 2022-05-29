@@ -1,0 +1,30 @@
+@use 'bootstrap/variables' as *;
+
+@mixin colors() {
+  &.gray {
+    background-color: $gray-100;
+  }
+
+  &.blue {
+    background-color: $blue;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span,
+    ul,
+    ol,
+    li,
+    blockquote,
+    cite,
+    var,
+    label {
+      color: $white;
+    }
+  }
+}
