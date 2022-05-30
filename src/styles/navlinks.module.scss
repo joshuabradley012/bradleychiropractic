@@ -35,7 +35,7 @@
 
 @include media-breakpoint-down(md) {
   .links {
-    padding: 0 0 $spacer-2;
+    padding: $spacer-6 0;
     top: 100%;
     width: 100%;
   }
