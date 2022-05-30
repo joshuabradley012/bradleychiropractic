@@ -14,12 +14,12 @@ export default function Navlinks({ className, handleClick }) {
       name: 'Services',
     },
     {
-      href: '/testimonials',
-      name: 'Testimonials',
-    },
-    {
       href: '/about',
       name: 'About',
+    },
+    {
+      href: '/testimonials',
+      name: 'Testimonials',
     },
     {
       href: '/blog',
