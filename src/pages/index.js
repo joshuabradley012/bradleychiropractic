@@ -245,6 +245,7 @@ export async function getStaticProps(context) {
   const posts = getAllPosts([
     'title',
     'excerpt',
+    'category',
     'slug',
     'coverImage',
   ], 3);

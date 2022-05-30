@@ -3,7 +3,7 @@ title: 'The First Step to Any Exercise Routine: Determine Your Goals'
 excerpt: 'Goal setting is the most important step of any workout routine.'
 coverImage: '/workout.png'
 date: '2016-04-11T05:35:07.322Z'
-category: 'health'
+category: 'exercise'
 author:
   name: Dr. Brendon Bradley
   image: '/dr-bradley.png'

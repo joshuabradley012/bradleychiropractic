@@ -3,7 +3,7 @@ title: 'Where to Begin When Choosing Exercises: Finding Imbalances'
 excerpt: 'To get the most out of exercise it is important that we start addressing our imbalances.'
 coverImage: '/first-step.png'
 date: '2016-05-12T05:35:07.322Z'
-category: 'health'
+category: 'exercise'
 author:
   name: Dr. Brendon Bradley
   image: '/dr-bradley.png'

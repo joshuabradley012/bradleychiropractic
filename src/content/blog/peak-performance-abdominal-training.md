@@ -3,7 +3,7 @@ title: 'Peak Performance Abdominal Training'
 excerpt: The abdominal muscles are but extremely important to anybody's performance in sports or in everyday life.
 coverImage: '/abs.png'
 date: '2015-06-12T05:35:07.322Z'
-category: 'health'
+category: 'exercise'
 author:
   name: Dr. Brendon Bradley
   image: '/dr-bradley.png'

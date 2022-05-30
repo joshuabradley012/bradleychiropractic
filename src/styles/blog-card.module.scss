@@ -31,6 +31,22 @@
   }
 }
 
+.category {
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-2;
+  color: $black;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  position: absolute;
+  top: $spacer-3;
+  left: $spacer-3;
+  letter-spacing: .05em;
+  padding: $spacer-1 $spacer-2;
+  text-transform: capitalize;
+  z-index: 2;
+}
+
 .postContent {
   color: $font-color;
   padding-top: $spacer-6;

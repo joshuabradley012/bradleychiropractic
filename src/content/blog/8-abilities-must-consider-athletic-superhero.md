@@ -3,7 +3,7 @@ title: '8 Abilities You Must Consider to be an Athletic Superhero'
 excerpt: 'To achieve peak performance, you must consider and train for the needs of your sport.'
 coverImage: '/athletic-superhero.png'
 date: '2016-06-08T05:35:07.322Z'
-category: 'health'
+category: 'exercise'
 author:
   name: Dr. Brendon Bradley
   image: '/dr-bradley.png'
