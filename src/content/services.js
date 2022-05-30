@@ -58,7 +58,7 @@ Through daily routines, many people develop weaknesses which lead to poor postur
       cta: 'Learn More',
       href: '/services/nutrition',
       content: `
-## Tailor a nutritional supplement program for your needs.
+## Create a nutritional program for your needs.
 
 We've partnered with Science Based Nutrition to provide in-depth tests to find and correct nutitional defficiences. This is effective for relieving many chronic illnesses, and providing your body the nutritients it needs for optimal health.
       `,
