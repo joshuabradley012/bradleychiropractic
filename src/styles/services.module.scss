@@ -1,0 +1,71 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.serviceCol {
+  padding-top: $spacer-12;
+  padding-bottom: $spacer-12;
+
+  &:before {
+    border-top: $border;
+    content: '';
+    display: block;
+    margin-top: -$spacer-12;
+    margin-bottom: $spacer-12;
+    width: 100%;
+  }
+}
+
+
+.imageWrapper {
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 75%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.imageCol,
+.textCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.middleCol {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.serviceName {
+  color: $font-color;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  margin-top: $spacer-6;
+  text-transform: uppercase;
+  transition: color $transition-time;
+}
+
+@include media-breakpoint-down(lg) {
+  .middleCol {
+    order: 1;
+  }
+
+  .imageCol {
+    order: 2;
+  }
+
+  .textCol {
+    order: 3;
+  }
+}

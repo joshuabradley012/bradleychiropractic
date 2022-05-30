@@ -1,30 +1,92 @@
 @use 'bootstrap/variables' as *;
 
+@mixin text($color) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span,
+  ul,
+  ol,
+  li,
+  blockquote,
+  cite,
+  var,
+  label {
+    color: $color;
+  }
+
+  svg {
+    fill: $color;
+  }
+}
+
 @mixin colors() {
   &.gray {
     background-color: $gray-100;
   }
 
+  &:global(.gray) {
+    background-color: $gray-100;
+  }
+
   &.blue {
     background-color: $blue;
+    color: $white;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a,
-    span,
-    ul,
-    ol,
-    li,
-    blockquote,
-    cite,
-    var,
-    label {
-      color: $white;
-    }
+    @include text($white);
+  }
+
+  &:global(.blue) {
+    background-color: $blue;
+    color: $white;
+
+    @include text($white);
+  }
+
+  &.green {
+    background-color: $green;
+    color: $white;
+
+    @include text($white);
+  }
+
+  &:global(.green) {
+    background-color: $green;
+    color: $white;
+
+    @include text($white);
+  }
+
+  &.red {
+    background-color: $red;
+    color: $white;
+
+    @include text($white);
+  }
+
+  &:global(.red) {
+    background-color: $red;
+    color: $white;
+
+    @include text($white);
+  }
+
+  &.purple {
+    background-color: $purple;
+    color: $white;
+
+    @include text($white);
+  }
+
+  &:global(.purple) {
+    background-color: $purple;
+    color: $white;
+
+    @include text($white);
   }
 }

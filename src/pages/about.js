@@ -19,10 +19,10 @@ export default function About() {
         <meta name="description" content={content.seoDescription} />
         <meta property="og:description" content={content.seoDescription} />
       </Head>
-      <section className="section pt-0">
+      <section className="section">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-12 content-col">
+          <div className="row gy-12 justify-content-center">
+            <div className="col-12 content-col content">
               <h6>{content.brow}</h6>
               <h1 className="mb-0">{content.title}</h1>
             </div>

@@ -8,6 +8,7 @@ import useScript from '@/hooks/useScript';
 
 import Icon from '@/components/icon';
 import IconLink from '@/components/icon-link';
+import IconService from '@/components/icon-service';
 import Review from '@/components/review';
 import SubscribeForm from '@/components/subscribe-form';
 import BlogCards from '@/components/blog-cards';
@@ -87,20 +88,14 @@ export default function Home({ posts, testimonials }) {
                 {services.cta}
               </IconLink>
             </div>
-            <div className="col-12">
+            <div className="col-12 col-xl-8">
               <div className="box">
                 <div className="row gy-12">
                   {services.items.map(service => (
                     <div className="col-6 col-lg" key={service.name}>
                       <Link href={service.href}>
                         <a className={styles.service}>
-                          <span className={styles.serviceImageWrapper}>
-                            <Image
-                              src={service.image}
-                              alt={service.name}
-                              layout="fill"
-                            />
-                          </span>
+                          <IconService className={cn('large', service.color)} type={service.icon} />
                           <span className={styles.serviceName}>{service.name}</span>
                         </a>
                       </Link>

@@ -18,7 +18,7 @@ export default function Blog({ posts }) {
       <section className="section gray">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8 mb-12">
+            <div className="col-12 col-md-8 mb-12">
               <div className="content text-left text-lg-center">
                 <h6>{content.brow}</h6>
                 <h1>{content.title}</h1>

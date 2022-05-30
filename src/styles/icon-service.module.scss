@@ -1,0 +1,13 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+@use 'mixins' as *;
+
+.iconService {
+  background: $secondary;
+  padding: $spacer-6;
+  height: $spacer-12 * 2;;
+  width: $spacer-12 * 2;;
+  border-radius: 50%;
+
+  @include colors();
+}

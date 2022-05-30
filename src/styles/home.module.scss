@@ -1,6 +1,5 @@
 @use 'bootstrap/variables' as *;
 @use 'bootstrap/mixins/breakpoints' as *;
-//@use 'global' as *;
 
 .title {
   color: $white;
@@ -39,7 +38,6 @@
   overflow: hidden;
   width: 100%;
 }
-
 
 .mapInner {
   display: block;
@@ -100,6 +98,7 @@
 }
 
 .service {
+  align-items: center;
   color: $primary;
   display: flex;
   flex-direction: column;
@@ -132,7 +131,7 @@
   color: $font-color;
   font-size: $font-size-sm;
   font-weight: 500;
-  margin-top: $spacer-4;
+  margin-top: $spacer-6;
   text-transform: uppercase;
   transition: color $transition-time;
 }

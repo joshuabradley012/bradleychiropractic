@@ -29,10 +29,10 @@ export default function Post({ post, morePosts, preview }) {
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.coverImage} />
       </Head>
-      <section className="section pt-0">
+      <section className="section">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-12 content-col">
+          <div className="row gy-12 justify-content-center">
+            <div className="col-12 content-col content">
               <h6>{post.category}</h6>
               <h1>{post.title}</h1>
               <p className={styles.excerpt}>{post.excerpt}</p>

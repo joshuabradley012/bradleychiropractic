@@ -26,6 +26,8 @@ button {
 }
 
 main {
+  padding-top: 92px;
+
   @include media-breakpoint-down(sm) {
     .btn,
     button {
@@ -123,4 +125,8 @@ main {
     bottom: 0;
     left: 0;
   }
+}
+
+.intro {
+  font-size: $font-size-lg;
 }
