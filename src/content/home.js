@@ -51,28 +51,28 @@ const content = {
     items: [
       {
         name: 'Chiropractic',
-        icon: 'medical',
+        icon: 'chiropractic',
         color: 'blue',
         image: chiropractic,
         href: '/services/chiropractic',
       },
       {
         name: 'Spinal Decompression',
-        icon: 'medical',
+        icon: 'spinal-decompression',
         color: 'purple',
         image: decompression,
         href: '/services/spinal-decompression',
       },
       {
         name: 'Corrective Exercise',
-        icon: 'medical',
+        icon: 'exercise',
         color: 'red',
         image: exercise,
         href: '/services/corrective-exercise',
       },
       {
         name: 'Nutrition',
-        icon: 'medical',
+        icon: 'nutrition',
         color: 'green',
         image: nutrition,
         href: '/services/nutrition',

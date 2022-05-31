@@ -13,7 +13,7 @@ const content = {
   services: [
     {
       name: 'Chiropractic',
-      icon: 'medical',
+      icon: 'chiropractic',
       color: 'blue',
       image: chiropractic,
       cta: 'Learn More',
@@ -26,7 +26,7 @@ Chiropractic realigns the skeletal system to enable the optimal function of musc
     },
     {
       name: 'Spinal Decompression',
-      icon: 'medical',
+      icon: 'spinal-decompression',
       color: 'purple',
       image: decompression,
       cta: 'Learn More',
@@ -39,7 +39,7 @@ The DRX-9000 is a state of the art decompression table which gently pulls the sp
     },
     {
       name: 'Corrective Exercise',
-      icon: 'medical',
+      icon: 'exercise',
       color: 'red',
       image: exercise,
       cta: 'Learn More',
@@ -52,7 +52,7 @@ Through daily routines, many people develop weaknesses which lead to poor postur
     },
     {
       name: 'Nutrition',
-      icon: 'medical',
+      icon: 'nutrition',
       color: 'green',
       image: nutrition,
       cta: 'Learn More',
