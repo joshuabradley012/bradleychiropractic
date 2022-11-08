@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
 
-import { getAllPosts, getTestimonialBySlug } from '@/lib/api';
+import { getAllPosts, getTestimonialsBySlugs } from '@/lib/api';
 import useScript from '@/hooks/useScript';
 
 import Icon from '@/components/icon';
@@ -250,17 +250,13 @@ export async function getStaticProps(context) {
     'coverImage',
   ], 3);
 
-  const testimonials = [];
-
-  content.doctor.testimonials.forEach(slug => (
-    testimonials.push(getTestimonialBySlug(slug, [
-      'content',
-      'platform',
-      'rating',
-      'slug',
-      'source',
-    ]))
-  ));
+  const testimonials = getTestimonialsBySlugs(content.doctor.testimonials, [
+    'content',
+    'platform',
+    'rating',
+    'slug',
+    'source',
+  ]);
 
   return {
     props: {

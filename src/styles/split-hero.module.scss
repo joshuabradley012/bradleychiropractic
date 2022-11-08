@@ -1,0 +1,93 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+@use 'mixins' as *;
+
+.splitHero {
+  align-items: center;
+  display: flex;
+  min-height: 66vh;
+
+  &:global(.blue) {
+    svg {
+      fill: $blue;
+    }
+  }
+
+  &:global(.green) {
+    svg {
+      fill: $green;
+    }
+  }
+
+  &:global(.purple) {
+    svg {
+      fill: $purple;
+    }
+  }
+
+  &:global(.red) {
+    svg {
+      fill: $red;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    min-height: unset;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+}
+
+.imageWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  @include colors();
+
+  @include media-breakpoint-down(lg) {
+    position: relative;
+    margin-top: 9.6rem !important;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: 7.2rem !important;
+  }
+
+  :global(.next-image) {
+    left: 50% !important;
+
+    @include media-breakpoint-down(lg) {
+      left: 0 !important;
+      position: relative !important;
+      padding-top: 75% !important;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.textContent {
+  margin-right: $spacer-9 * 2;
+
+  @include media-breakpoint-down(lg) {
+    margin-right: 0;
+  }
+}
+
+.icon {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  box-shadow: $box-shadow-3;
+
+  @include media-breakpoint-down(lg) {
+    bottom: 100%;
+  }
+}

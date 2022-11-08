@@ -46,7 +46,7 @@ export default function Services() {
     );
 
     serviceElements.push(
-      <div className={cn('col-12', styles.serviceCol)}>
+      <div key={service.name} className={cn('col-12', styles.serviceCol)}>
         <div className="row gy-12">
           {textPosition === 'left' ? text : image}
           <div className={cn('col-12 col-lg-2', styles.middleCol)}>

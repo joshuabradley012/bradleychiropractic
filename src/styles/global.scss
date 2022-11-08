@@ -3,6 +3,7 @@
 @use 'mixins' as *;
 
 // Fix Next.js images
+.next-image,
 span[style^="box-sizing:border-box;display:inline-block"] {
   display: block !important;
 }

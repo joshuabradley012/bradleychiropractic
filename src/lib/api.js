@@ -75,12 +75,31 @@ export function getAllPosts(fields = [], count) {
   return getAll(postsDirectory, fields, count);
 }
 
+export function getPostsByCategory(category, fields = [], count) {
+  const posts = getAll(postsDirectory, fields);
+  let results = posts.filter(post => post.category === category);
+  if (count) {
+    results = results.slice(0, count);
+  }
+  return results;
+}
+
 export function getTestimonialSlugs() {
   return getSlugs(testimonialsDirectory);
 }
 
 export function getTestimonialBySlug(slug, fields = []) {
   return getBySlug(testimonialsDirectory, slug, fields);
+}
+
+export function getTestimonialsBySlugs(slugs = [], fields = []) {
+  const testimonials = [];
+
+  slugs.forEach(slug => {
+    testimonials.push(getTestimonialBySlug(slug, fields));
+  });
+
+  return testimonials;
 }
 
 export function getAllTestimonials(fields = [], count) {

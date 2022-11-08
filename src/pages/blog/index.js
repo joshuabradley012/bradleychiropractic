@@ -15,7 +15,7 @@ export default function Blog({ posts }) {
         <meta name="description" content={content.seoDescription} />
         <meta property="og:description" content={content.seoDescription} />
       </Head>
-      <section className="section gray">
+      <section className="section">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-8 mb-12">

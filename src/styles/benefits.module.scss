@@ -1,0 +1,8 @@
+@use 'bootstrap/variables' as *;
+@use 'bootstrap/mixins/breakpoints' as *;
+
+.columnIcon {
+  height: 5.6rem;
+  width: 5.6rem;
+  margin-bottom: $spacer-6;
+}
