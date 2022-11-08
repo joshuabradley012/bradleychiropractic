@@ -12,9 +12,9 @@ const defaultBreakpoints = {
 };
 
 const useBreakpoint = (breakpoints = defaultBreakpoints) => {
-  if (typeof window === 'undefined') return null;
+  const { width } = useDimensions();
 
-  const { width } = useDimensions(window);
+  if (typeof window === 'undefined') return "";
 
   let breakpoint = '';
   for (let size in breakpoints) {

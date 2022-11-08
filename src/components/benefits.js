@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import cn from 'classnames';
+import hash from "object-hash";
 
 import Icon from '@/components/icon';
 import Markdown from '@/components/markdown';
@@ -19,7 +20,7 @@ export default function Benefits({ content }) {
         </div>
         <div className="row gy-12">
           {content.columns.map(column => (
-            <div className="col-12 col-lg-4">
+            <div key={hash(column)} className="col-12 col-lg-4">
               {column.icon && <Icon className={styles.columnIcon} type={column.icon} />}
               <Markdown className="content">{column.content}</Markdown>
             </div>

@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
 const useScript = url => {
-  if (typeof document === 'undefined') return null;
-
   useEffect(() => {
+    if (typeof document === 'undefined') return null;
+
     const script = document.createElement('script');
 
     script.src = url;
