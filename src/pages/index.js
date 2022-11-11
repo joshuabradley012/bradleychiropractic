@@ -22,7 +22,6 @@ export default function Home({ posts, testimonials }) {
   const [hours, setHours] = useState(0);
 
   useEffect(() => {
-    console.log(new Date().getHours());
     setHours(new Date().getHours());
   }, []);
 
@@ -42,7 +41,7 @@ export default function Home({ posts, testimonials }) {
         <meta name="description" content={content.seoDescription} />
         <meta property="og:description" content={content.seoDescription} />
       </Head>
-      <section className={hours}>
+      <section className="section" data-hours={hours}>
         <div className="bg-image">
           <Image
             src={hero.heroImage}
