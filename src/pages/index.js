@@ -19,11 +19,12 @@ import content from '@/content/home';
 import styles from '@/styles/home.module.scss';
 
 export default function Home({ posts, testimonials }) {
-  const [hours, setHours] = useState(new Date().getHours());
+  const [hours, setHours] = useState(0);
 
   useEffect(() => {
+    console.log(new Date().getHours());
     setHours(new Date().getHours());
-  }, [hours]);
+  }, []);
 
   const {
     hero,
