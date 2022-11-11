@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,12 +19,11 @@ import content from '@/content/home';
 import styles from '@/styles/home.module.scss';
 
 export default function Home({ posts, testimonials }) {
-  const hours = new Date().getHours();
-  //const [hours, setHours] = useState(new Date().getHours());
+  const [hours, setHours] = useState(new Date().getHours());
 
-  //useEffect(() => {
-  //  setHours(new Date().getHours());
-  //}, [hours]);
+  useEffect(() => {
+    setHours(new Date().getHours());
+  }, [hours]);
 
   const {
     hero,
