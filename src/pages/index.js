@@ -18,6 +18,13 @@ import content from '@/content/home';
 import styles from '@/styles/home.module.scss';
 
 export default function Home({ posts, testimonials }) {
+  const hours = new Date().getHours();
+  //const [hours, setHours] = useState(new Date().getHours());
+
+  //useEffect(() => {
+  //  setHours(new Date().getHours());
+  //}, [hours]);
+
   const {
     hero,
     directions,
@@ -34,7 +41,7 @@ export default function Home({ posts, testimonials }) {
         <meta name="description" content={content.seoDescription} />
         <meta property="og:description" content={content.seoDescription} />
       </Head>
-      <section className="section">
+      <section className={hours}>
         <div className="bg-image">
           <Image
             src={hero.heroImage}
