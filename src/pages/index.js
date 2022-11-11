@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,12 +18,6 @@ import content from '@/content/home';
 import styles from '@/styles/home.module.scss';
 
 export default function Home({ posts, testimonials }) {
-  const [hours, setHours] = useState(0);
-
-  useEffect(() => {
-    setHours(new Date().getHours());
-  }, []);
-
   const {
     hero,
     directions,
@@ -41,7 +34,7 @@ export default function Home({ posts, testimonials }) {
         <meta name="description" content={content.seoDescription} />
         <meta property="og:description" content={content.seoDescription} />
       </Head>
-      <section className="section" data-hours={hours}>
+      <section className="section">
         <div className="bg-image">
           <Image
             src={hero.heroImage}
