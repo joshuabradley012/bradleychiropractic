@@ -5,13 +5,16 @@
     "dev": "next dev -p 3002",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:push": "dotenv -e .env.local -- npx prisma db push"
   },
   "dependencies": {
+    "@prisma/client": "4.6.1",
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
     "next": "^12.1.6",
     "object-hash": "^3.0.0",
+    "prisma": "^4.6.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rehype-raw": "^6.1.1",
