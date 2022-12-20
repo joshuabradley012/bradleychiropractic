@@ -104,7 +104,7 @@ const content = {
   directions: {
     headline: 'Visit Our Office',
     caption: 'On your first visit, we will have a sit down consultation to create a specialized wellness plan for you.',
-    cta: 'Schedule',
+    cta: 'Schedule a visit',
     officeHoursHeadline: 'Office Hours',
     officeHours: <>9AM - 6PM, Monday - Thursday <br />9AM - 12PM, Friday</>,
     addressHeadline: 'Address',

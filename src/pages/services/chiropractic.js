@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 import cn from 'classnames';
 
 import {
@@ -10,6 +8,7 @@ import {
 
 import Benefits from '@/components/benefits';
 import BlogCards from '@/components/blog-cards';
+import Markdown from '@/components/markdown';
 import SplitHero from '@/components/split-hero';
 import SubscribeForm from '@/components/subscribe-form';
 import TestimonialMasonry from '@/components/testimonial-masonry';
@@ -20,6 +19,7 @@ export default function Chiropractic({ posts, testimonials }) {
   const {
     hero,
     benefits,
+    about,
     postsSection,
   } = content;
 
@@ -38,6 +38,20 @@ export default function Chiropractic({ posts, testimonials }) {
       </section>
       <Benefits content={benefits} />
       <section className="section white">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-12 content-col">
+              <div className="content box gray">
+                <h2 className="mb-12">{about.title}</h2>
+                <Markdown className="content">
+                  {about.content}
+                </Markdown>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section gray">
         <div className="container">
           <div className="row justify-content-center mb-12">
             <div className="col-12 col-lg-8">

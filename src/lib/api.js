@@ -71,6 +71,16 @@ export function getPostBySlug(slug, fields = []) {
   return getBySlug(postsDirectory, slug, fields);
 }
 
+export function getPostsBySlugs(slugs = [], fields = []) {
+  const posts = [];
+
+  slugs.forEach(slug => {
+    posts.push(getPostBySlug(slug, fields));
+  });
+
+  return posts;
+}
+
 export function getAllPosts(fields = [], count) {
   return getAll(postsDirectory, fields, count);
 }

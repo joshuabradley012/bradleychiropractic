@@ -1,7 +1,8 @@
 @use 'bootstrap/variables' as *;
 @use 'bootstrap/mixins/breakpoints' as *;
 
-.subscribeForm {
+.form {
+  align-items: flex-start;
   background: transparent;
   border-radius: unset;
   display: flex;
@@ -9,32 +10,42 @@
   padding: unset;
   justify-content: center;
   text-align: left;
+}
 
-  input {
-    color: $font-color;
-    margin: 0 $spacer-6 0 0;
-    width: 300px;
+.inputWrapper {
+  width: 300px;
+}
 
-    &:focus {
-      border: $border;
-    }
+.input {
+  color: $font-color;
+  margin: 0;
+
+  &:focus {
+    border: $border;
   }
 }
 
+.inputMessage {
+  font-size: $font-size-sm;
+  margin: $spacer-2 0 0;
+}
+
+.submitButton {
+  margin: 0 0 0 $spacer-6;
+}
+
 @include media-breakpoint-down(lg) {
-  .subscribeForm {
-    input {
-      width: 100%;
-    }
+  .inputWrapper {
+    width: 100%;
   }
 }
 
 @include media-breakpoint-down(sm) {
-  .subscribeForm {
+  .form {
     flex-wrap: wrap;
+  }
 
-    input {
-      margin: 0 0 $spacer-5 0;
-    }
+  .submitButton {
+    margin: $spacer-5 0 0 0;
   }
 }

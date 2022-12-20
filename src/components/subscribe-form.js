@@ -10,6 +10,7 @@ const subscribe = {
 
 export default function SubscribeForm() {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   function handleChange(e) {
     setEmail(e.target.value);
@@ -18,11 +19,13 @@ export default function SubscribeForm() {
   async function submit(e) {
     e.preventDefault();
     try {
-      await fetch('/api/subscribe', {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
+      const json = await res.json();
+      setMessage(json.message);
     } catch (err) {
       console.error(err);
     }
@@ -36,14 +39,18 @@ export default function SubscribeForm() {
             <div className="content text-left text-lg-center">
               <h2>{subscribe.headline}</h2>
               <p>{subscribe.caption}</p>
-              <form className={styles.subscribeForm} onSubmit={submit}>
-                <input
-                  type="text"
-                  placeholder="Email"
-                  onChange={handleChange}
-                  value={email}
-                />
-                <button className="secondary" type="submit">Subscribe</button>
+              <form className={styles.form} onSubmit={submit}>
+                <div className={styles.inputWrapper}>
+                  <input
+                    className={styles.input}
+                    type="text"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    value={email}
+                  />
+                  {!!message && <p className={styles.inputMessage}>{message}</p>}
+                </div>
+                <button className={cn("secondary", styles.submitButton)} type="submit">Subscribe</button>
               </form>
             </div>
           </div>

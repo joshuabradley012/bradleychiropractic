@@ -16,7 +16,7 @@ const content = {
       icon: 'chiropractic',
       color: 'blue',
       image: chiropractic,
-      cta: 'Learn More',
+      cta: 'Learn more',
       href: '/services/chiropractic',
       content: `
 ## Restore alignment with chiropractic adjustments.
@@ -29,7 +29,7 @@ Chiropractic realigns the skeletal system to enable the optimal function of musc
       icon: 'spinal-decompression',
       color: 'purple',
       image: decompression,
-      cta: 'Learn More',
+      cta: 'Learn more',
       href: '/services/spinal-decompression',
       content: `
 ## Effectively heal herinated discs without surgery.
@@ -42,7 +42,7 @@ The DRX-9000 is a state of the art decompression table which gently pulls the sp
       icon: 'exercise',
       color: 'red',
       image: exercise,
-      cta: 'Learn More',
+      cta: 'Learn more',
       href: '/services/corrective-exercise',
       content: `
 ## Strengthen your posture using corrective exercise.
@@ -55,7 +55,7 @@ Through daily routines, many people develop weaknesses which lead to poor postur
       icon: 'nutrition',
       color: 'green',
       image: nutrition,
-      cta: 'Learn More',
+      cta: 'Learn more',
       href: '/services/nutrition',
       content: `
 ## Create a nutritional program for your needs.

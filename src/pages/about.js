@@ -5,7 +5,6 @@ import cn from 'classnames';
 
 import Markdown from '@/components/markdown';
 import SubscribeForm from '@/components/subscribe-form';
-import Tabs from '@/components/tabs';
 
 import styles from '@/styles/about.module.scss';
 
@@ -39,8 +38,11 @@ export default function About() {
               <Markdown className="content">
                 {content.text}
               </Markdown>
-              <h2>{content.faqTitle}</h2>
-              <Tabs tabs={content.faqs} />
+              <div className="mt-12">
+                <Link href="/schedule">
+                  <a className="btn">{content.cta}</a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
