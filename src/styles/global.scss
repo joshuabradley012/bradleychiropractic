@@ -18,6 +18,18 @@ button {
       background-color: $gray-500;
     }
   }
+  &.icon {
+    align-items: center;
+    display: inline-flex;
+    color: $black;
+    font-weight: 500;
+    justify-content: center;
+
+    span[class^="icon"] {
+      margin-left: -$spacer-2;
+      margin-right: $spacer-4;
+    }
+  }
 }
 
 .icon-link {

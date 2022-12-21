@@ -18,49 +18,6 @@
   display: flex;
 }
 
-.phone {
-  align-items: center;
-  display: flex;
-  color: $black;
-  font-weight: 500;
-  justify-content: center;
-}
-
-.icon {
-  margin-left: -$spacer-2;
-  margin-right: $spacer-4;
-}
-
-.map {
-  background: $white;
-  border: 1px solid $border-color;
-  border-radius: $border-radius-lg;
-  overflow: hidden;
-  width: 100%;
-}
-
-.mapInner {
-  display: block;
-  overflow: hidden;
-  position: relative;
-
-  &::before {
-    content: '';
-    display: block;
-    padding-top: 56.25%;
-  }
-
-  iframe {
-    border: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  }
-}
-
 .copy {
   display: flex;
   flex-direction: column;

@@ -8,8 +8,6 @@ form {
   padding: $spacer-9;
 
   @include media-breakpoint-down(sm) {
-    border-radius: 0;
-    margin: 0 (-$spacer-6);
     padding: $spacer-6;
   }
 
@@ -77,6 +75,7 @@ textarea,
     border-bottom-width: $border-width * 2;
     border-left-width: $border-width * 2;
     box-shadow: unset;
+    padding: ($spacer-4 - $border-width * 3);
   }
 }
 

@@ -6,12 +6,13 @@ import cn from 'classnames';
 import { getAllPosts, getTestimonialsBySlugs } from '@/lib/api';
 import useScript from '@/hooks/useScript';
 
+import BlogCards from '@/components/blog-cards';
 import Icon from '@/components/icon';
 import IconLink from '@/components/icon-link';
 import IconService from '@/components/icon-service';
+import Map from '@/components/map';
 import Review from '@/components/review';
 import SubscribeForm from '@/components/subscribe-form';
-import BlogCards from '@/components/blog-cards';
 import TestimonialMasonry from '@/components/testimonial-masonry';
 
 import content from '@/content/home';
@@ -53,8 +54,8 @@ export default function Home({ posts, testimonials }) {
                   <Link href="/schedule">
                     <a className="btn">Schedule</a>
                   </Link>
-                  <a className={cn('btn secondary', styles.phone)} href="tel:+16616176160">
-                    <Icon type="phone" className={styles.icon} />(661) 617-6160
+                  <a className="btn secondary icon" href="tel:+16616176160">
+                    <Icon type="phone" />(661) 617-6160
                   </a>
                 </div>
               </div>
@@ -201,16 +202,7 @@ export default function Home({ posts, testimonials }) {
               </Link>
             </div>
             <div className={cn('col-12 col-lg-6', styles.mapCol)}>
-              <div className={styles.map}>
-                <div className={styles.mapInner}>
-                  <iframe
-                    loading="lazy"
-                    allowFullScreen={true}
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0D0k2ChjLuOipeyDacW0pZsfR708ueC4
-                      &q=Bradley+Chiropractic+Nutrition+Center,Bakersfield+CA"
-                  />
-                </div>
-              </div>
+              <Map />
             </div>
             <div className={cn('col-12 col-lg-6 d-flex', styles.copyCol)}>
               <div className={styles.copy}>

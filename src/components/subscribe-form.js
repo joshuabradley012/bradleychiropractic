@@ -63,8 +63,7 @@ export default function SubscribeForm() {
                 <div className={styles.inputWrapper}>
                   <input
                     {...register('email')}
-                    className={cn({
-                      [styles.input]: true,
+                    className={cn(styles.input, {
                       [styles.inputSuccess]: message,
                       [styles.inputError]: !!errors.email?.message || !!errorMessage,
                     })}
