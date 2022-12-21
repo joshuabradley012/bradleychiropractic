@@ -76,6 +76,14 @@ main {
   }
 }
 
+.box {
+  background: $white;
+  border-radius: $border-radius-lg;
+  padding: $spacer-9;
+
+  @include colors();
+}
+
 .section {
   padding: $spacer-12 * 2 0;
   position: relative;
@@ -89,14 +97,6 @@ main {
   @include media-breakpoint-down(md) {
     padding: $spacer-12 * 1.5 0;
   }
-}
-
-.box {
-  background: $white;
-  border-radius: $border-radius-lg;
-  padding: $spacer-9;
-
-  @include colors();
 }
 
 .quote {

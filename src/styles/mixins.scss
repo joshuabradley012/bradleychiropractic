@@ -28,16 +28,10 @@
 @mixin colors() {
   &.white {
     background-color: $white;
-    color: $black;
-
-    @include text($black);
   }
 
   &:global(.white) {
     background-color: $white;
-    color: $black;
-
-    @include text($black);
   }
 
 

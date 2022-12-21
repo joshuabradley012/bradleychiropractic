@@ -21,7 +21,7 @@ export default function Schedule() {
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8">
               <div className="content text-left text-lg-center">
-                <h1>Schedule an appointment</h1>
+                <h1>Schedule an appointment.</h1>
                 <a className="btn secondary icon" href="tel:+16616176160">
                   <Icon type="phone" />(661) 617-6160
                 </a>
@@ -31,7 +31,7 @@ export default function Schedule() {
           <div className="row justify-content-center mt-12">
             <div className="col-12 col-lg-6 content mb-12 mb-lg-0">
               <form className={cn('text-left', styles.form)}>
-                <h2>Schedule now</h2>
+                <h2>Schedule Now</h2>
                 <p>Find a time that works for you and we&apos;ll follow up through email to finalize your appointment.</p>
                 <label>Name</label>
                 <input type="text" />

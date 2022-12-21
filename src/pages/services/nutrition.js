@@ -37,7 +37,7 @@ export default function Nutrition({ posts, testimonials }) {
         </div>
       </section>
       <Benefits content={benefits} />
-      <section className="section white">
+      <section className="section">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 content-col">
