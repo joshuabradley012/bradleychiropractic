@@ -1,7 +1,7 @@
 ---
 source: 'Vicki Stalnaker'
 services: 'Chiropractic'
-platform: 'DemandForce'
+platform: 'Demandforce'
 rating: 5
 ---
 

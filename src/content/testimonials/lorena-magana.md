@@ -1,7 +1,7 @@
 ---
 source: 'Lorena Magana'
 services: 'Chiropractic'
-platform: 'DemandForce'
+platform: 'Demandforce'
 rating: 5
 ---
 

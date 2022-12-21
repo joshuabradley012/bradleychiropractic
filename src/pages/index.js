@@ -186,7 +186,7 @@ export default function Home({ posts, testimonials }) {
       <section className="section">
         <div className="container">
           <div className="row gy-12 justify-content-center">
-            <div className={cn('col-12 col-md-6', styles.imageCol)}>
+            <div className={cn('col-12 col-lg-6', styles.imageCol)}>
               <Link href="/schedule">
                 <a>
                   <div className={styles.teamImageWrapper}>
@@ -200,7 +200,7 @@ export default function Home({ posts, testimonials }) {
                 </a>
               </Link>
             </div>
-            <div className={cn('col-12 col-md-6', styles.mapCol)}>
+            <div className={cn('col-12 col-lg-6', styles.mapCol)}>
               <div className={styles.map}>
                 <div className={styles.mapInner}>
                   <iframe
@@ -212,7 +212,7 @@ export default function Home({ posts, testimonials }) {
                 </div>
               </div>
             </div>
-            <div className={cn('col-12 col-md-6 d-flex', styles.copyCol)}>
+            <div className={cn('col-12 col-lg-6 d-flex', styles.copyCol)}>
               <div className={styles.copy}>
                 <div className={cn('content', styles.copyInner)}>
                   <h2>{directions.headline}</h2>
@@ -225,7 +225,7 @@ export default function Home({ posts, testimonials }) {
                 </div>
               </div>
             </div>
-            <div className={cn('col-12 col-md-6 d-flex', styles.directionsCol)}>
+            <div className={cn('col-12 col-lg-6 d-flex', styles.directionsCol)}>
               <div className="content">
                 <h3>{directions.officeHoursHeadline}</h3>
                 <p>{directions.officeHours}</p>

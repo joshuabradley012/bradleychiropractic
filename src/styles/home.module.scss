@@ -163,7 +163,7 @@
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .imageCol {
     order: 2;
   }
@@ -187,12 +187,7 @@
   }
 
   .caption {
-    font-size: $font-size-lg;
     margin: $spacer-5 0;
-  }
-
-  .cta {
-    justify-content: flex-start;
   }
 }
 

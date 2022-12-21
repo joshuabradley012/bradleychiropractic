@@ -2,7 +2,7 @@ import Head from 'next/head';
 import cn from 'classnames';
 
 import {
-  getPostsByCategory,
+  getPostsBySlugs,
   getTestimonialsBySlugs,
 } from '@/lib/api';
 
@@ -69,7 +69,7 @@ export default function Chiropractic({ posts, testimonials }) {
 }
 
 export async function getStaticProps(context) {
-  const posts = getPostsByCategory(content.postsSection.category, [
+  const posts = getPostsBySlugs(content.postsSection.slugs, [
     'title',
     'excerpt',
     'category',

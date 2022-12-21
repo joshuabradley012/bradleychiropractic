@@ -1,7 +1,7 @@
 ---
 source: 'Adiel Martinez'
 services: 'Chiropractic'
-platform: 'DemandForce'
+platform: 'Demandforce'
 rating: 5
 ---
 

@@ -1,7 +1,7 @@
 ---
 source: 'Martha McCraw'
 services: 'Chiropractic'
-platform: 'DemandForce'
+platform: 'Demandforce'
 rating: 5
 ---
 

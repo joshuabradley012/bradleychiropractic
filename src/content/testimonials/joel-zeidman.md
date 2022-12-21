@@ -1,7 +1,7 @@
 ---
 source: 'Joel Zeidman'
 services: 'Decompression'
-platform: 'DemandForce'
+platform: 'Demandforce'
 rating: 5
 ---
 

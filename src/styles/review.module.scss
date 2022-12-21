@@ -1,6 +1,11 @@
 @use 'bootstrap/variables' as *;
 @use 'bootstrap/mixins/breakpoints' as *;
 
+.reviewWrapper {
+  color: $gray-700;
+  display: block;
+}
+
 .review {
   margin-bottom: $spacer-6;
 }

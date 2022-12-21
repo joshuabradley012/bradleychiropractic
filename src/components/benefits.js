@@ -20,7 +20,7 @@ export default function Benefits({ content }) {
         </div>
         <div className="row gy-12">
           {content.columns.map(column => (
-            <div key={hash(column)} className="col-12 col-lg-4">
+            <div key={hash(column)} className="col-12 col-lg-6 col-xl-4">
               {column.icon && <Icon className={styles.columnIcon} type={column.icon} />}
               <Markdown className="content">{column.content}</Markdown>
             </div>

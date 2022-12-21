@@ -6,7 +6,7 @@ import Stars from '@/components/stars';
 
 import styles from '@/styles/review.module.scss';
 
-export default function Review({ content, count, platform, rating, source }) {
+export default function Review({ content, count, link, platform, rating, source }) {
   const platformTypes = {
     'Google': 'google',
     'Yelp': 'yelp',
@@ -17,7 +17,7 @@ export default function Review({ content, count, platform, rating, source }) {
   const platformType = platformTypes[platform];
 
   return (
-    <div>
+    <a href={link} target="_blank" className={styles.reviewWrapper}>
       {(platform || rating) && (
         <div className={styles.review}>
           {platformType ? (
@@ -37,6 +37,6 @@ export default function Review({ content, count, platform, rating, source }) {
           {source && <cite>{source}</cite>}
         </blockquote>
       )}
-    </div>
+    </a>
   );
 }

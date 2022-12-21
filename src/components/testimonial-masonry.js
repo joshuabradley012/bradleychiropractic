@@ -10,11 +10,11 @@ export default function TestimoniaMasonry({ content }) {
   const breakpoint = useBreakpoint();
 
   let columns = [[]];
-  if (breakpoint === 'lg' || breakpoint === 'xl' || breakpoint === 'xxl') {
+  if (breakpoint === 'xl' || breakpoint === 'xxl') {
     columns = [[], [], []];
   }
 
-  if (breakpoint === 'md') {
+  if (breakpoint === 'lg') {
     columns = [[], []];
   }
 

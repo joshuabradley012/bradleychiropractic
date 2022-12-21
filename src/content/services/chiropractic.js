@@ -24,43 +24,51 @@ const content = {
     cta: 'Schedule an appointment',
     columns: [
       {
-        icon: 'car-accident',
+        icon: 'headache',
         content: `
 ### Headaches
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+Most headaches are caused by tension within the muscles and joints of the upper back and neck. Tension is caused by poor posture and misalignment of the vertebrae within the spine. These misalignments are called subluxations. Chiropractors are uniquely qualified to locate, detect and remove subluxations. By removing subluxations, the body is more balanced. Pain and tension are relived and in most cases symptoms such as headaches disappear. Chiropractic is a safe and effective treatment for headaches.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'neck-pain',
         content: `
-### Headaches
+### Neck Pain
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+Neck pain has become a common occurrence in modern society. Because of cell phones and computers we are constantly looking down (flexing our necks). Over time this repetitive flexion causes postural imbalances leading to pain and dysfunction. A common postural finding with our patient’s is forward head posture coupled with upper crossed syndrome. When these imbalances are present, the vertebrae in our necks become misaligned and stuck or fixated. By correcting the postural imbalances and restoring proper movement to the neck, chiropractic effectively treats these common causes of neck pain.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'chiropractic',
         content: `
-### Headaches
+### Low Back Pain
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+Statistics tell us that 80% of all people with experience lower back pain at some point in their life. The low back consists of 5 bones (vertebrae) with discs in between acting as shock absorbers. Between each vertebra are spaces where the spinal nerves exit. When injury occurs to the spine, vertebrae become misaligned, discs often injured and spinal nerves compressed. Many people suffering from low back pain benefit greatly from chiropractic care. Chiropractic care is safe, effective and affordable, especially when compared to drugs and surgery.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'herniated-disc',
         content: `
-### Headaches
+### Sciatica
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+When a disc bulges or (herniates) it can put pressure on the nerves that exit your spine and travel down your leg. This is called sciatica. After a detailed history, examination and evaluation of x-rays and MRI we can determine the best course of care for those suffering from sciatica. In some cases, a conservative course of chiropractic care is all that is needed. If the disc herniation is more pronounced, spinal decompression might be the best way to go. In rare situations, the disc herniation is too large and a referral will be made to either a pain management specialist or an orthopedic surgeon.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'holistic-health',
         content: `
-### Headaches
+### Carpal Tunnel Syndrome
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+One of the nerves that travel down the front part of your arm into your hand is called the median nerve. When this nerve becomes compressed it causes pain, numbness and tingling and inflammation in your hand. The median nerve originates from branches of the nerves that exit your neck. By combining chiropractic care along with specific exercises and muscle release techniques we are able to treat many people with carpal tunnel syndrome. When treatment is successful, a person is able to avoid surgery and long periods of recovery and get back to their normal routine.
+        `,
+      },
+      {
+        icon: 'exercise',
+        content: `
+### Shoulder Pain
+
+Because postural imbalances are prevalent in our society and due to the complexity of the shoulder joint, injuries and conditions of the shoulder are a very common in our office. The nerves that supply the muscles of the shoulder exit the lower part of the neck. Poor posture lends itself to placing increased stress on the muscles within the shoulder that make up the rotator cuff tendon. We have a specific protocol of exercises, chiropractic adjustments and muscular release techniques that we use to effectively treat those suffering from shoulder pain.
         `,
       },
     ],
@@ -106,7 +114,11 @@ When two smooth surfaces are in contact, such as is the case with spinal and per
     `,
   },
   postsSection: {
-    category: 'chiropractic',
+    slugs: [
+      'chiropractic-care-for-car-accidents',
+      'neck-pain-back-pain-and-how-chiropractic-helps',
+      'chiropractic-helps-alleviate-headaches',
+    ],
     title: 'Read more about chiropractic.',
   },
 };

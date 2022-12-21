@@ -25,8 +25,23 @@
   }
 }
 
+.inputError {
+  border: 2px solid $red !important;
+}
+
+.inputSuccess {
+  border: 2px solid $green !important;
+}
+
 .inputMessage {
   font-size: $font-size-sm;
+  font-weight: 700;
+  margin: $spacer-2 0 0;
+}
+
+.inputErrorMessage {
+  font-size: $font-size-sm;
+  font-weight: 700;
   margin: $spacer-2 0 0;
 }
 

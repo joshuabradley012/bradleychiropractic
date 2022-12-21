@@ -1,7 +1,7 @@
 ---
 source: 'Saul McGarity'
 services: 'Chiropractic'
-platform: 'DemandForce'
+platform: 'Demandforce'
 rating: 5
 ---
 
