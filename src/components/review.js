@@ -17,7 +17,7 @@ export default function Review({ content, count, link, platform, rating, source 
   const platformType = platformTypes[platform];
 
   return (
-    <a href={link} target="_blank" className={styles.reviewWrapper}>
+    <a href={link} target="_blank" rel="noreferrer" className={styles.reviewWrapper}>
       {(platform || rating) && (
         <div className={styles.review}>
           {platformType ? (
