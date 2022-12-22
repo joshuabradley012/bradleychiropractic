@@ -35,7 +35,7 @@ export default function Home({ posts, testimonials }) {
         <meta name="description" content={content.seoDescription} />
         <meta property="og:description" content={content.seoDescription} />
       </Head>
-      <section className="section">
+      <section className={cn('section', styles.hero)}>
         <div className="bg-image">
           <Image
             src={hero.heroImage}
