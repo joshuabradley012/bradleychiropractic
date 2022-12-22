@@ -56,7 +56,7 @@ Through daily routines, many people develop weaknesses which lead to poor postur
       color: 'green',
       image: nutrition,
       cta: 'Learn more',
-      href: '/services/nutrition',
+      href: '/services/nutritional-counseling',
       content: `
 ## Create a nutritional program for your needs.
 

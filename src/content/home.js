@@ -79,7 +79,7 @@ const content = {
         icon: 'nutrition',
         color: 'green',
         image: nutrition,
-        href: '/services/nutrition',
+        href: '/services/nutritional-counseling',
       },
     ],
   },
