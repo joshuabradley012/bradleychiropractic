@@ -10,10 +10,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Subscriber {
+model Appointment {
   id         String   @id @unique @default(uuid())
-  email      String   @unique
-  subscribed Boolean
+  name       String
+  email      String
+  phone      String
+  date       String
+  time       String
+  service    String
+  message    String
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }

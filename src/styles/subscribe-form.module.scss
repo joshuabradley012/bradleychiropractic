@@ -27,12 +27,12 @@
 
 .inputError {
   border: $border-width * 2 solid $red !important;
-  padding: ($spacer-4 - $border-width * 3);
+  padding: ($spacer-3 - $border-width * 3);
 }
 
 .inputSuccess {
   border: $border-width * 2 solid $green !important;
-  padding: ($spacer-4 - $border-width * 3);
+  padding: ($spacer-3 - $border-width * 3);
 }
 
 .inputMessage {

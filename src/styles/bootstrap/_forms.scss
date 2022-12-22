@@ -65,7 +65,7 @@ textarea,
   font-family: $main-font;
   height: $spacer-12;
   line-height: 1;
-  padding: ($spacer-4 - $border-width * 2);
+  padding: ($spacer-3 - $border-width * 2);
   width: 100%;
 
   &:focus {
@@ -75,7 +75,7 @@ textarea,
     border-bottom-width: $border-width * 2;
     border-left-width: $border-width * 2;
     box-shadow: unset;
-    padding: ($spacer-4 - $border-width * 3);
+    padding: ($spacer-3 - $border-width * 3);
   }
 }
 

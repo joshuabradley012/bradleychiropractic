@@ -1,6 +1,8 @@
-import mailchimp from "@mailchimp/mailchimp_marketing";
+import marketing from "@mailchimp/mailchimp_marketing";
+import transactionalClient from "@mailchimp/mailchimp_transactional";
 
-const apiKey = process.env.MAILCHIMP_API_KEY;
+const mailchimpApiKey = process.env.MAILCHIMP_API_KEY;
+const mandrillApiKey = process.env.MANDRILL_API_KEY;
 
 const lists = {
   newsletter: "0ec90064fd",
@@ -10,10 +12,11 @@ const lists = {
   clickfunnel: "c43526c3bc",
 };
 
-mailchimp.setConfig({
-  apiKey,
+marketing.setConfig({
+  apiKey: mailchimpApiKey,
   server: "us10",
 });
 
-export default mailchimp;
-export { lists };
+const transactional = transactionalClient(mandrillApiKey);
+
+export { marketing, transactional, lists };

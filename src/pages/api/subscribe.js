@@ -1,21 +1,24 @@
-import prisma from "@/lib/prisma";
-import mailchimp, { lists } from "@/lib/mailchimp";
-import { removeUndefined } from "@/lib/objects";
+import { lists, marketing } from "@/lib/mailchimp";
+import { subscriberSchema } from "@/lib/validation";
 
 export default async function handle(req, res) {
   try {
-    const { email } = req.body;
+    let subscriber;
 
-    if (!email) {
+    try {
+      subscriber = await subscriberSchema.validate(req.body);
+    } catch (err) {
       res.status(400);
       res.json({
         success: false,
-        message: "Email required",
+        message: err?.errors?.toString() || "Validation failed",
       });
       return;
     }
 
-    const mcResponse = await mailchimp.lists.addListMember(lists.newsletter, {
+    const { email } = subscriber;
+
+    const mcResponse = await marketing.lists.addListMember(lists.newsletter, {
       email_address: email,
       status: "subscribed",
     });

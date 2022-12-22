@@ -13,6 +13,7 @@ import styles from '@/styles/schedule.module.scss';
 
 export default function Schedule() {
   const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const {
     register,
@@ -25,7 +26,27 @@ export default function Schedule() {
   });
 
   async function submit(data) {
-    console.log(data);
+    try {
+      setSubmitted(true);
+      const res = await fetch('/api/schedule', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      if (res.status === 200) {
+        setMessage(json.message);
+        setErrorMessage('');
+        setSubmitted(true);
+      } else {
+        setMessage('');
+        setErrorMessage(json.message);
+        setSubmitted(false);
+      }
+    } catch (err) {
+      console.error(err);
+      setSubmitted(false);
+    }
   }
 
   return (
@@ -52,46 +73,56 @@ export default function Schedule() {
               <form className={cn('text-left', styles.form)} onSubmit={handleSubmit(submit)}>
                 <h2>Schedule Here</h2>
                 <p>Find a time that works for you and we&apos;ll follow up through email to finalize your appointment. Or give us a call using the number above.</p>
+
                 <label>Name*</label>
                 <input
                   {...register('name')}
                   type="text"
+                  disabled={submitted}
                   className={cn({
                     [styles.inputError]: !!errors.name?.message,
                   })}
                 />
                 {!!errors.name?.message && <p className={styles.inputErrorMessage}>{errors.name?.message}</p>}
+
                 <label>Email*</label>
                 <input
                   {...register('email')}
                   type="text"
+                  disabled={submitted}
                   className={cn({
                     [styles.inputError]: !!errors.email?.message,
                   })}
                 />
                 {!!errors.email?.message && <p className={styles.inputErrorMessage}>{errors.email?.message}</p>}
+
                 <label>Phone*</label>
                 <input
                   {...register('phone')}
                   type="text"
+                  disabled={submitted}
                   className={cn({
                     [styles.inputError]: !!errors.phone?.message,
                   })}
                 />
                 {!!errors.phone?.message && <p className={styles.inputErrorMessage}>{errors.phone?.message}</p>}
+
                 <label>Date*</label>
                 <input
                   {...register('date')}
                   type="date"
+                  disabled={submitted}
                   className={cn({
                     [styles.inputError]: !!errors.date?.message,
                   })}
                 />
                 {!!errors.date?.message && <p className={styles.inputErrorMessage}>{errors.date?.message}</p>}
+
                 <label>Time*</label>
                 <select
                   {...register('time')}
                   defaultValue=""
+                  disabled={submitted}
                   className={cn({
                     [styles.inputError]: !!errors.time?.message,
                   })}
@@ -117,16 +148,40 @@ export default function Schedule() {
                   <option value="5:30PM">5:30 PM</option>
                 </select>
                 {!!errors.time?.message && <p className={styles.inputErrorMessage}>{errors.time?.message}</p>}
+
+                <label>Service*</label>
+                <select
+                  {...register('service')}
+                  defaultValue=""
+                  disabled={submitted}
+                  className={cn({
+                    [styles.inputError]: !!errors.service?.message,
+                  })}
+                >
+                  <option value="" disabled hidden>Select a service</option>
+                  <option value="Chiropractic">Chiropractic</option>
+                  <option value="Spinal Decompression">Spinal Decompression</option>
+                  <option value="Corrective Exercise">Corrective Exercise</option>
+                  <option value="Nutritional Counseling">Nutritional Counseling</option>
+                </select>
+                {!!errors.service?.message && <p className={styles.inputErrorMessage}>{errors.service?.message}</p>}
+
                 <label>Message (optional)</label>
                 <textarea
                   {...register('message')}
                   rows="4"
+                  disabled={submitted}
                   className={cn({
                     [styles.inputError]: !!errors.message?.message,
                   })}
                 />
                 {!!errors.message?.message && <p className={styles.inputErrorMessage}>{errors.message?.message}</p>}
-                <button type="submit">Submit</button>
+
+                <div className={styles.submitRow}>
+                  <button disabled={submitted} type="submit">Submit</button>
+                  {!!message && <p className={styles.successMessage}>{message}</p>}
+                  {!!errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+                </div>
               </form>
             </div>
             <div className="col-12 col-lg-6 content">
