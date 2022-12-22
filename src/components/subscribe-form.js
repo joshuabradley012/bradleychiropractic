@@ -27,6 +27,7 @@ export default function SubscribeForm() {
   async function submit(data) {
     try {
       if (submitted) return;
+      setSubmitted(true);
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -40,9 +41,11 @@ export default function SubscribeForm() {
       } else {
         setMessage('');
         setError('email', { type: 'api-error', message: json.message });
+        setSubmitted(false);
       }
     } catch (err) {
       console.error(err);
+      setSubmitted(false);
     }
   }
 

@@ -27,6 +27,7 @@ export default function Schedule() {
 
   async function submit(data) {
     try {
+      if (submitted) return;
       setSubmitted(true);
       const res = await fetch('/api/schedule', {
         method: 'POST',
