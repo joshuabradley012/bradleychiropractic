@@ -17,7 +17,19 @@ button {
     &:hover {
       background-color: $gray-500;
     }
+
+    &:disabled,
+    &[disabled] {
+      background-color: $gray-300;
+      color: $gray-500;
+      cursor: unset;
+
+      &:hover {
+        background-color: $gray-300;
+      }
+    }
   }
+
   &.icon {
     align-items: center;
     display: inline-flex;

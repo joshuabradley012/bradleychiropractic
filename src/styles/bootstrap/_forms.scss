@@ -120,6 +120,17 @@ button,
       background-color: $gray-100;
     }
   }
+
+  &:disabled,
+  &[disabled] {
+    background-color: $gray-300;
+    color: $gray-500;
+    cursor: unset;
+
+    &:hover {
+      background-color: $gray-300;
+    }
+  }
 }
 
 // This must be separate from other buttons

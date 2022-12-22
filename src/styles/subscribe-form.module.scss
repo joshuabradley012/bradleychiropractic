@@ -21,16 +21,18 @@
   margin: 0;
 
   &:focus {
-    border: $border;
+    border-color: $gray-500;
   }
 }
 
 .inputError {
-  border: 0.2rem solid $red !important;
+  border: $border-width * 2 solid $red !important;
+  padding: ($spacer-4 - $border-width * 3);
 }
 
 .inputSuccess {
-  border: 0.2rem solid $green !important;
+  border: $border-width * 2 solid $green !important;
+  padding: ($spacer-4 - $border-width * 3);
 }
 
 .inputMessage {

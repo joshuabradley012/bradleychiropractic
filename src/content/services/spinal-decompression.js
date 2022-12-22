@@ -24,43 +24,43 @@ const content = {
     cta: 'Schedule an appointment',
     columns: [
       {
-        icon: 'car-accident',
+        icon: 'neck-pain',
         content: `
-### Headaches
+### Degenerative Disc
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+The discs in your spine stay healthy through movement. Injury often causes a lack of movement around the discs due to muscle spasms and guarding. This lack of movement causes the discs to essentially dry out of dehydrate. The medical term for a disc that is losing its hydration and drying out is "desiccation". The gentle pull placed upon the spine during decompression causes movement around the disc helping rehydrate it and become more viable, thereby allowing better movement and less pain.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'herniated-disc',
         content: `
-### Headaches
+### Bulging (Herniated) Disc
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+A normal healthy disc is hydrated and sponge like. Think of an intervertebral disc like a jelly donut. The middle of the disc, or nucleus pulposus, is a jelly like material and the outer fibers, known as the annular fibrosis hold the jelly like material within the center of the disc. Through direct or repetitive injury the outer fibers begin to weaken and in some instances tear, allowing the jelly like material to bulge outward. Frequently, the bulging part of the disc places pressure on the exiting nerve root, causing severe pain into the leg. Decompression creates a negative pressure around the disc allowing the bulge to centralize and heal, thus the pressure on the nerve root is removed and the pain relieved.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'chiropractic',
         content: `
-### Headaches
+### Facet Syndrome
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+Between the vertebral bodies and behind the disc is a pair of joints called facet joints. This is where the majority of motion occurs as we move our spines. When there is less height between the vertebrae due to disc degeneration, the facet joints are under more pressure thereby causing inflammation of the joint capsule and pain. Over time degeneration can also occur between the facet joints. Decompression therapy creates a gentle distraction between these joints, thereby reducing pain and inflammation.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'spinal-decompression',
         content: `
-### Headaches
+### Sciatica
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+The sciatic nerve is the largest nerve that runs down your leg. It is made up of the L4 and L5 nerve roots and their branches. When these nerve roots are compressed, either due to disc herniation or degenerative changes, they cause severe pain throughout the distribution of the sciatic nerve. Decompression therapy effectively treats sciatica by reducing the bulging or degenerative disc putting pressure on the nerve roots.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'medical',
         content: `
-### Headaches
+### Failed Back Surgery
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+Not all back surgery is successful and in some instances decompression therapy can offer relief even to those who have already undergone surgery. However, there are some candidates who don’t qualify for decompression therapy. A thorough history and examination is performed before accepting a patient, to ensure they are a good candidate for this particular treatment.
         `,
       },
     ],

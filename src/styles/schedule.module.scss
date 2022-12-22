@@ -3,3 +3,28 @@
 .form {
   box-shadow: $box-shadow-6;
 }
+
+.inputError {
+  border: $border-width * 2 solid $red !important;
+  padding: ($spacer-4 - $border-width * 3);
+  margin-bottom: 0;
+}
+
+.inputSuccess {
+  border: $border-width * 2 solid $green !important;
+  padding: ($spacer-4 - $border-width * 3);
+}
+
+.inputMessage {
+  font-size: $font-size-sm;
+  font-weight: 700;
+  margin: $spacer-2 0 $spacer-5;
+}
+
+.inputErrorMessage {
+  color: $red;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  margin: $spacer-2 0 $spacer-5;
+}
+

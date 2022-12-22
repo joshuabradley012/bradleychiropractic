@@ -13,26 +13,20 @@ const subscribe = {
 
 export default function SubscribeForm() {
   const [message, setMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
   const {
     register,
     handleSubmit,
-    watch,
+    setError,
+    clearErrors,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(subscriberSchema),
   });
 
-  useEffect(() => {
-    const subscription = watch(() => {
-      setMessage("");
-      setErrorMessage("");
-    });
-    return () => subscription.unsubscribe();
-  }, [watch]);
-
   async function submit(data) {
     try {
+      if (submitted) return;
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -41,10 +35,11 @@ export default function SubscribeForm() {
       const json = await res.json();
       if (res.status === 200) {
         setMessage(json.message);
-        setErrorMessage("");
+        clearErrors('email');
+        setSubmitted(true);
       } else {
-        setMessage("");
-        setErrorMessage(json.message);
+        setMessage('');
+        setError('email', { type: 'api-error', message: json.message });
       }
     } catch (err) {
       console.error(err);
@@ -63,18 +58,18 @@ export default function SubscribeForm() {
                 <div className={styles.inputWrapper}>
                   <input
                     {...register('email')}
-                    className={cn(styles.input, {
-                      [styles.inputSuccess]: message,
-                      [styles.inputError]: !!errors.email?.message || !!errorMessage,
-                    })}
                     type="text"
                     placeholder="Email"
+                    disabled={submitted}
+                    className={cn(styles.input, {
+                      [styles.inputSuccess]: message,
+                      [styles.inputError]: !!errors.email?.message,
+                    })}
                   />
                   {!!message && <p className={styles.inputMessage}>{message}</p>}
-                  {!!errorMessage && <p className={styles.inputErrorMessage}>{errorMessage}</p>}
                   {!!errors.email?.message && <p className={styles.inputErrorMessage}>{errors.email?.message}</p>}
                 </div>
-                <button className={cn("secondary", styles.submitButton)} type="submit">Subscribe</button>
+                <button disabled={submitted} className={cn("secondary", styles.submitButton)} type="submit">Subscribe</button>
               </form>
             </div>
           </div>

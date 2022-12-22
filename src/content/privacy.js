@@ -6,7 +6,7 @@ const content = {
 
 Your privacy is very important to us. Accordingly, we have developed this policy in order for you to understand how we collect, use, communicate and make use of personal information. The following outlines our privacy policy.
 
-When accessing the https://bradleychiropracticnutrition.com website, Bradley Chiropractic Nutrition Center will learn certain information about you during your visit.
+When accessing the [https://bradleychiropracticnutrition.com](https://bradleychiropracticnutrition.com) website, Bradley Chiropractic Nutrition Center will learn certain information about you during your visit.
 
 Similar to other commercial websites, our website utilizes a standard technology called "cookies" (see explanation below) and server logs to collect information about how our site is used. Information gathered through cookies and server logs may include the date and time of visits, the pages viewed, time spent at our site, and the websites visited just before and just after our own, as well as your IP address.
 
@@ -50,7 +50,7 @@ Users who no longer wish to receive our newsletter or promotional materials may 
 
 ## Use of External Links
 
-https://bradleychiropracticnutrition.com may contain links to many other websites. Bradley Chiropractic Nutrition Center cannot guarantee the accuracy of information found at any linked site. Links to or from external sites not owned or controlled by Bradley Chiropractic Nutrition Center do not constitute an endorsement by Bradley Chiropractic Nutrition Center or any of its employees of the sponsors of these sites or the products or information presented therein.
+[https://bradleychiropracticnutrition.com](https://bradleychiropracticnutrition.com) may contain links to many other websites. Bradley Chiropractic Nutrition Center cannot guarantee the accuracy of information found at any linked site. Links to or from external sites not owned or controlled by Bradley Chiropractic Nutrition Center do not constitute an endorsement by Bradley Chiropractic Nutrition Center or any of its employees of the sponsors of these sites or the products or information presented therein.
 
 By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this web site are protected by applicable copyright and trade mark law.
 
@@ -83,7 +83,7 @@ Testimonials that appear on this site are actually received via text, audio or v
 
 The testimonials displayed in any form on this site (text, audio, video or other) are reproduced verbatim, except for correction of grammatical or typing errors. Some may have been shortened. In other words, not the whole message received by the testimonial writer is displayed when it seems too lengthy or not the whole statement seems relevant for the general public.
 
-Bradley Chiropractic Nutrition Center is not responsible for any of the opinions or comments posted on https://bradleychiropracticnutrition.com. Bradley Chiropractic Nutrition Center is not a forum for testimonials, however provides testimonials as a means for customers to share their experiences with one another. To protect against abuse, all testimonials appear after they have been reviewed by management of Bradley Chiropractic Nutrition Center. Bradley Chiropractic Nutrition Center does not share the opinions, views or commentary of any testimonials on https://bradleychiropracticnutrition.com - the opinions are strictly the views of the testimonial source.
+Bradley Chiropractic Nutrition Center is not responsible for any of the opinions or comments posted on [https://bradleychiropracticnutrition.com](https://bradleychiropracticnutrition.com). Bradley Chiropractic Nutrition Center is not a forum for testimonials, however provides testimonials as a means for customers to share their experiences with one another. To protect against abuse, all testimonials appear after they have been reviewed by management of Bradley Chiropractic Nutrition Center. Bradley Chiropractic Nutrition Center does not share the opinions, views or commentary of any testimonials on [https://bradleychiropracticnutrition.com](https://bradleychiropracticnutrition.com) - the opinions are strictly the views of the testimonial source.
 
 The testimonials are never intended to make claims that our products and/or services can be used to diagnose, treat, cure, mitigate or prevent any disease. Any such claims, implicit or explicit, in any shape or form, have not been clinically tested or evaluated.
 
@@ -109,7 +109,7 @@ We are committed to conducting our business in accordance with these principles 
 
 ## Contact
 
-If you have any questions regarding this policy, or your dealings with our website, please contact us here: https://bradleychiropracticnutrition.com/schedule
+If you have any questions regarding this policy, or your dealings with our website, please contact us here: [https://bradleychiropracticnutrition.com/schedule](https://bradleychiropracticnutrition.com/schedule)
 
 Bradley Chiropractic Nutrition Center 5001 Stockdale Hwy, Bakersfield, CA 93309
   `,

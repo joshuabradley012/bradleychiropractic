@@ -24,43 +24,35 @@ const content = {
     cta: 'Schedule an appointment',
     columns: [
       {
-        icon: 'car-accident',
+        icon: 'exercise',
         content: `
-### Headaches
+### Upper Crossed Syndrome
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+Poor posture over a period of time can cause permanent changes to the muscles and skeleton. Sitting is the most common cause of a postural imbalance known as upper crossed syndrome. This syndrome is characterized by a wounded mid thoracic spine, a forward head and forwardly rounded shoulders. Within the posterior aspect of the spine, the lower and middle trapezius muscles become stretched and weakened. The upper trapezius, levator scapulae and sub- occipital muscles become tight and short. In the front aspect of the body the pectoral muscles and anterior deltoids become short and tight. While the deep cervical flexors become elongated and weak. It is important to properly evaluate an individual and recognize these imbalances so that a proper exercise routine can be recommended. One that focuses on stretching the short muscles and strengthening the long, weak muscles is very important.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'spinal-decompression',
         content: `
-### Headaches
+### Lower Crossed Syndrome
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+This is a postural imbalance of the lower part of the body, involving the lower back and pelvis. It is characterized by an anteriorly tilted pelvis with weak abdominal muscles, weak gluteal muscles and tight hip flexors, hamstrings and lower back muscles. This syndrome is a common finding is those suffering from chronic lower back pain. Many people are unaware they have imbalances such as this and often are exercising in a manner that perpetuates the imbalance. Having said that, it is very important that the proper stretching and strengthening exercises are given so that these imbalances can be corrected.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'neck-pain',
         content: `
-### Headaches
+### Forward Head Posture
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+While forward head posture is a part of upper crossed syndrome, it can also exist in and of itself. It is a very common finding, due to our fixation on cell phones and computers. Many people with headaches and chronic neck and upper back pain have forward head posture. There are a specific set of exercises involving stretching, mobilization and strengthening. When they are done properly, forward head posture can be corrected over time.
         `,
       },
       {
-        icon: 'car-accident',
+        icon: 'holistic-health',
         content: `
-### Headaches
+### Weak Core Muscles
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
-        `,
-      },
-      {
-        icon: 'car-accident',
-        content: `
-### Headaches
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis pulvinar nisl nec euismod. Aliquam erat volutpat. Praesent eleifend vitae orci in suscipit. Morbi pulvinar cursus dolor, id malesuada dui suscipit a. Proin blandit ut enim eget facilisis. In sed semper justo, ac malesuada massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque ac congue quam, a vestibulum nisi.
+The abdominal wall (often referred to as the Core) is very often dysfunctional in many people. Most of these people are unaware of the imbalance and/or weaknesses they may have. In some cases, people who regularly train their (Core) are doing exercises that are actually causing further weakness and dysfunction of the abdominal muscles. We have a specific way of assessing core strength and identifying any underlying weakness or dysfunction. Once these imbalances are identified they can be properly corrected by doing the proper sequence of exercises.
         `,
       },
     ],

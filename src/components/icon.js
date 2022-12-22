@@ -32,7 +32,7 @@ const icons = {
 
 export default function Icon({ className, type, ...rest }) {
   if (icons[type] === undefined) {
-    console.log('Invalid Icon type.');
+    console.error('Invalid Icon type.');
     return null;
   }
 
