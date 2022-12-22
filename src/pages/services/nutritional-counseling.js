@@ -36,7 +36,7 @@ export default function Nutrition({ posts, testimonials }) {
           <TestimonialMasonry content={testimonials} />
         </div>
       </section>
-      <Benefits content={benefits} />
+      {/*<Benefits content={benefits} />*/}
       <section className="section">
         <div className="container">
           <div className="row justify-content-center">

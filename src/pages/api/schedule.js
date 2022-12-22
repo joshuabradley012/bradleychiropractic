@@ -42,11 +42,6 @@ export default async function handle(req, res) {
       subject: `Request for a new appointment from ${name}`,
       to: [
         {
-          email: "joshbradleydigital@gmail.com",
-          name: "Joshua Bradley",
-          type: "to",
-        },
-        {
           email: "destiny@bradleychiropracticnutrition.com",
           name: "Destiny Tarango",
           type: "to",
