@@ -15,9 +15,8 @@ export default function Review({ content, count, link, platform, rating, source 
   };
 
   const platformType = platformTypes[platform];
-
-  return (
-    <a href={link} target="_blank" rel="noreferrer" className={styles.reviewWrapper}>
+  const inner = (
+    <>
       {(platform || rating) && (
         <div className={styles.review}>
           {platformType ? (
@@ -37,6 +36,20 @@ export default function Review({ content, count, link, platform, rating, source 
           {source && <cite>{source}</cite>}
         </blockquote>
       )}
-    </a>
+    </>
+  );
+
+  if (link) {
+    return (
+      <a href={link} target="_blank" rel="noreferrer" className={styles.reviewWrapper}>
+        {inner}
+      </a>
+    );
+  }
+
+  return (
+    <div className={styles.reviewWrapper}>
+      {inner}
+    </div>
   );
 }
