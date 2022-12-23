@@ -14,8 +14,9 @@ export default function Navbar() {
   const [isNavOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => setNavOpen(!isNavOpen);
+  const closeNav = () => setNavOpen(false);
 
-  const handleNavigation = () => setNavOpen(false);
+  const handleNavigation = () => closeNav();
 
   return (
     <div className={styles.navbarWrapper}>
@@ -23,7 +24,7 @@ export default function Navbar() {
         <div className={cn('container', styles.navbarContainer)}>
 
           <ActiveLink href="/" activeClassName={styles.active}>
-            <a className={styles.logo}>
+            <a className={styles.logo} onClick={closeNav}>
               <Image
                 src={logo}
                 alt="Bradley Chiropractic Nutrition Center Logo"
@@ -37,7 +38,7 @@ export default function Navbar() {
 
           <div className={styles.cta}>
             <ActiveLink href="/schedule" activeClassName={styles.active}>
-              <a className="btn">Book now</a>
+              <a className="btn" onClick={closeNav}>Book now</a>
             </ActiveLink>
           </div>
 
