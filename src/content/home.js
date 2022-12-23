@@ -8,7 +8,7 @@ import teamImage from '@/public/adjustment-room.png';
 
 const content = {
   seoTitle: 'Bradley Chiropractic Nutrition Center | Bakersfield Chiropractor',
-  seoDescription: 'Dr. Bradley is passionate about giving the best chiropractic care possible by using many methods; including spinal decompressions, exercise, and nutrition.',
+  seoDescription: 'Dr. Bradley provides the best chiropractic care possible by using a holistic approach to chiropractic medicine, including spinal decompressions, exercise, and nutrition.',
 
   hero: {
     heroImage,
