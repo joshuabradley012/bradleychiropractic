@@ -54,7 +54,7 @@ export default async function handle(req, res) {
       text: `
 Hello,
 
-Somebody requested an appointment using the online form.
+Somebody scheduled an appointment using the online form.
 
 Appointment details
 --------------------------------------
