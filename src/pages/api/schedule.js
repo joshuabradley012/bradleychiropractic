@@ -1,4 +1,3 @@
-import moment from "moment";
 import prisma from "@/lib/prisma";
 import { transactional } from "@/lib/mailchimp";
 import { scheduleSchema } from "@/lib/validation";
@@ -39,7 +38,7 @@ export default async function handle(req, res) {
 
     const emailBody = {
       from_email: "no-reply@bradleychiropracticnutrition.com",
-      subject: `Request for a new appointment from ${name}`,
+      subject: `Schedule for a new appointment from ${name}`,
       to: [
         {
           email: "destiny@bradleychiropracticnutrition.com",
@@ -55,7 +54,7 @@ export default async function handle(req, res) {
       text: `
 Hello,
 
-Somebody requsted an appointment using the online form.
+Somebody requested an appointment using the online form.
 
 Appointment details
 --------------------------------------
