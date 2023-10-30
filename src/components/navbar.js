@@ -38,7 +38,7 @@ export default function Navbar() {
 
           <div className={styles.cta}>
             <ActiveLink href="/schedule" activeClassName={styles.active}>
-              <a className="btn" onClick={closeNav}>Book now</a>
+              <a className="btn" onClick={closeNav}>Schedule now</a>
             </ActiveLink>
           </div>
 
