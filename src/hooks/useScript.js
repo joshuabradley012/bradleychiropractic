@@ -1,20 +1,20 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
-const useScript = url => {
+const useScript = (url, dataId) => {
+  const ref = useRef();
+
   useEffect(() => {
-    if (typeof document === 'undefined') return null;
-
     const script = document.createElement('script');
-
     script.src = url;
-    script.async = true;
-
-    document.body.appendChild(script);
+    script.setAttribute('data-id', dataId);
+    ref.current.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
-    }
+      ref.current.removeChild(script);
+    };
   }, [url]);
+
+  return ref;
 };
 
 export default useScript;
