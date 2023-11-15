@@ -20,6 +20,16 @@ span[style^="box-sizing:border-box;display:inline-block"] {
   }
 }
 
+// Fix ReviewWave form
+
+.rw-sched-wrap .rw-field-row .rw-field .rw-form-cell-with-icon .rw-form-field-icon {
+  width: 20px;
+}
+
+.rw-sched-wrap .rw-form-button svg, .rw-sched-wrap .rw-privacy-button svg {
+  width: 24px;
+}
+
 .btn,
 button {
   &.secondary {
