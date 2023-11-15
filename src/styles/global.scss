@@ -21,9 +21,8 @@ span[style^="box-sizing:border-box;display:inline-block"] {
 }
 
 // Fix ReviewWave form
-
 [class^="rw-"],
-[class*=" rws-"] {
+[class^="rws-"] {
   svg {
     height: auto;
     width: auto;
