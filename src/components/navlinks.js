@@ -25,6 +25,10 @@ export default function Navlinks({ className, handleClick }) {
       href: '/blog',
       name: 'Blog',
     },
+    {
+      href: '/forms',
+      name: 'Forms',
+    },
   ];
 
   return (
